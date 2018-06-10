@@ -36,7 +36,7 @@ Folder structure:
 
 I have included diagrams of the general data model followed by all examples, plus diagrams of the specific model in each case in the root folder.
 
-Design pattern examples: There are three test programs, two with example main programs
+```Design pattern examples: There are three test programs, two with example main programs
 ====================================================================================================
 |  Main/Test       |  Unit Module |  Notes                                                         |
 |==================|==============|=================================================================
@@ -64,5 +64,5 @@ Helper modules: There are two helper classes and three helper modules of pure fu
 ----------------------------------------------------------------------------------------------------
 |  HTML      |  Module of pure functions that format HTML report output and buffer using Pages     |
 ====================================================================================================
-
+```
 In the initial commit, I have only included a single scenario in testing the Trapit core function itself. I will add further scenarios in future - simply by adding metadata records in the .json file
