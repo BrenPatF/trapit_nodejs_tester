@@ -48,8 +48,8 @@ Design pattern examples: There are three test programs, two with example main pr
 ----------------------------------------------------------------------------------------------------
 |  TestTrapit      |  Trapit      |  The assertion module itself, written with core pure function  |
 |                  |              |  to enable unit testing, and make multiple reporters easy      |
-====================================================================================================```
-
+====================================================================================================
+```
 Helper modules: There are two helper classes and three helper modules of pure functions
 ```====================================================================================================
 |  Module    |  Notes                                                                              | 
