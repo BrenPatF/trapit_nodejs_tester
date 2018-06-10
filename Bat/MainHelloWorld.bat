@@ -1,0 +1,1 @@
+node ..\code\MainHelloWorld.js > ..\Out\MainHelloWorld.out 2> ..\Out\MainHelloWorld.err

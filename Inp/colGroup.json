@@ -1,0 +1,99 @@
+{ "meta": {
+    "title": "colGroup",
+    "inp": {
+        "Log": [
+            "Line"
+        ],
+        "Scalars": [
+            "Delimiter",
+            "Column#"
+        ],
+        "Lines": [
+            "Line"
+        ]
+    },
+    "out": {
+        "Log": [
+            "#Lines",
+            "Date Offset",
+            "Text"
+        ],
+        "listAsIs": [
+            "#Instances"
+        ],
+        "sortByKey": [
+            "Key",
+            "Value"
+        ],
+        "sortByValue": [
+            "Key",
+            "Value"
+        ]
+    }
+},
+"scenarios" : { 
+   "4 lines and comma": 
+   {
+    "inp": {
+       "Log": [
+       ],
+       "Scalars": [
+            ",|2"
+        ],
+        "Lines": [
+            "0,1,Cc,3",
+            "00,1,A,9",
+            "000,1,B,27",
+            "0000,1,A,81"
+        ]
+    },
+    "out": {
+        "Log": [
+            "1|Log time within range [0, 2000]ms of start|File ../Inp/ut_group.csv, delimiter ',', column 2"
+        ],
+        "listAsIs": [
+            "3"
+        ],
+        "sortByKey": [
+            "A|2",
+            "Bx|1",
+            "Cc|1"
+        ],
+        "sortByValue": [
+            "B|1",
+            "Cc|1",
+            "A|2"
+        ]
+    }
+}
+,
+   "2 duplicate lines with double-delimiter": 
+   {
+    "inp": {
+        "Log": [
+            "Log line 1"
+        ],
+        "Scalars": [
+            ";;|0"
+        ],
+        "Lines": [
+            "X;;1;;A",
+            "X;;1;;A"
+        ]
+    },
+    "out": {
+        "Log": [
+            "2|Log time within range [0, 2000]ms of start|File ../Inp/ut_group.csv, delimiter ';;', column 0"
+        ],
+        "listAsIs": [
+            "2"
+        ],
+        "sortByKey": [
+            "X|2"
+        ],
+        "sortByValue": [
+            "X|2"
+        ]
+    }
+}
+}}

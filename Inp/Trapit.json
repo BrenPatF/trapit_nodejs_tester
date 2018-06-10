@@ -1,0 +1,160 @@
+{ "meta": {
+    "title": "Trapit",
+    "inp": {
+        "Report": [
+            "Title"
+        ],
+        "Input Fields": [
+            "Group",
+            "Field"
+        ],
+        "Output Fields": [
+            "Group",
+            "Field"
+        ],
+        "Input Values": [
+            "Scenario",
+            "Group",
+            "Row CSV"
+        ],
+        "Expected Values": [
+            "Scenario",
+            "Group",
+            "Row CSV"
+        ],
+        "Actual Values": [
+            "Scenario",
+            "Group",
+            "Row CSV"
+        ]
+    },
+    "out": {
+        "Summaries": [
+            "Type",
+            "Scenario",
+            "Group",
+            "Header 1",
+            "Header 2",
+            "Footer",
+            "# Records",
+            "# Fails",
+            "Status"
+        ],
+        "Input Fields": [
+            "Scenario",
+            "Group",
+            "Name",
+            "Length"
+        ],
+        "Output Fields": [
+            "Scenario",
+            "Group",
+            "Name",
+            "Length"
+        ],
+        "Input Values": [
+            "Scenario",
+            "Group",
+            "Row CSV"
+        ],
+        "Output Values": [
+            "Scenario",
+            "Group",
+            "Row CSV"
+        ]
+    }
+},
+"scenarios" : { 
+   "Outer scenario, passing 2 each of in, out groups and inner scenarios": 
+   {
+    "inp": {
+       "Report": ["Report One"],
+       "Input Fields": [
+            "2-field input group|First",
+            "2-field input group|Second",
+            "1-field input group|Only"
+        ],
+        "Output Fields": [
+            "1-field output group|Single",
+            "2-field output group|Output One",
+            "2-field output group|Output Two"
+        ],
+        "Input Values": [
+            "Scenario with 2 non-empty output groups|2-field input group|Value 1~Value 2",
+            "Scenario with 2 non-empty output groups|1-field input group|Record 1 value",
+            "Scenario with 2 non-empty output groups|1-field input group|Record 2 value",
+            "Scenario with 1 empty, 1 non-empty output groups, and 1 empty input group|1-field input group|Sole input field"
+        ],
+        "Expected Values": [
+            "Scenario with 2 non-empty output groups|1-field output group|Record 1 out",
+            "Scenario with 2 non-empty output groups|1-field output group|Record 2 out",
+            "Scenario with 2 non-empty output groups|2-field output group|Out value 1~Out value 2",
+            "Scenario with 1 empty, 1 non-empty output groups, and 1 empty input group|2-field output group|Out 1-1~Out 1-2",
+            "Scenario with 1 empty, 1 non-empty output groups, and 1 empty input group|2-field output group|Out 2-1~Out 2-2"
+        ],
+        "Actual Values": [
+            "Scenario with 2 non-empty output groups|1-field output group|Record 1 out",
+            "Scenario with 2 non-empty output groups|1-field output group|Record 2 out",
+            "Scenario with 2 non-empty output groups|2-field output group|Out value 1~Out value 2",
+            "Scenario with 2 non-empty output groups|2-field output group|Extra 1~Extra 2",
+            "Scenario with 1 empty, 1 non-empty output groups, and 1 empty input group|2-field output group|Out 1-1~Out 1-2",
+            "Scenario with 1 empty, 1 non-empty output groups, and 1 empty input group|2-field output group|Out 2-1~Out 2-2"
+        ]
+    },
+    "out": {
+        "Summaries": [
+            "Report|||Unit Test Report: Report One||Test scenarios: 1 failed of 2: FAILURE|2|1|FAILURE",
+            "Scenario|Scenario with 2 non-empty output groups||SCENARIO 1: Scenario with 2 non-empty output groups|INPUTS-OUTPUTS|1 failed of 2: FAILURE|2|1|FAILURE",
+            "Input group|Scenario with 2 non-empty output groups|2-field input group|GROUP 1: 2-field input group|||||",
+            "Input group|Scenario with 2 non-empty output groups|1-field input group|GROUP 2: 1-field input group|||||",
+            "Output group|Scenario with 2 non-empty output groups|1-field output group|GROUP 1: 1-field output group||0 failed of 2: SUCCESS|2|0|SUCCESS",
+            "Output group|Scenario with 2 non-empty output groups|2-field output group|GROUP 2: 2-field output group||1 failed of 2: FAILURE|2|1|FAILURE",
+            "Scenario|Scenario with 1 empty, 1 non-empty output groups, and 1 empty input group||SCENARIO 2: Scenario with 1 empty, 1 non-empty output groups, and 1 empty input group|INPUTS-OUTPUTS|0 failed of 2: SUCCESS|2|0|SUCCESS",
+            "Input group|Scenario with 1 empty, 1 non-empty output groups, and 1 empty input group|2-field input group|GROUP 1: 2-field input group: Empty|||||",
+            "Input group|Scenario with 1 empty, 1 non-empty output groups, and 1 empty input group|1-field input group|GROUP 2: 1-field input group|||||",
+            "Output group|Scenario with 1 empty, 1 non-empty output groups, and 1 empty input group|1-field output group|GROUP 1: 1-field output group: Empty as expected: SUCCESS||0 failed of 0: SUCCESS|0|0|SUCCESS",
+            "Output group|Scenario with 1 empty, 1 non-empty output groups, and 1 empty input group|2-field output group|GROUP 2: 2-field output group||0 failed of 2: SUCCESS|2|0|SUCCESS"
+        ],
+        "Input Fields": [
+            "Scenario with 2 non-empty output groups|2-field input group|#|1",
+            "Scenario with 2 non-empty output groups|2-field input group|First|7",
+            "Scenario with 2 non-empty output groups|2-field input group|Second|7",
+            "Scenario with 2 non-empty output groups|1-field input group|#|1",
+            "Scenario with 2 non-empty output groups|1-field input group|Only|14",
+            "Scenario with 1 empty, 1 non-empty output groups, and 1 empty input group|2-field input group|#|1",
+            "Scenario with 1 empty, 1 non-empty output groups, and 1 empty input group|2-field input group|First|5",
+            "Scenario with 1 empty, 1 non-empty output groups, and 1 empty input group|2-field input group|Second|6",
+            "Scenario with 1 empty, 1 non-empty output groups, and 1 empty input group|1-field input group|#|1",
+            "Scenario with 1 empty, 1 non-empty output groups, and 1 empty input group|1-field input group|Only|16"
+        ],
+        "Output Fields": [
+            "Scenario with 2 non-empty output groups|1-field output group|#|1",
+            "Scenario with 2 non-empty output groups|1-field output group|Single|12",
+            "Scenario with 2 non-empty output groups|2-field output group|#|2",
+            "Scenario with 2 non-empty output groups|2-field output group|Output One|11",
+            "Scenario with 2 non-empty output groups|2-field output group|Output Two|11",
+            "Scenario with 1 empty, 1 non-empty output groups, and 1 empty input group|1-field output group|#|",
+            "Scenario with 1 empty, 1 non-empty output groups, and 1 empty input group|1-field output group|Single|",
+            "Scenario with 1 empty, 1 non-empty output groups, and 1 empty input group|2-field output group|#|1",
+            "Scenario with 1 empty, 1 non-empty output groups, and 1 empty input group|2-field output group|Output One|10",
+            "Scenario with 1 empty, 1 non-empty output groups, and 1 empty input group|2-field output group|Output Two|10"
+        ],
+        "Input Values": [
+            "Scenario with 2 non-empty output groups|2-field input group|1~Value 1~Value 2",
+            "Scenario with 2 non-empty output groups|1-field input group|1~Record 1 value",
+            "Scenario with 2 non-empty output groups|1-field input group|2~Record 2 value",
+            "Scenario with 1 empty, 1 non-empty output groups, and 1 empty input group|1-field input group|1~Sole input field"
+        ],
+        "Output Values": [
+            "Scenario with 2 non-empty output groups|1-field output group|1~Record 1 out",
+            "Scenario with 2 non-empty output groups|1-field output group|2~Record 2 out",
+            "Scenario with 2 non-empty output groups|2-field output group|1~Out value 1~Out value 2",
+            "Scenario with 2 non-empty output groups|2-field output group|2~~",
+            "Scenario with 2 non-empty output groups|2-field output group|2*~Extra 1~Extra 2",
+            "Scenario with 1 empty, 1 non-empty output groups, and 1 empty input group|1-field output group|",
+            "Scenario with 1 empty, 1 non-empty output groups, and 1 empty input group|2-field output group|1~Out 1-1~Out 1-2",
+            "Scenario with 1 empty, 1 non-empty output groups, and 1 empty input group|2-field output group|2~Out 2-1~Out 2-2"
+        ]
+    }
+}
+}}

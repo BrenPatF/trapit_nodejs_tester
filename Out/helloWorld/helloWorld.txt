@@ -1,0 +1,29 @@
+Unit Test Report: helloWorld
+============================
+
+   SCENARIO 1: Scenario : 0 failed of 1: SUCCESS
+
+Test scenarios: 0 failed of 1: SUCCESS
+======================================
+
+SCENARIO 1: Scenario {
+======================
+
+   INPUTS
+   ======
+
+   OUTPUTS
+   =======
+
+      GROUP 1: Group {
+      ================
+
+            #  Greeting    
+            -  ------------
+            1  Hello World!
+
+      } 0 failed of 1: SUCCESS
+      ========================
+
+} 0 failed of 1: SUCCESS
+========================

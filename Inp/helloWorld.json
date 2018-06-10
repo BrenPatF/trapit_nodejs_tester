@@ -1,0 +1,20 @@
+{ "meta": {
+    "title": "helloWorld",
+    "inp": {},
+    "out": {
+        "Group": [
+            "Greeting"
+        ]
+    }
+},
+"scenarios" : { 
+   "Scenario": 
+   {
+    "inp": {},
+    "out": {
+        "Group": [
+            "Hello World!"
+        ]
+    }
+}
+}}
