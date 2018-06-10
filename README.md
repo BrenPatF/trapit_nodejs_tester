@@ -36,8 +36,8 @@ Folder structure:
 
 I have included diagrams of the general data model followed by all examples, plus diagrams of the specific model in each case in the root folder.
 
-```Design pattern examples: There are three test programs, two with example main programs
-====================================================================================================
+Design pattern examples: There are three test programs, two with example main programs
+```====================================================================================================
 |  Main/Test       |  Unit Module |  Notes                                                         |
 |==================|==============|=================================================================
 |  MainHelloWorld  |              |  Simple Hello World program done as pure function to allow for |
