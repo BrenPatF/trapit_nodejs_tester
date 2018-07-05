@@ -29,10 +29,11 @@ Class used to buffer pages of text ahead of writing to file, used by Text and HT
 
 ***************************************************************************************************/
 const fs = require('fs');
+const Utils = require('../lib/Utils');
 
-function repSpaces(page) {
-    return page.replace(/ /g, '-');
-}
+//function repSpaces(page) {
+//    return page.replace(/ /g, '-');
+//}
 class Pages {
 
     /***************************************************************************************************
@@ -42,7 +43,7 @@ class Pages {
     ***************************************************************************************************/
     constructor(indexPage, root) {
         this.root = root;
-        this.indexPage = repSpaces(indexPage);
+        this.indexPage = Utils.repSpaces(indexPage);
         this.pageLines = {};
     }
     /***************************************************************************************************
@@ -52,7 +53,7 @@ class Pages {
     ***************************************************************************************************/
     addLine(page, line, indentLev) { //
     
-        const newPage = repSpaces(page);
+        const newPage = Utils.repSpaces(page);
         if (!this.pageLines.hasOwnProperty(newPage)) {
             this.pageLines[newPage] = [];
         }

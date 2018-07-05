@@ -32,7 +32,8 @@ Folder structure:
 	- root holds .out and .err files from the .bat (usually empty)
 	- *title* subfolders hold result files for test programs with a single *title*.txt...
 	- ...and *title*.html as the root page with links for pages per scenario
-- test: test .js programs
+	- external subfolder has externally-sourced JSON output files that are processed by TestExternals.js
+- test: test .js programs, including TestExternals.js for the externally-sourced JSON files
 
 I have included diagrams of the general data model followed by all examples, plus diagrams of the specific model in each case in the root folder.
 
@@ -64,5 +65,22 @@ Helper modules: There are two helper classes and three helper modules of pure fu
 ----------------------------------------------------------------------------------------------------
 |  HTML      |  Module of pure functions that format HTML report output and buffer using Pages     |
 ====================================================================================================
+```
+Externally-sourced JSON files: The files are from an Oracle project, named {package}.{procedure}_OUT.json:
+
+See https://github.com/BrenPatF/trapit_oracle_tester for the project that creates these files (the 
+JSON version is not uploaded yet).
+
+```================================================================================================================
+|  File                                       |  Notes                                                         | 
+|===============================================================================================================
+|  TT_EMP_BATCH.tt_AIP_Load_Emps_OUT.json     |  Batch loading of employee data from file to table             |
+----------------------------------------------------------------------------------------------------------------
+|  TT_EMP_WS.tt_AIP_Get_Dept_Emps_OUT.json    |  REF cursor getting department, employee data for web service  |
+----------------------------------------------------------------------------------------------------------------
+|  TT_EMP_WS.tt_AIP_Save_Emps_OUT.json        |  Web service procedure to save employee data                   |
+----------------------------------------------------------------------------------------------------------------
+|  TT_VIEW_DRIVERS.tt_HR_Test_View_V_OUT.json |  Batch view getting department, employee data                  |
+================================================================================================================
 ```
 In the initial commit, I have only included a single scenario in testing the Trapit core function itself. I will add further scenarios in future - simply by adding metadata records in the .json file

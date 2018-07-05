@@ -30,6 +30,7 @@ multiple reporters easy
 ***************************************************************************************************/
 const Utils = require ('../Lib/Utils.js');
 const DELIM = '|';
+const UNTESTED = 'UNTESTED';
 
 const BOILER = {
 				sceHdr			: 'SCENARIO $1: $2',
@@ -49,8 +50,11 @@ const BOILER = {
 				repFtr			: 'Test scenarios: $1 failed of $2: $3'
 			   };
 function csvToLis(csv) {return csv.split(DELIM)}
-function repSpaces(page) {
-    return page.replace(/ /g, '-');
+function expRepUntested(exp, act) {
+	const [expLis, actLis] = [csvToLis(exp), csvToLis(act)];
+	const repExpLis = Object.keys(expLis).map( i => (expLis[i] === UNTESTED ? UNTESTED +': ' + actLis[i] : expLis[i]));
+	const repActLis = Object.keys(expLis).map( i => (expLis[i] === UNTESTED ? UNTESTED +': ' + actLis[i] : actLis[i]));
+	return [repExpLis.join(DELIM), repActLis.join(DELIM)];
 }
 function mkInpObj(inp, groups) {
 	let inpGroups = {};
@@ -100,9 +104,10 @@ function mkOutObj(out, groups) {
 				}
 			}
 			for (let j = 0; j < exp.length; j++) {
-				valLis.push(exp[j]);
-				if (act[j] != exp[j]) {
-					valLis.push(act[j]);
+				const [expStr, actStr] = [...expRepUntested(exp[j], act[j])];
+				valLis.push(expStr);
+				if (actStr != expStr) {
+					valLis.push(actStr);
 					valLis[valLis.length - 2] = (j + 1) +  DELIM + valLis[valLis.length - 2];
 					valLis[valLis.length - 1] = (j + 1) + BOILER.errFlag + DELIM + valLis[valLis.length - 1];
 					nFail++;
@@ -194,12 +199,12 @@ function chkInputs(meta, scenarios) {
 	}
 }
 function prUTResults(results, ext, p) {
-	const root = repSpaces(results.title);
+	const root = Utils.repSpaces(results.title);
 	const ifile = root + ext;
 
 	p.prRepHdr(results.repHdr, '../out/' + root, ifile);
 	for (const s in results.sceLis)	{
-		const sfile = repSpaces(s) + ext;
+		const sfile = Utils.repSpaces(s) + ext;
 		const sceLis = results.sceLis[s];
 		const [inpGroups, outGroups] = [sceLis.inpGroups, sceLis.outGroups];
 		p.prSceHdr(sceLis.sceHdr, sfile);

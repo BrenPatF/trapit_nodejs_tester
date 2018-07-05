@@ -119,7 +119,7 @@ var self = module.exports = {
         pg.printPages();
     },
     prRepLin: (sfile, hdr, ftr, ofile) => {
-        prField('<a href="' + sfile + '" target="_blank">' + hdr + '</a> : ' + ftr, ofile, 2);
+        prField('<a href="' + Utils.repSpaces(sfile) + '" target="_blank">' + hdr + '</a> : ' + ftr, ofile, 2);
     },
     prSceHdr: (text, ofile) => {
         prHTMLHeader(ofile);

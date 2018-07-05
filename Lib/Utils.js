@@ -102,5 +102,8 @@ sleep: (time) => { // sleep time in ms
     while (new Date().getTime() < stop + time) {
         ;
     }
+},
+repSpaces: (page) => {
+    return page.replace(/ /g, '-').replace(/</g, 'lt').replace(/>/g, 'gt').replace(/\//g, '_').replace(/:/g, '_');
 }
 }
