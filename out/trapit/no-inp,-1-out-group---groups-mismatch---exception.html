@@ -1,0 +1,101 @@
+<html>
+<head>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th {
+  background-color: #dddddd;
+  border: 1px solid #030303;
+  text-align: left;
+  padding: 8px;
+}
+td {
+  border: 1px solid #030303;
+  text-align: left;
+  padding: 8px;
+}
+
+h1 {margin-top: 0em; margin-bottom: 0em;
+  font-family: arial, sans-serif;
+  width: 100%;
+  font-size: 300%;
+  background-color: #FF8033;
+}
+h2 {margin-top: 0em; margin-bottom: 0em;
+  font-family: arial, sans-serif;
+  width: 100%;
+  font-size: 200%;
+  background-color: #2AE6C1; //#7DFF33;
+}
+h3 {margin-top: 0em; margin-bottom: 0em;
+  font-family: arial, sans-serif;
+  width: 100%;
+  font-size: 150%;
+  background-color: #33F0FF;
+}
+h4 {margin-top: 0em; margin-bottom: 0em;
+  font-family: arial, sans-serif;
+  width: 100%;
+  font-size: 125%;
+  background-color: #7DFF33;//#F933FF;
+}
+</style>
+</head>
+<body>
+<h2>SCENARIO 5: No inp, 1 out group - groups mismatch - Exception</h2>
+<h3>INPUTS</h3>
+<h4>GROUP 1: Report</h4>
+<table>
+<tr><th>#</th><th>Title</th></tr>
+<tr><td>1</td><td>Groups Mismatch Exception</td></tr>
+</table>
+<h4></h4>
+<h4>GROUP 2: Input Fields: Empty</h4>
+<h4>GROUP 3: Output Fields</h4>
+<table>
+<tr><th>#</th><th>Group</th><th>Field</th></tr>
+<tr><td>1</td><td>Output group one</td><td>Field 1-1</td></tr>
+</table>
+<h4></h4>
+<h4>GROUP 4: Input Values: Empty</h4>
+<h4>GROUP 5: Expected Values</h4>
+<table>
+<tr><th>#</th><th>Scenario</th><th>Group</th><th>Row CSV</th></tr>
+<tr><td>1</td><td>No inp, 1 out group</td><td>Output group one</td><td>First value</td></tr>
+</table>
+<h4></h4>
+<h4>GROUP 6: Actual Values</h4>
+<table>
+<tr><th>#</th><th>Scenario</th><th>Group</th><th>Row CSV</th></tr>
+<tr><td>1</td><td>No inp, 1 out group</td><td>Output group one</td><td>First value</td></tr>
+<tr><td>2</td><td>No inp, 1 out group</td><td>Output group differs</td><td>First value</td></tr>
+</table>
+<h4></h4>
+<h3>OUTPUTS</h3>
+<h4>GROUP 1: Summaries: Empty as expected: SUCCESS</h4>
+<h4>GROUP 2: Input Fields: Empty as expected: SUCCESS</h4>
+<h4>GROUP 3: Output Fields: Empty as expected: SUCCESS</h4>
+<h4>GROUP 4: Input Values: Empty as expected: SUCCESS</h4>
+<h4>GROUP 5: Output Values</h4>
+<table>
+<tr><th>#</th><th>Scenario</th><th>Group</th><th>Row CSV</th></tr>
+<tr><td>1</td><td>No inp, 1 out group</td><td>Exception Message</td><td>Error, s: Out: No inp, 1 out group: expected #groups = 1, actual #groups = 2</td></tr>
+<tr><td>2</td><td>No inp, 1 out group</td><td>Exception Stack</td><td>UNTESTED: Error: Error, s: Out: No inp, 1 out group: expected #groups = 1, actual #groups = 2
+    at chkGrpLen (C:\Users\Brend_000\Documents\GitHub\trapit_nodejs_tester\lib\trapit.js:209:11)
+    at chkInputs (C:\Users\Brend_000\Documents\GitHub\trapit_nodejs_tester\lib\trapit.js:230:5)
+    at Object.getUTResults (C:\Users\Brend_000\Documents\GitHub\trapit_nodejs_tester\lib\trapit.js:299:5)
+    at purelyWrapUnit (C:\Users\Brend_000\Documents\GitHub\trapit_nodejs_tester\test\test-trapit.js:193:23)
+    at Object.<anonymous> (C:\Users\Brend_000\Documents\GitHub\trapit_nodejs_tester\test\test-trapit.js:208:18)
+    at Module._compile (internal/modules/cjs/loader.js:689:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:700:10)
+    at Module.load (internal/modules/cjs/loader.js:599:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:538:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:530:3)</td></tr>
+</table>
+<h4>0 failed of 2: SUCCESS</h4>
+<h2>0 failed of 5: SUCCESS</h2>
+</body></html>

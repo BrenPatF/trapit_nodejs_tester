@@ -1,1 +1,0 @@
-node ..\Code\MainColGroup.js  > ..\Out\MainColGroup.out 2> ..\Out\MainColGroup.err

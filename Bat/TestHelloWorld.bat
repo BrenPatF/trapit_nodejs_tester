@@ -1,1 +1,0 @@
-node ..\test\TestHelloWorld.js > ..\Out\TestHelloWorld.out 2> ..\Out\TestHelloWorld.err

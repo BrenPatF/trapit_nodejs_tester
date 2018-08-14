@@ -1,80 +1,77 @@
 "use strict";
 /***************************************************************************************************
-Name: Pages.js                         Author: Brendan Furey                       Date: 10-Jun-2018
+Name: Pages.js             Author: Brendan Furey             Date: 10-Jun-2018
 
 Component module in: The Math Function Unit Testing design pattern, implemented in nodejs
 
 GitHub: https://github.com/BrenPatF/trapit_nodejs_tester
 
 See: 'Database API Viewed As A Mathematical Function: Insights into Testing'
-     https://tinyurl.com/yaayvnhn
-     Brendan Furey, March 2018
+   https://tinyurl.com/yaayvnhn
+   Brendan Furey, March 2018
 
 Helper modules: There are two helper classes and three helper modules of pure functions
 ====================================================================================================
-|  Module    |  Notes                                                                              | 
+|  Module  |  Notes                                        | 
 |===================================================================================================
-|  Utils     |  General utility functions, called mainly by the Text module below                  |
+|  Utils   |  General utility functions, called mainly by the Text module below          |
 ----------------------------------------------------------------------------------------------------
-|  TimerSet  |  Code timing class, used here only by the main programs                             |
+|  TimerSet  |  Code timing class, used here only by the main programs               |
 ----------------------------------------------------------------------------------------------------
-| *Pages*    |  Class used to buffer pages of text ahead of writing to file, used by Text and HTML |
+| *Pages*  |  Class used to buffer pages of text ahead of writing to file, used by Text and HTML |
 ----------------------------------------------------------------------------------------------------
-|  Text      |  Module of pure functions that format text report output and buffer using Pages     |
+|  Text    |  Module of pure functions that format text report output and buffer using Pages   |
 ----------------------------------------------------------------------------------------------------
-|  HTML      |  Module of pure functions that format HTML report output and buffer using Pages     |
+|  HTML    |  Module of pure functions that format HTML report output and buffer using Pages   |
 ====================================================================================================
 
 Class used to buffer pages of text ahead of writing to file, used by Text and HTML
 
 ***************************************************************************************************/
 const fs = require('fs');
-const Utils = require('../lib/Utils');
+const utils = require('./utils');
 
-//function repSpaces(page) {
-//    return page.replace(/ /g, '-');
-//}
 class Pages {
 
-    /***************************************************************************************************
+  /***************************************************************************************************
 
-    : Constructor 
+  : Constructor 
 
-    ***************************************************************************************************/
-    constructor(indexPage, root) {
-        this.root = root;
-        this.indexPage = Utils.repSpaces(indexPage);
-        this.pageLines = {};
+  ***************************************************************************************************/
+  constructor(indexPage, root) {
+    this.root = root;
+    this.indexPage = utils.repSpaces(indexPage);
+    this.pageLines = {};
+  }
+  /***************************************************************************************************
+
+  addLine: Add a line to a page
+
+  ***************************************************************************************************/
+  addLine(page, line, indentLev) { //
+  
+    const newPage = utils.repSpaces(page);
+    if (!this.pageLines.hasOwnProperty(newPage)) {
+      this.pageLines[newPage] = [];
     }
-    /***************************************************************************************************
+    this.pageLines[newPage].push('   '.repeat(indentLev) + line);
+  }
+  /***************************************************************************************************
 
-    addLine: Add a line to a page
+  printPages: Print all the pages to files
 
-    ***************************************************************************************************/
-    addLine(page, line, indentLev) { //
-    
-        const newPage = Utils.repSpaces(page);
-        if (!this.pageLines.hasOwnProperty(newPage)) {
-            this.pageLines[newPage] = [];
-        }
-        this.pageLines[newPage].push('   '.repeat(indentLev) + line);
+  ***************************************************************************************************/
+  printPages() {
+    fs.existsSync(this.root) || fs.mkdirSync(this.root);
+    for (const page in this.pageLines) {
+      fs.writeFileSync (this.root + '/' + page, this.pageLines[page].join('\n'));
     }
-    /***************************************************************************************************
+  }
+  printPagesRoot() {
+    fs.existsSync(this.root) || fs.mkdirSync(this.root);
+    const allPages = Object.values(this.pageLines).reduce( (p, c) => {return p.concat(c)})
+    fs.writeFileSync (this.root + '/' + this.indexPage, allPages.join('\n'));
+  }
 
-    printPages: Print all the pages to files
-
-    ***************************************************************************************************/
-    printPages() {
-        fs.existsSync(this.root) || fs.mkdirSync(this.root);
-        for (const page in this.pageLines) {
-            fs.writeFileSync (this.root + '/' + page, this.pageLines[page].join('\n'));
-        }
-    }
-    printPagesRoot() {
-        fs.existsSync(this.root) || fs.mkdirSync(this.root);
-        const allPages = Object.values(this.pageLines).reduce( (p, c) => {return p.concat(c)})
-        fs.writeFileSync (this.root + '/' + this.indexPage, allPages.join('\n'));
-   }
-
-   }
+}
 module.exports = Pages;

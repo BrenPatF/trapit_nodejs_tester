@@ -1,1 +1,0 @@
-node ..\test\TestExternals.js > ..\Out\TestExternals.out 2> ..\Out\TestExternals.err

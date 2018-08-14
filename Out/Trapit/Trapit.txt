@@ -1,13 +1,17 @@
 Unit Test Report: Trapit
 ========================
 
-   SCENARIO 1: Outer scenario, passing 2 each of in, out groups and inner scenarios : 0 failed of 5: SUCCESS
+   SCENARIO 1: No inp, 1 out group - simple edge-case - Passing : 0 failed of 5: SUCCESS
+   SCENARIO 2: 2 inp/out groups - 1-field/2-field groups; empty/non-empty groups; non-exact matches - Passing : 0 failed of 5: SUCCESS
+   SCENARIO 3: 2 inp/out groups - 1-field/2-field groups; empty/non-empty groups; non-exact matches - Failing : 0 failed of 5: SUCCESS
+   SCENARIO 4: No inp, 1 out group - fields mismatch - Exception : 0 failed of 5: SUCCESS
+   SCENARIO 5: No inp, 1 out group - groups mismatch - Exception : 0 failed of 5: SUCCESS
 
-Test scenarios: 0 failed of 1: SUCCESS
+Test scenarios: 0 failed of 5: SUCCESS
 ======================================
 
-SCENARIO 1: Outer scenario, passing 2 each of in, out groups and inner scenarios {
-==================================================================================
+SCENARIO 1: No inp, 1 out group - simple edge-case - Passing {
+==============================================================
 
    INPUTS
    ======
@@ -15,9 +19,106 @@ SCENARIO 1: Outer scenario, passing 2 each of in, out groups and inner scenarios
       GROUP 1: Report {
       =================
 
-            #  Title     
-            -  ----------
-            1  Report One
+            #  Title                
+            -  ---------------------
+            1  Hello World Edge Case
+
+      }
+      =
+
+      GROUP 2: Input Fields: Empty
+      ============================
+
+      GROUP 3: Output Fields {
+      ========================
+
+            #  Group                 Field 
+            -  --------------------  ------
+            1  1-field output group  Single
+
+      }
+      =
+
+      GROUP 4: Input Values: Empty
+      ============================
+
+      GROUP 5: Expected Values {
+      ==========================
+
+            #  Scenario             Group                 Row CSV     
+            -  -------------------  --------------------  ------------
+            1  No inp, 1 out group  1-field output group  Hello World!
+
+      }
+      =
+
+      GROUP 6: Actual Values {
+      ========================
+
+            #  Scenario             Group                 Row CSV     
+            -  -------------------  --------------------  ------------
+            1  No inp, 1 out group  1-field output group  Hello World!
+
+      }
+      =
+
+   OUTPUTS
+   =======
+
+      GROUP 1: Summaries {
+      ====================
+
+            #  Type          Scenario             Group                 Header 1                                 Header 2        Footer                                  # Records  # Fails  Status 
+            -  ------------  -------------------  --------------------  ---------------------------------------  --------------  --------------------------------------  ---------  -------  -------
+            1  Report                                                   Unit Test Report: Hello World Edge Case                  Test scenarios: 0 failed of 1: SUCCESS  1          0        SUCCESS
+            2  Scenario      No inp, 1 out group                        SCENARIO 1: No inp, 1 out group          INPUTS-OUTPUTS  0 failed of 1: SUCCESS                  1          0        SUCCESS
+            3  Output group  No inp, 1 out group  1-field output group  GROUP 1: 1-field output group                            0 failed of 1: SUCCESS                  1          0        SUCCESS
+
+      } 0 failed of 3: SUCCESS
+      ========================
+
+      GROUP 2: Input Fields: Empty as expected: SUCCESS
+      =================================================
+
+      GROUP 3: Output Fields {
+      ========================
+
+            #  Scenario             Group                 Name    Length
+            -  -------------------  --------------------  ------  ------
+            1  No inp, 1 out group  1-field output group  #       1     
+            2  No inp, 1 out group  1-field output group  Single  12    
+
+      } 0 failed of 2: SUCCESS
+      ========================
+
+      GROUP 4: Input Values: Empty as expected: SUCCESS
+      =================================================
+
+      GROUP 5: Output Values {
+      ========================
+
+            #  Scenario             Group                 Row CSV       
+            -  -------------------  --------------------  --------------
+            1  No inp, 1 out group  1-field output group  1~Hello World!
+
+      } 0 failed of 1: SUCCESS
+      ========================
+
+} 0 failed of 5: SUCCESS
+========================
+
+SCENARIO 2: 2 inp/out groups - 1-field/2-field groups; empty/non-empty groups; non-exact matches - Passing {
+============================================================================================================
+
+   INPUTS
+   ======
+
+      GROUP 1: Report {
+      =================
+
+            #  Title       
+            -  ------------
+            1  Passing case
 
       }
       =
@@ -49,12 +150,13 @@ SCENARIO 1: Outer scenario, passing 2 each of in, out groups and inner scenarios
       GROUP 4: Input Values {
       =======================
 
-            #  Scenario                                                                   Group                Row CSV         
-            -  -------------------------------------------------------------------------  -------------------  ----------------
-            1  Scenario with 2 non-empty output groups                                    2-field input group  Value 1~Value 2 
-            2  Scenario with 2 non-empty output groups                                    1-field input group  Record 1 value  
-            3  Scenario with 2 non-empty output groups                                    1-field input group  Record 2 value  
-            4  Scenario with 1 empty, 1 non-empty output groups, and 1 empty input group  1-field input group  Sole input field
+            #  Scenario                                                               Group                Row CSV         
+            -  ---------------------------------------------------------------------  -------------------  ----------------
+            1  2 non-empty inp/out groups; 1-field/2-field inp/out groups             2-field input group  Value 1~Value 2 
+            2  2 non-empty inp/out groups; 1-field/2-field inp/out groups             1-field input group  Record 1 value  
+            3  2 non-empty inp/out groups; 1-field/2-field inp/out groups             1-field input group  Record 2 value  
+            4  1 empty/1 non-empty inp/out groups; exact matches                      1-field input group  Sole input field
+            5  1 empty/1 non-empty inp/out groups; untested and range/regex matching  1-field input group  Sole input field
 
       }
       =
@@ -62,13 +164,15 @@ SCENARIO 1: Outer scenario, passing 2 each of in, out groups and inner scenarios
       GROUP 5: Expected Values {
       ==========================
 
-            #  Scenario                                                                   Group                 Row CSV                
-            -  -------------------------------------------------------------------------  --------------------  -----------------------
-            1  Scenario with 2 non-empty output groups                                    1-field output group  Record 1 out           
-            2  Scenario with 2 non-empty output groups                                    1-field output group  Record 2 out           
-            3  Scenario with 2 non-empty output groups                                    2-field output group  Out value 1~Out value 2
-            4  Scenario with 1 empty, 1 non-empty output groups, and 1 empty input group  2-field output group  Out 1-1~Out 1-2        
-            5  Scenario with 1 empty, 1 non-empty output groups, and 1 empty input group  2-field output group  Out 2-1~Out 2-2        
+            #  Scenario                                                               Group                 Row CSV                 
+            -  ---------------------------------------------------------------------  --------------------  ------------------------
+            1  2 non-empty inp/out groups; 1-field/2-field inp/out groups             1-field output group  Record 1 out            
+            2  2 non-empty inp/out groups; 1-field/2-field inp/out groups             1-field output group  Record 2 out            
+            3  2 non-empty inp/out groups; 1-field/2-field inp/out groups             2-field output group  Out value 1~Out value 2 
+            4  1 empty/1 non-empty inp/out groups; exact matches                      2-field output group  Out 1-1~Out 1-2         
+            5  1 empty/1 non-empty inp/out groups; exact matches                      2-field output group  Out 2-1~Out 2-2         
+            6  1 empty/1 non-empty inp/out groups; untested and range/regex matching  2-field output group  IN [2,5]~UNTESTED       
+            7  1 empty/1 non-empty inp/out groups; untested and range/regex matching  2-field output group  LIKE /ab\[c\].*/~Out 2-2
 
       }
       =
@@ -76,14 +180,15 @@ SCENARIO 1: Outer scenario, passing 2 each of in, out groups and inner scenarios
       GROUP 6: Actual Values {
       ========================
 
-            #  Scenario                                                                   Group                 Row CSV                
-            -  -------------------------------------------------------------------------  --------------------  -----------------------
-            1  Scenario with 2 non-empty output groups                                    1-field output group  Record 1 out           
-            2  Scenario with 2 non-empty output groups                                    1-field output group  Record 2 out           
-            3  Scenario with 2 non-empty output groups                                    2-field output group  Out value 1~Out value 2
-            4  Scenario with 2 non-empty output groups                                    2-field output group  Extra 1~Extra 2        
-            5  Scenario with 1 empty, 1 non-empty output groups, and 1 empty input group  2-field output group  Out 1-1~Out 1-2        
-            6  Scenario with 1 empty, 1 non-empty output groups, and 1 empty input group  2-field output group  Out 2-1~Out 2-2        
+            #  Scenario                                                               Group                 Row CSV                
+            -  ---------------------------------------------------------------------  --------------------  -----------------------
+            1  2 non-empty inp/out groups; 1-field/2-field inp/out groups             1-field output group  Record 1 out           
+            2  2 non-empty inp/out groups; 1-field/2-field inp/out groups             1-field output group  Record 2 out           
+            3  2 non-empty inp/out groups; 1-field/2-field inp/out groups             2-field output group  Out value 1~Out value 2
+            4  1 empty/1 non-empty inp/out groups; exact matches                      2-field output group  Out 1-1~Out 1-2        
+            5  1 empty/1 non-empty inp/out groups; exact matches                      2-field output group  Out 2-1~Out 2-2        
+            6  1 empty/1 non-empty inp/out groups; untested and range/regex matching  2-field output group  3.0~Anything           
+            7  1 empty/1 non-empty inp/out groups; untested and range/regex matching  2-field output group  ab[c]def~Out 2-2       
 
       }
       =
@@ -94,89 +199,490 @@ SCENARIO 1: Outer scenario, passing 2 each of in, out groups and inner scenarios
       GROUP 1: Summaries {
       ====================
 
-            #   Type          Scenario                                                                   Group                 Header 1                                                                               Header 2        Footer                                  # Records  # Fails  Status 
-            --  ------------  -------------------------------------------------------------------------  --------------------  -------------------------------------------------------------------------------------  --------------  --------------------------------------  ---------  -------  -------
-            1   Report                                                                                                         Unit Test Report: Report One                                                                           Test scenarios: 1 failed of 2: FAILURE  2          1        FAILURE
-            2   Scenario      Scenario with 2 non-empty output groups                                                          SCENARIO 1: Scenario with 2 non-empty output groups                                    INPUTS-OUTPUTS  1 failed of 2: FAILURE                  2          1        FAILURE
-            3   Input group   Scenario with 2 non-empty output groups                                    2-field input group   GROUP 1: 2-field input group                                                                                                                                              
-            4   Input group   Scenario with 2 non-empty output groups                                    1-field input group   GROUP 2: 1-field input group                                                                                                                                              
-            5   Output group  Scenario with 2 non-empty output groups                                    1-field output group  GROUP 1: 1-field output group                                                                          0 failed of 2: SUCCESS                  2          0        SUCCESS
-            6   Output group  Scenario with 2 non-empty output groups                                    2-field output group  GROUP 2: 2-field output group                                                                          1 failed of 2: FAILURE                  2          1        FAILURE
-            7   Scenario      Scenario with 1 empty, 1 non-empty output groups, and 1 empty input group                        SCENARIO 2: Scenario with 1 empty, 1 non-empty output groups, and 1 empty input group  INPUTS-OUTPUTS  0 failed of 2: SUCCESS                  2          0        SUCCESS
-            8   Input group   Scenario with 1 empty, 1 non-empty output groups, and 1 empty input group  2-field input group   GROUP 1: 2-field input group: Empty                                                                                                                                       
-            9   Input group   Scenario with 1 empty, 1 non-empty output groups, and 1 empty input group  1-field input group   GROUP 2: 1-field input group                                                                                                                                              
-            10  Output group  Scenario with 1 empty, 1 non-empty output groups, and 1 empty input group  1-field output group  GROUP 1: 1-field output group: Empty as expected: SUCCESS                                              0 failed of 0: SUCCESS                  0          0        SUCCESS
-            11  Output group  Scenario with 1 empty, 1 non-empty output groups, and 1 empty input group  2-field output group  GROUP 2: 2-field output group                                                                          0 failed of 2: SUCCESS                  2          0        SUCCESS
+            #   Type          Scenario                                                               Group                 Header 1                                                                           Header 2        Footer                                  # Records  # Fails  Status 
+            --  ------------  ---------------------------------------------------------------------  --------------------  ---------------------------------------------------------------------------------  --------------  --------------------------------------  ---------  -------  -------
+            1   Report                                                                                                     Unit Test Report: Passing case                                                                     Test scenarios: 0 failed of 3: SUCCESS  3          0        SUCCESS
+            2   Scenario      2 non-empty inp/out groups; 1-field/2-field inp/out groups                                   SCENARIO 1: 2 non-empty inp/out groups; 1-field/2-field inp/out groups             INPUTS-OUTPUTS  0 failed of 2: SUCCESS                  2          0        SUCCESS
+            3   Input group   2 non-empty inp/out groups; 1-field/2-field inp/out groups             2-field input group   GROUP 1: 2-field input group                                                                                                                                          
+            4   Input group   2 non-empty inp/out groups; 1-field/2-field inp/out groups             1-field input group   GROUP 2: 1-field input group                                                                                                                                          
+            5   Output group  2 non-empty inp/out groups; 1-field/2-field inp/out groups             1-field output group  GROUP 1: 1-field output group                                                                      0 failed of 2: SUCCESS                  2          0        SUCCESS
+            6   Output group  2 non-empty inp/out groups; 1-field/2-field inp/out groups             2-field output group  GROUP 2: 2-field output group                                                                      0 failed of 1: SUCCESS                  1          0        SUCCESS
+            7   Scenario      1 empty/1 non-empty inp/out groups; exact matches                                            SCENARIO 2: 1 empty/1 non-empty inp/out groups; exact matches                      INPUTS-OUTPUTS  0 failed of 2: SUCCESS                  2          0        SUCCESS
+            8   Input group   1 empty/1 non-empty inp/out groups; exact matches                      2-field input group   GROUP 1: 2-field input group: Empty                                                                                                                                   
+            9   Input group   1 empty/1 non-empty inp/out groups; exact matches                      1-field input group   GROUP 2: 1-field input group                                                                                                                                          
+            10  Output group  1 empty/1 non-empty inp/out groups; exact matches                      1-field output group  GROUP 1: 1-field output group: Empty as expected: SUCCESS                                          0 failed of 0: SUCCESS                  0          0        SUCCESS
+            11  Output group  1 empty/1 non-empty inp/out groups; exact matches                      2-field output group  GROUP 2: 2-field output group                                                                      0 failed of 2: SUCCESS                  2          0        SUCCESS
+            12  Scenario      1 empty/1 non-empty inp/out groups; untested and range/regex matching                        SCENARIO 3: 1 empty/1 non-empty inp/out groups; untested and range/regex matching  INPUTS-OUTPUTS  0 failed of 2: SUCCESS                  2          0        SUCCESS
+            13  Input group   1 empty/1 non-empty inp/out groups; untested and range/regex matching  2-field input group   GROUP 1: 2-field input group: Empty                                                                                                                                   
+            14  Input group   1 empty/1 non-empty inp/out groups; untested and range/regex matching  1-field input group   GROUP 2: 1-field input group                                                                                                                                          
+            15  Output group  1 empty/1 non-empty inp/out groups; untested and range/regex matching  1-field output group  GROUP 1: 1-field output group: Empty as expected: SUCCESS                                          0 failed of 0: SUCCESS                  0          0        SUCCESS
+            16  Output group  1 empty/1 non-empty inp/out groups; untested and range/regex matching  2-field output group  GROUP 2: 2-field output group                                                                      0 failed of 2: SUCCESS                  2          0        SUCCESS
 
-      } 0 failed of 11: SUCCESS
+      } 0 failed of 16: SUCCESS
       =========================
 
       GROUP 2: Input Fields {
       =======================
 
-            #   Scenario                                                                   Group                Name    Length
-            --  -------------------------------------------------------------------------  -------------------  ------  ------
-            1   Scenario with 2 non-empty output groups                                    2-field input group  #       1     
-            2   Scenario with 2 non-empty output groups                                    2-field input group  First   7     
-            3   Scenario with 2 non-empty output groups                                    2-field input group  Second  7     
-            4   Scenario with 2 non-empty output groups                                    1-field input group  #       1     
-            5   Scenario with 2 non-empty output groups                                    1-field input group  Only    14    
-            6   Scenario with 1 empty, 1 non-empty output groups, and 1 empty input group  2-field input group  #       1     
-            7   Scenario with 1 empty, 1 non-empty output groups, and 1 empty input group  2-field input group  First   5     
-            8   Scenario with 1 empty, 1 non-empty output groups, and 1 empty input group  2-field input group  Second  6     
-            9   Scenario with 1 empty, 1 non-empty output groups, and 1 empty input group  1-field input group  #       1     
-            10  Scenario with 1 empty, 1 non-empty output groups, and 1 empty input group  1-field input group  Only    16    
+            #   Scenario                                                               Group                Name    Length
+            --  ---------------------------------------------------------------------  -------------------  ------  ------
+            1   2 non-empty inp/out groups; 1-field/2-field inp/out groups             2-field input group  #       1     
+            2   2 non-empty inp/out groups; 1-field/2-field inp/out groups             2-field input group  First   7     
+            3   2 non-empty inp/out groups; 1-field/2-field inp/out groups             2-field input group  Second  7     
+            4   2 non-empty inp/out groups; 1-field/2-field inp/out groups             1-field input group  #       1     
+            5   2 non-empty inp/out groups; 1-field/2-field inp/out groups             1-field input group  Only    14    
+            6   1 empty/1 non-empty inp/out groups; exact matches                      2-field input group  #       1     
+            7   1 empty/1 non-empty inp/out groups; exact matches                      2-field input group  First   5     
+            8   1 empty/1 non-empty inp/out groups; exact matches                      2-field input group  Second  6     
+            9   1 empty/1 non-empty inp/out groups; exact matches                      1-field input group  #       1     
+            10  1 empty/1 non-empty inp/out groups; exact matches                      1-field input group  Only    16    
+            11  1 empty/1 non-empty inp/out groups; untested and range/regex matching  2-field input group  #       1     
+            12  1 empty/1 non-empty inp/out groups; untested and range/regex matching  2-field input group  First   5     
+            13  1 empty/1 non-empty inp/out groups; untested and range/regex matching  2-field input group  Second  6     
+            14  1 empty/1 non-empty inp/out groups; untested and range/regex matching  1-field input group  #       1     
+            15  1 empty/1 non-empty inp/out groups; untested and range/regex matching  1-field input group  Only    16    
 
-      } 0 failed of 10: SUCCESS
+      } 0 failed of 15: SUCCESS
       =========================
 
       GROUP 3: Output Fields {
       ========================
 
-            #   Scenario                                                                   Group                 Name        Length
-            --  -------------------------------------------------------------------------  --------------------  ----------  ------
-            1   Scenario with 2 non-empty output groups                                    1-field output group  #           1     
-            2   Scenario with 2 non-empty output groups                                    1-field output group  Single      12    
-            3   Scenario with 2 non-empty output groups                                    2-field output group  #           2     
-            4   Scenario with 2 non-empty output groups                                    2-field output group  Output One  11    
-            5   Scenario with 2 non-empty output groups                                    2-field output group  Output Two  11    
-            6   Scenario with 1 empty, 1 non-empty output groups, and 1 empty input group  1-field output group  #                 
-            7   Scenario with 1 empty, 1 non-empty output groups, and 1 empty input group  1-field output group  Single            
-            8   Scenario with 1 empty, 1 non-empty output groups, and 1 empty input group  2-field output group  #           1     
-            9   Scenario with 1 empty, 1 non-empty output groups, and 1 empty input group  2-field output group  Output One  10    
-            10  Scenario with 1 empty, 1 non-empty output groups, and 1 empty input group  2-field output group  Output Two  10    
+            #   Scenario                                                               Group                 Name        Length
+            --  ---------------------------------------------------------------------  --------------------  ----------  ------
+            1   2 non-empty inp/out groups; 1-field/2-field inp/out groups             1-field output group  #           1     
+            2   2 non-empty inp/out groups; 1-field/2-field inp/out groups             1-field output group  Single      12    
+            3   2 non-empty inp/out groups; 1-field/2-field inp/out groups             2-field output group  #           1     
+            4   2 non-empty inp/out groups; 1-field/2-field inp/out groups             2-field output group  Output One  11    
+            5   2 non-empty inp/out groups; 1-field/2-field inp/out groups             2-field output group  Output Two  11    
+            6   1 empty/1 non-empty inp/out groups; exact matches                      1-field output group  #                 
+            7   1 empty/1 non-empty inp/out groups; exact matches                      1-field output group  Single            
+            8   1 empty/1 non-empty inp/out groups; exact matches                      2-field output group  #           1     
+            9   1 empty/1 non-empty inp/out groups; exact matches                      2-field output group  Output One  10    
+            10  1 empty/1 non-empty inp/out groups; exact matches                      2-field output group  Output Two  10    
+            11  1 empty/1 non-empty inp/out groups; untested and range/regex matching  1-field output group  #                 
+            12  1 empty/1 non-empty inp/out groups; untested and range/regex matching  1-field output group  Single            
+            13  1 empty/1 non-empty inp/out groups; untested and range/regex matching  2-field output group  #           1     
+            14  1 empty/1 non-empty inp/out groups; untested and range/regex matching  2-field output group  Output One  26    
+            15  1 empty/1 non-empty inp/out groups; untested and range/regex matching  2-field output group  Output Two  18    
 
-      } 0 failed of 10: SUCCESS
+      } 0 failed of 15: SUCCESS
       =========================
 
       GROUP 4: Input Values {
       =======================
 
-            #  Scenario                                                                   Group                Row CSV           
-            -  -------------------------------------------------------------------------  -------------------  ------------------
-            1  Scenario with 2 non-empty output groups                                    2-field input group  1~Value 1~Value 2 
-            2  Scenario with 2 non-empty output groups                                    1-field input group  1~Record 1 value  
-            3  Scenario with 2 non-empty output groups                                    1-field input group  2~Record 2 value  
-            4  Scenario with 1 empty, 1 non-empty output groups, and 1 empty input group  1-field input group  1~Sole input field
+            #  Scenario                                                               Group                Row CSV           
+            -  ---------------------------------------------------------------------  -------------------  ------------------
+            1  2 non-empty inp/out groups; 1-field/2-field inp/out groups             2-field input group  1~Value 1~Value 2 
+            2  2 non-empty inp/out groups; 1-field/2-field inp/out groups             1-field input group  1~Record 1 value  
+            3  2 non-empty inp/out groups; 1-field/2-field inp/out groups             1-field input group  2~Record 2 value  
+            4  1 empty/1 non-empty inp/out groups; exact matches                      1-field input group  1~Sole input field
+            5  1 empty/1 non-empty inp/out groups; untested and range/regex matching  1-field input group  1~Sole input field
 
-      } 0 failed of 4: SUCCESS
+      } 0 failed of 5: SUCCESS
       ========================
 
       GROUP 5: Output Values {
       ========================
 
-            #  Scenario                                                                   Group                 Row CSV                  
-            -  -------------------------------------------------------------------------  --------------------  -------------------------
-            1  Scenario with 2 non-empty output groups                                    1-field output group  1~Record 1 out           
-            2  Scenario with 2 non-empty output groups                                    1-field output group  2~Record 2 out           
-            3  Scenario with 2 non-empty output groups                                    2-field output group  1~Out value 1~Out value 2
-            4  Scenario with 2 non-empty output groups                                    2-field output group  2~~                      
-            5  Scenario with 2 non-empty output groups                                    2-field output group  2*~Extra 1~Extra 2       
-            6  Scenario with 1 empty, 1 non-empty output groups, and 1 empty input group  1-field output group                           
-            7  Scenario with 1 empty, 1 non-empty output groups, and 1 empty input group  2-field output group  1~Out 1-1~Out 1-2        
-            8  Scenario with 1 empty, 1 non-empty output groups, and 1 empty input group  2-field output group  2~Out 2-1~Out 2-2        
+            #  Scenario                                                               Group                 Row CSV                             
+            -  ---------------------------------------------------------------------  --------------------  ------------------------------------
+            1  2 non-empty inp/out groups; 1-field/2-field inp/out groups             1-field output group  1~Record 1 out                      
+            2  2 non-empty inp/out groups; 1-field/2-field inp/out groups             1-field output group  2~Record 2 out                      
+            3  2 non-empty inp/out groups; 1-field/2-field inp/out groups             2-field output group  1~Out value 1~Out value 2           
+            4  1 empty/1 non-empty inp/out groups; exact matches                      1-field output group                                      
+            5  1 empty/1 non-empty inp/out groups; exact matches                      2-field output group  1~Out 1-1~Out 1-2                   
+            6  1 empty/1 non-empty inp/out groups; exact matches                      2-field output group  2~Out 2-1~Out 2-2                   
+            7  1 empty/1 non-empty inp/out groups; untested and range/regex matching  1-field output group                                      
+            8  1 empty/1 non-empty inp/out groups; untested and range/regex matching  2-field output group  1~IN [2,5]: 3.0~UNTESTED: Anything  
+            9  1 empty/1 non-empty inp/out groups; untested and range/regex matching  2-field output group  2~LIKE /ab\[c\].*/: ab[c]def~Out 2-2
 
-      } 0 failed of 8: SUCCESS
+      } 0 failed of 9: SUCCESS
+      ========================
+
+} 0 failed of 5: SUCCESS
+========================
+
+SCENARIO 3: 2 inp/out groups - 1-field/2-field groups; empty/non-empty groups; non-exact matches - Failing {
+============================================================================================================
+
+   INPUTS
+   ======
+
+      GROUP 1: Report {
+      =================
+
+            #  Title       
+            -  ------------
+            1  Failing case
+
+      }
+      =
+
+      GROUP 2: Input Fields {
+      =======================
+
+            #  Group                Field 
+            -  -------------------  ------
+            1  2-field input group  First 
+            2  2-field input group  Second
+            3  1-field input group  Only  
+
+      }
+      =
+
+      GROUP 3: Output Fields {
+      ========================
+
+            #  Group                 Field     
+            -  --------------------  ----------
+            1  1-field output group  Single    
+            2  2-field output group  Output One
+            3  2-field output group  Output Two
+
+      }
+      =
+
+      GROUP 4: Input Values {
+      =======================
+
+            #  Scenario                                                               Group                Row CSV         
+            -  ---------------------------------------------------------------------  -------------------  ----------------
+            1  2 non-empty inp/out groups; 1-field/2-field inp/out groups             2-field input group  Value 1~Value 2 
+            2  2 non-empty inp/out groups; 1-field/2-field inp/out groups             1-field input group  Record 1 value  
+            3  2 non-empty inp/out groups; 1-field/2-field inp/out groups             1-field input group  Record 2 value  
+            4  1 empty/1 non-empty inp/out groups; exact matches                      1-field input group  Sole input field
+            5  1 empty/1 non-empty inp/out groups; untested and range/regex matching  1-field input group  Sole input field
+
+      }
+      =
+
+      GROUP 5: Expected Values {
+      ==========================
+
+            #  Scenario                                                               Group                 Row CSV                 
+            -  ---------------------------------------------------------------------  --------------------  ------------------------
+            1  2 non-empty inp/out groups; 1-field/2-field inp/out groups             1-field output group  Record 1 out            
+            2  2 non-empty inp/out groups; 1-field/2-field inp/out groups             1-field output group  Record 2 out            
+            3  2 non-empty inp/out groups; 1-field/2-field inp/out groups             2-field output group  Out value 1~Out value 2 
+            4  1 empty/1 non-empty inp/out groups; exact matches                      2-field output group  Out 1-1~Out 1-2         
+            5  1 empty/1 non-empty inp/out groups; exact matches                      2-field output group  Out 2-1~Out 2-2         
+            6  1 empty/1 non-empty inp/out groups; untested and range/regex matching  2-field output group  IN [2,5]~UNTESTED       
+            7  1 empty/1 non-empty inp/out groups; untested and range/regex matching  2-field output group  LIKE /ab\[c\].*/~Out 2-2
+
+      }
+      =
+
+      GROUP 6: Actual Values {
+      ========================
+
+            #  Scenario                                                               Group                 Row CSV                
+            -  ---------------------------------------------------------------------  --------------------  -----------------------
+            1  2 non-empty inp/out groups; 1-field/2-field inp/out groups             1-field output group  Record 1 out           
+            2  2 non-empty inp/out groups; 1-field/2-field inp/out groups             1-field output group  Record 2 out           
+            3  2 non-empty inp/out groups; 1-field/2-field inp/out groups             2-field output group  Out value 1~Out value 2
+            4  1 empty/1 non-empty inp/out groups; exact matches                      2-field output group  Out 1-1~Out 1-2        
+            5  1 empty/1 non-empty inp/out groups; exact matches                      2-field output group  Out 2-1 wrong~Out 2-2  
+            6  1 empty/1 non-empty inp/out groups; untested and range/regex matching  2-field output group  1.9~Anything           
+            7  1 empty/1 non-empty inp/out groups; untested and range/regex matching  2-field output group  aB[c]def~Out 2-2       
+
+      }
+      =
+
+   OUTPUTS
+   =======
+
+      GROUP 1: Summaries {
+      ====================
+
+            #   Type          Scenario                                                               Group                 Header 1                                                                           Header 2        Footer                                  # Records  # Fails  Status 
+            --  ------------  ---------------------------------------------------------------------  --------------------  ---------------------------------------------------------------------------------  --------------  --------------------------------------  ---------  -------  -------
+            1   Report                                                                                                     Unit Test Report: Failing case                                                                     Test scenarios: 2 failed of 3: FAILURE  3          2        FAILURE
+            2   Scenario      2 non-empty inp/out groups; 1-field/2-field inp/out groups                                   SCENARIO 1: 2 non-empty inp/out groups; 1-field/2-field inp/out groups             INPUTS-OUTPUTS  0 failed of 2: SUCCESS                  2          0        SUCCESS
+            3   Input group   2 non-empty inp/out groups; 1-field/2-field inp/out groups             2-field input group   GROUP 1: 2-field input group                                                                                                                                          
+            4   Input group   2 non-empty inp/out groups; 1-field/2-field inp/out groups             1-field input group   GROUP 2: 1-field input group                                                                                                                                          
+            5   Output group  2 non-empty inp/out groups; 1-field/2-field inp/out groups             1-field output group  GROUP 1: 1-field output group                                                                      0 failed of 2: SUCCESS                  2          0        SUCCESS
+            6   Output group  2 non-empty inp/out groups; 1-field/2-field inp/out groups             2-field output group  GROUP 2: 2-field output group                                                                      0 failed of 1: SUCCESS                  1          0        SUCCESS
+            7   Scenario      1 empty/1 non-empty inp/out groups; exact matches                                            SCENARIO 2: 1 empty/1 non-empty inp/out groups; exact matches                      INPUTS-OUTPUTS  1 failed of 2: FAILURE                  2          1        FAILURE
+            8   Input group   1 empty/1 non-empty inp/out groups; exact matches                      2-field input group   GROUP 1: 2-field input group: Empty                                                                                                                                   
+            9   Input group   1 empty/1 non-empty inp/out groups; exact matches                      1-field input group   GROUP 2: 1-field input group                                                                                                                                          
+            10  Output group  1 empty/1 non-empty inp/out groups; exact matches                      1-field output group  GROUP 1: 1-field output group: Empty as expected: SUCCESS                                          0 failed of 0: SUCCESS                  0          0        SUCCESS
+            11  Output group  1 empty/1 non-empty inp/out groups; exact matches                      2-field output group  GROUP 2: 2-field output group                                                                      1 failed of 2: FAILURE                  2          1        FAILURE
+            12  Scenario      1 empty/1 non-empty inp/out groups; untested and range/regex matching                        SCENARIO 3: 1 empty/1 non-empty inp/out groups; untested and range/regex matching  INPUTS-OUTPUTS  1 failed of 2: FAILURE                  2          1        FAILURE
+            13  Input group   1 empty/1 non-empty inp/out groups; untested and range/regex matching  2-field input group   GROUP 1: 2-field input group: Empty                                                                                                                                   
+            14  Input group   1 empty/1 non-empty inp/out groups; untested and range/regex matching  1-field input group   GROUP 2: 1-field input group                                                                                                                                          
+            15  Output group  1 empty/1 non-empty inp/out groups; untested and range/regex matching  1-field output group  GROUP 1: 1-field output group: Empty as expected: SUCCESS                                          0 failed of 0: SUCCESS                  0          0        SUCCESS
+            16  Output group  1 empty/1 non-empty inp/out groups; untested and range/regex matching  2-field output group  GROUP 2: 2-field output group                                                                      2 failed of 2: FAILURE                  2          2        FAILURE
+
+      } 0 failed of 16: SUCCESS
+      =========================
+
+      GROUP 2: Input Fields {
+      =======================
+
+            #   Scenario                                                               Group                Name    Length
+            --  ---------------------------------------------------------------------  -------------------  ------  ------
+            1   2 non-empty inp/out groups; 1-field/2-field inp/out groups             2-field input group  #       1     
+            2   2 non-empty inp/out groups; 1-field/2-field inp/out groups             2-field input group  First   7     
+            3   2 non-empty inp/out groups; 1-field/2-field inp/out groups             2-field input group  Second  7     
+            4   2 non-empty inp/out groups; 1-field/2-field inp/out groups             1-field input group  #       1     
+            5   2 non-empty inp/out groups; 1-field/2-field inp/out groups             1-field input group  Only    14    
+            6   1 empty/1 non-empty inp/out groups; exact matches                      2-field input group  #       1     
+            7   1 empty/1 non-empty inp/out groups; exact matches                      2-field input group  First   5     
+            8   1 empty/1 non-empty inp/out groups; exact matches                      2-field input group  Second  6     
+            9   1 empty/1 non-empty inp/out groups; exact matches                      1-field input group  #       1     
+            10  1 empty/1 non-empty inp/out groups; exact matches                      1-field input group  Only    16    
+            11  1 empty/1 non-empty inp/out groups; untested and range/regex matching  2-field input group  #       1     
+            12  1 empty/1 non-empty inp/out groups; untested and range/regex matching  2-field input group  First   5     
+            13  1 empty/1 non-empty inp/out groups; untested and range/regex matching  2-field input group  Second  6     
+            14  1 empty/1 non-empty inp/out groups; untested and range/regex matching  1-field input group  #       1     
+            15  1 empty/1 non-empty inp/out groups; untested and range/regex matching  1-field input group  Only    16    
+
+      } 0 failed of 15: SUCCESS
+      =========================
+
+      GROUP 3: Output Fields {
+      ========================
+
+            #   Scenario                                                               Group                 Name        Length
+            --  ---------------------------------------------------------------------  --------------------  ----------  ------
+            1   2 non-empty inp/out groups; 1-field/2-field inp/out groups             1-field output group  #           1     
+            2   2 non-empty inp/out groups; 1-field/2-field inp/out groups             1-field output group  Single      12    
+            3   2 non-empty inp/out groups; 1-field/2-field inp/out groups             2-field output group  #           1     
+            4   2 non-empty inp/out groups; 1-field/2-field inp/out groups             2-field output group  Output One  11    
+            5   2 non-empty inp/out groups; 1-field/2-field inp/out groups             2-field output group  Output Two  11    
+            6   1 empty/1 non-empty inp/out groups; exact matches                      1-field output group  #                 
+            7   1 empty/1 non-empty inp/out groups; exact matches                      1-field output group  Single            
+            8   1 empty/1 non-empty inp/out groups; exact matches                      2-field output group  #           2     
+            9   1 empty/1 non-empty inp/out groups; exact matches                      2-field output group  Output One  13    
+            10  1 empty/1 non-empty inp/out groups; exact matches                      2-field output group  Output Two  10    
+            11  1 empty/1 non-empty inp/out groups; untested and range/regex matching  1-field output group  #                 
+            12  1 empty/1 non-empty inp/out groups; untested and range/regex matching  1-field output group  Single            
+            13  1 empty/1 non-empty inp/out groups; untested and range/regex matching  2-field output group  #           2     
+            14  1 empty/1 non-empty inp/out groups; untested and range/regex matching  2-field output group  Output One  30    
+            15  1 empty/1 non-empty inp/out groups; untested and range/regex matching  2-field output group  Output Two  18    
+
+      } 0 failed of 15: SUCCESS
+      =========================
+
+      GROUP 4: Input Values {
+      =======================
+
+            #  Scenario                                                               Group                Row CSV           
+            -  ---------------------------------------------------------------------  -------------------  ------------------
+            1  2 non-empty inp/out groups; 1-field/2-field inp/out groups             2-field input group  1~Value 1~Value 2 
+            2  2 non-empty inp/out groups; 1-field/2-field inp/out groups             1-field input group  1~Record 1 value  
+            3  2 non-empty inp/out groups; 1-field/2-field inp/out groups             1-field input group  2~Record 2 value  
+            4  1 empty/1 non-empty inp/out groups; exact matches                      1-field input group  1~Sole input field
+            5  1 empty/1 non-empty inp/out groups; untested and range/regex matching  1-field input group  1~Sole input field
+
+      } 0 failed of 5: SUCCESS
+      ========================
+
+      GROUP 5: Output Values {
+      ========================
+
+            #   Scenario                                                               Group                 Row CSV                                  
+            --  ---------------------------------------------------------------------  --------------------  -----------------------------------------
+            1   2 non-empty inp/out groups; 1-field/2-field inp/out groups             1-field output group  1~Record 1 out                           
+            2   2 non-empty inp/out groups; 1-field/2-field inp/out groups             1-field output group  2~Record 2 out                           
+            3   2 non-empty inp/out groups; 1-field/2-field inp/out groups             2-field output group  1~Out value 1~Out value 2                
+            4   1 empty/1 non-empty inp/out groups; exact matches                      1-field output group                                           
+            5   1 empty/1 non-empty inp/out groups; exact matches                      2-field output group  1~Out 1-1~Out 1-2                        
+            6   1 empty/1 non-empty inp/out groups; exact matches                      2-field output group  2~Out 2-1~Out 2-2                        
+            7   1 empty/1 non-empty inp/out groups; exact matches                      2-field output group  2*~Out 2-1 wrong~Out 2-2                 
+            8   1 empty/1 non-empty inp/out groups; untested and range/regex matching  1-field output group                                           
+            9   1 empty/1 non-empty inp/out groups; untested and range/regex matching  2-field output group  1~IN [2,5]: 1.9~UNTESTED: Anything       
+            10  1 empty/1 non-empty inp/out groups; untested and range/regex matching  2-field output group  1*~NOT IN [2,5]: 1.9~UNTESTED: Anything  
+            11  1 empty/1 non-empty inp/out groups; untested and range/regex matching  2-field output group  2~LIKE /ab\[c\].*/: aB[c]def~Out 2-2     
+            12  1 empty/1 non-empty inp/out groups; untested and range/regex matching  2-field output group  2*~NOT LIKE /ab\[c\].*/: aB[c]def~Out 2-2
+
+      } 0 failed of 12: SUCCESS
+      =========================
+
+} 0 failed of 5: SUCCESS
+========================
+
+SCENARIO 4: No inp, 1 out group - fields mismatch - Exception {
+===============================================================
+
+   INPUTS
+   ======
+
+      GROUP 1: Report {
+      =================
+
+            #  Title                    
+            -  -------------------------
+            1  Fields Mismatch Exception
+
+      }
+      =
+
+      GROUP 2: Input Fields: Empty
+      ============================
+
+      GROUP 3: Output Fields {
+      ========================
+
+            #  Group                 Field  
+            -  --------------------  -------
+            1  2-field output group  Field 1
+            2  2-field output group  Field 2
+
+      }
+      =
+
+      GROUP 4: Input Values: Empty
+      ============================
+
+      GROUP 5: Expected Values {
+      ==========================
+
+            #  Scenario             Group                 Row CSV    
+            -  -------------------  --------------------  -----------
+            1  No inp, 1 out group  2-field output group  First value
+
+      }
+      =
+
+      GROUP 6: Actual Values {
+      ========================
+
+            #  Scenario             Group                 Row CSV    
+            -  -------------------  --------------------  -----------
+            1  No inp, 1 out group  2-field output group  First value
+
+      }
+      =
+
+   OUTPUTS
+   =======
+
+      GROUP 1: Summaries: Empty as expected: SUCCESS
+      ==============================================
+
+      GROUP 2: Input Fields: Empty as expected: SUCCESS
+      =================================================
+
+      GROUP 3: Output Fields: Empty as expected: SUCCESS
+      ==================================================
+
+      GROUP 4: Input Values: Empty as expected: SUCCESS
+      =================================================
+
+      GROUP 5: Output Values {
+      ========================
+
+            #  Scenario             Group              Row CSV                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+            -  -------------------  -----------------  -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+            1  No inp, 1 out group  Exception Message  Error, exp #fields 1, expected 2 [s: No inp, 1 out group, g: 2-field output group, r: First value]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+            2  No inp, 1 out group  Exception Stack    UNTESTED: Error: Error, exp #fields 1, expected 2 [s: No inp, 1 out group, g: 2-field output group, r: First value]
+    at chkRec (C:\Users\Brend_000\Documents\GitHub\trapit_nodejs_tester\lib\trapit.js:170:11)
+    at chkInputs (C:\Users\Brend_000\Documents\GitHub\trapit_nodejs_tester\lib\trapit.js:245:9)
+    at Object.getUTResults (C:\Users\Brend_000\Documents\GitHub\trapit_nodejs_tester\lib\trapit.js:299:5)
+    at purelyWrapUnit (C:\Users\Brend_000\Documents\GitHub\trapit_nodejs_tester\test\test-trapit.js:193:23)
+    at Object.<anonymous> (C:\Users\Brend_000\Documents\GitHub\trapit_nodejs_tester\test\test-trapit.js:208:18)
+    at Module._compile (internal/modules/cjs/loader.js:689:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:700:10)
+    at Module.load (internal/modules/cjs/loader.js:599:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:538:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:530:3)
+
+      } 0 failed of 2: SUCCESS
+      ========================
+
+} 0 failed of 5: SUCCESS
+========================
+
+SCENARIO 5: No inp, 1 out group - groups mismatch - Exception {
+===============================================================
+
+   INPUTS
+   ======
+
+      GROUP 1: Report {
+      =================
+
+            #  Title                    
+            -  -------------------------
+            1  Groups Mismatch Exception
+
+      }
+      =
+
+      GROUP 2: Input Fields: Empty
+      ============================
+
+      GROUP 3: Output Fields {
+      ========================
+
+            #  Group             Field    
+            -  ----------------  ---------
+            1  Output group one  Field 1-1
+
+      }
+      =
+
+      GROUP 4: Input Values: Empty
+      ============================
+
+      GROUP 5: Expected Values {
+      ==========================
+
+            #  Scenario             Group             Row CSV    
+            -  -------------------  ----------------  -----------
+            1  No inp, 1 out group  Output group one  First value
+
+      }
+      =
+
+      GROUP 6: Actual Values {
+      ========================
+
+            #  Scenario             Group                 Row CSV    
+            -  -------------------  --------------------  -----------
+            1  No inp, 1 out group  Output group one      First value
+            2  No inp, 1 out group  Output group differs  First value
+
+      }
+      =
+
+   OUTPUTS
+   =======
+
+      GROUP 1: Summaries: Empty as expected: SUCCESS
+      ==============================================
+
+      GROUP 2: Input Fields: Empty as expected: SUCCESS
+      =================================================
+
+      GROUP 3: Output Fields: Empty as expected: SUCCESS
+      ==================================================
+
+      GROUP 4: Input Values: Empty as expected: SUCCESS
+      =================================================
+
+      GROUP 5: Output Values {
+      ========================
+
+            #  Scenario             Group              Row CSV                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+            -  -------------------  -----------------  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+            1  No inp, 1 out group  Exception Message  Error, s: Out: No inp, 1 out group: expected #groups = 1, actual #groups = 2                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+            2  No inp, 1 out group  Exception Stack    UNTESTED: Error: Error, s: Out: No inp, 1 out group: expected #groups = 1, actual #groups = 2
+    at chkGrpLen (C:\Users\Brend_000\Documents\GitHub\trapit_nodejs_tester\lib\trapit.js:209:11)
+    at chkInputs (C:\Users\Brend_000\Documents\GitHub\trapit_nodejs_tester\lib\trapit.js:230:5)
+    at Object.getUTResults (C:\Users\Brend_000\Documents\GitHub\trapit_nodejs_tester\lib\trapit.js:299:5)
+    at purelyWrapUnit (C:\Users\Brend_000\Documents\GitHub\trapit_nodejs_tester\test\test-trapit.js:193:23)
+    at Object.<anonymous> (C:\Users\Brend_000\Documents\GitHub\trapit_nodejs_tester\test\test-trapit.js:208:18)
+    at Module._compile (internal/modules/cjs/loader.js:689:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:700:10)
+    at Module.load (internal/modules/cjs/loader.js:599:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:538:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:530:3)
+
+      } 0 failed of 2: SUCCESS
       ========================
 
 } 0 failed of 5: SUCCESS

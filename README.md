@@ -22,6 +22,7 @@ Advantages include:
 - Once the unit test program is written for one scenario (that includes all data groups), no further programming is required to handle additional scenarios
 - The outputs from the unit testing program show exactly what the program actually does in terms of data inputs and outputs
 - All unit test programs can follow a single, straightfoward pattern
+- The nodejs assertion package can be used to process results files generated from any language as .json files, and four examples from Oracle PL/SQL are included
 
 Folder structure:
 - bat: Windows .bat files to execute the main/test programs and direct any error output to files in out root folder
@@ -32,23 +33,23 @@ Folder structure:
 	- root holds .out and .err files from the .bat (usually empty)
 	- *title* subfolders hold result files for test programs with a single *title*.txt...
 	- ...and *title*.html as the root page with links for pages per scenario
-	- external subfolder has externally-sourced JSON output files that are processed by TestExternals.js
-- test: test .js programs, including TestExternals.js for the externally-sourced JSON files
+	- external subfolder has externally-sourced JSON output files that are processed by test-externals.js
+- test: test .js programs, including test-externals.js for the externally-sourced JSON files
 
 I have included diagrams of the general data model followed by all examples, plus diagrams of the specific model in each case in the root folder.
 
 Design pattern examples: There are three test programs, two with example main programs
-```====================================================================================================
-|  Main/Test       |  Unit Module |  Notes                                                         |
-|==================|==============|=================================================================
-|  MainHelloWorld  |              |  Simple Hello World program done as pure function to allow for |
-|  TestHelloWorld  |  HelloWorld  |  unit testing as a simple edge case                            |
+```=================================================================================================
+|  Main/Test         |  Unit Module |  Notes                                                       |
+|====================|==============|===============================================================
+|  main-hello-world  |              |  Simple Hello World program done as pure function to allow   |
+|  test-hello-world  |  HelloWorld  |  for unit testing as a simple edge case                      |
 ----------------------------------------------------------------------------------------------------
-|  MainColGroup    |              |  A simple file-reading and group-counting module, with logging |
-|  TestColGroup    |  ColGroup    |  to file. Example of testing impure units, and error display   |
+|  main-col-group    |              |  A simple file-reading and group-counting module, with       |
+|  test-col-group    |  ColGroup    |  logging. Example of testing impure units, and error display |
 ----------------------------------------------------------------------------------------------------
-|  TestTrapit      |  Trapit      |  The assertion module itself, written with core pure function  |
-|                  |              |  to enable unit testing, and make multiple reporters easy      |
+|  test-trapit       |  Trapit      |  The assertion module itself, written with core pure function|
+|                    |              |  to enable unit testing, and make multiple reporters easy    |
 ====================================================================================================
 ```
 Helper modules: There are two helper classes and three helper modules of pure functions
@@ -74,13 +75,13 @@ JSON version is not uploaded yet).
 ```================================================================================================================
 |  File                                       |  Notes                                                         | 
 |===============================================================================================================
-|  TT_EMP_BATCH.tt_AIP_Load_Emps_OUT.json     |  Batch loading of employee data from file to table             |
+|  tt_emp_batch.tt_aip_load_emps_out.json     |  Batch loading of employee data from file to table             |
 ----------------------------------------------------------------------------------------------------------------
-|  TT_EMP_WS.tt_AIP_Get_Dept_Emps_OUT.json    |  REF cursor getting department, employee data for web service  |
+|  tt_emp_ws.tt_aip_get_dept_emps_out.json    |  REF cursor getting department, employee data for web service  |
 ----------------------------------------------------------------------------------------------------------------
-|  TT_EMP_WS.tt_AIP_Save_Emps_OUT.json        |  Web service procedure to save employee data                   |
+|  tt_emp_ws.tt_aip_save_emps_out.json        |  Web service procedure to save employee data                   |
 ----------------------------------------------------------------------------------------------------------------
-|  TT_VIEW_DRIVERS.tt_HR_Test_View_V_OUT.json |  Batch view getting department, employee data                  |
+|  tt_view_drivers.tt_hr_test_view_v_out.json |  Batch view getting department, employee data                  |
 ================================================================================================================
 ```
 In the initial commit, I have only included a single scenario in testing the Trapit core function itself. I will add further scenarios in future - simply by adding metadata records in the .json file

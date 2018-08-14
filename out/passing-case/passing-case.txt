@@ -1,0 +1,141 @@
+Unit Test Report: Passing case
+==============================
+
+   SCENARIO 1: 2 non-empty inp/out groups; 1-field/2-field inp/out groups : 0 failed of 2: SUCCESS
+   SCENARIO 2: 1 empty/1 non-empty inp/out groups; exact matches : 0 failed of 2: SUCCESS
+   SCENARIO 3: 1 empty/1 non-empty inp/out groups; untested and range/regex matching : 0 failed of 2: SUCCESS
+
+Test scenarios: 0 failed of 3: SUCCESS
+======================================
+
+SCENARIO 1: 2 non-empty inp/out groups; 1-field/2-field inp/out groups {
+========================================================================
+
+   INPUTS
+   ======
+
+      GROUP 1: 2-field input group {
+      ==============================
+
+            #  First    Second 
+            -  -------  -------
+            1  Value 1  Value 2
+
+      }
+      =
+
+      GROUP 2: 1-field input group {
+      ==============================
+
+            #  Only          
+            -  --------------
+            1  Record 1 value
+            2  Record 2 value
+
+      }
+      =
+
+   OUTPUTS
+   =======
+
+      GROUP 1: 1-field output group {
+      ===============================
+
+            #  Single      
+            -  ------------
+            1  Record 1 out
+            2  Record 2 out
+
+      } 0 failed of 2: SUCCESS
+      ========================
+
+      GROUP 2: 2-field output group {
+      ===============================
+
+            #  Output One   Output Two 
+            -  -----------  -----------
+            1  Out value 1  Out value 2
+
+      } 0 failed of 1: SUCCESS
+      ========================
+
+} 0 failed of 2: SUCCESS
+========================
+
+SCENARIO 2: 1 empty/1 non-empty inp/out groups; exact matches {
+===============================================================
+
+   INPUTS
+   ======
+
+      GROUP 1: 2-field input group: Empty
+      ===================================
+
+      GROUP 2: 1-field input group {
+      ==============================
+
+            #  Only            
+            -  ----------------
+            1  Sole input field
+
+      }
+      =
+
+   OUTPUTS
+   =======
+
+      GROUP 1: 1-field output group: Empty as expected: SUCCESS
+      =========================================================
+
+      GROUP 2: 2-field output group {
+      ===============================
+
+            #  Output One  Output Two
+            -  ----------  ----------
+            1  Out 1-1     Out 1-2   
+            2  Out 2-1     Out 2-2   
+
+      } 0 failed of 2: SUCCESS
+      ========================
+
+} 0 failed of 2: SUCCESS
+========================
+
+SCENARIO 3: 1 empty/1 non-empty inp/out groups; untested and range/regex matching {
+===================================================================================
+
+   INPUTS
+   ======
+
+      GROUP 1: 2-field input group: Empty
+      ===================================
+
+      GROUP 2: 1-field input group {
+      ==============================
+
+            #  Only            
+            -  ----------------
+            1  Sole input field
+
+      }
+      =
+
+   OUTPUTS
+   =======
+
+      GROUP 1: 1-field output group: Empty as expected: SUCCESS
+      =========================================================
+
+      GROUP 2: 2-field output group {
+      ===============================
+
+            #  Output One                  Output Two        
+            -  --------------------------  ------------------
+            1  IN [2,5]: 3.0               UNTESTED: Anything
+            2  LIKE /ab\[c\].*/: ab[c]def  Out 2-2           
+
+      } 0 failed of 2: SUCCESS
+      ========================
+
+} 0 failed of 2: SUCCESS
+========================

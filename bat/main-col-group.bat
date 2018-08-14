@@ -1,0 +1,1 @@
+node ..\code\main-col-group.js  > ..\out\main-col-group.out 2> ..\out\main-col-group.err
