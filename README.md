@@ -67,10 +67,10 @@ Helper modules: There are two helper classes and three helper modules of pure fu
 |  HTML      |  Module of pure functions that format HTML report output and buffer using Pages     |
 ====================================================================================================
 ```
-Externally-sourced JSON files: The files are from an Oracle project, named {package}.{procedure}_OUT.json:
+Externally-sourced JSON files: The files are from an Oracle project, named {package}.{procedure}_out.json:
 
 See https://github.com/BrenPatF/trapit_oracle_tester for the project that creates these files (the 
-JSON version is not uploaded yet).
+JSON version has now been uploaded as a branch, which will be merged to master soon).
 
 ```================================================================================================================
 |  File                                       |  Notes                                                         | 
@@ -84,4 +84,4 @@ JSON version is not uploaded yet).
 |  tt_view_drivers.tt_hr_test_view_v_out.json |  Batch view getting department, employee data                  |
 ================================================================================================================
 ```
-In the initial commit, I have only included a single scenario in testing the Trapit core function itself. I will add further scenarios in future - simply by adding metadata records in the .json file
+Unit testing the Trapit core function covers five scenarios including exceptions. Note that each scenario covers a number of sub-scenarios.
