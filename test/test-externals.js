@@ -1,6 +1,6 @@
 "use strict";
 /***************************************************************************************************
-Name: TestExternals.js                 Author: Brendan Furey                       Date: 05-Jul-2018
+Name: test-externals.js                Author: Brendan Furey                       Date: 05-Jul-2018
 
 Component module in: The Math Function Unit Testing design pattern, implemented in nodejs
 
@@ -11,7 +11,7 @@ See: 'Database API Viewed As A Mathematical Function: Insights into Testing'
      Brendan Furey, March 2018
 
 Unit test assertion driver program for JSON output files that are externally sourced. Loops over all
-files in folder ../Out/external and creates results files formatted in HTML and text in a ../Out
+files in folder ../out/external and creates results files formatted in HTML and text in a ../out
 subfolder named as the file name. The source JSON files contain a meta object and a scenarios
 object in my standard data model.
 
@@ -21,13 +21,12 @@ formatted here via the Nodejs programs.
 
 The files from the Oracle project, named {package}.{procedure}_OUT.json, are:
 
-	TT_EMP_BATCH.tt_AIP_Load_Emps_OUT.json
-	TT_EMP_WS.tt_AIP_Get_Dept_Emps_OUT.json
-	TT_EMP_WS.tt_AIP_Save_Emps_OUT.json
-	TT_VIEW_DRIVERS.tt_HR_Test_View_V_OUT.json
+	tt_emp_batch.tt_aip_load_emps_out.json
+	tt_emp_ws.tt_aip_get_dept_emps_out.json
+	tt_emp_ws.tt_aip_save_emps_out.json
+	tt_view_drivers.tt_hr_test_view_v_out.json
 
-See https://github.com/BrenPatF/trapit_oracle_tester for the project that creates these files (the 
-JSON version is not uploaded yet).
+See https://github.com/BrenPatF/trapit_oracle_tester for the project that creates these files
 ***************************************************************************************************/
 const Trapit = require('../lib/trapit');
 function testExternal(fileName) {
@@ -35,10 +34,7 @@ function testExternal(fileName) {
 	const testData = Trapit.getUTData(fileName);
 	const [meta, scenarios] = [testData.meta, testData.scenarios];
 
-	const utOutput = Trapit.getUTResults(meta, scenarios);
-	Trapit.prUTResultsHTML(utOutput);
-	Trapit.prUTResultsText(utOutput);
-}
+	Trapit.prUTResultsTextAndHTML(meta, scenarios);}
 
 const extFolder = '../out/external';
 const fs = require('fs');

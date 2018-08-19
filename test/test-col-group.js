@@ -1,6 +1,6 @@
 'use strict';
 /***************************************************************************************************
-Name: MainColGroup.js                  Author: Brendan Furey                       Date: 10-Jun-2018
+Name: test-col-group.js                Author: Brendan Furey                       Date: 10-Jun-2018
 
 Component module in: The Math Function Unit Testing design pattern, implemented in nodejs
 
@@ -12,23 +12,22 @@ See: 'Database API Viewed As A Mathematical Function: Insights into Testing'
 
 Design pattern examples: There are three test programs, two with example main programs
 ====================================================================================================
-|  Main/Test       |  Unit Module |  Notes                                                         |
-|==================|==============|=================================================================
-|  MainHelloWorld  |              |  Simple Hello World program done as pure function to allow for |
-|  TestHelloWorld  |  HelloWorld  |  unit testing as a simple edge case                            |
+|  Main/Test         |  Unit Module |  Notes                                                       |
+|====================|==============|===============================================================
+|  main-hello-world  |              |  Simple Hello World program done as pure function to allow   |
+|  test-hello-world  |  HelloWorld  |  for unit testing as a simple edge case                      |
 ----------------------------------------------------------------------------------------------------
-|  MainColGroup    |              |  A simple file-reading and group-counting module, with logging |
-| *TestColGroup*   |  ColGroup    |  to file. Example of testing impure units, and error display   |
+|  main-col-group    |              |  Simple file-reading and group-counting module, with logging |
+| *test-col-group*   |  ColGroup    |  to file. Example of testing impure units, and error display |
 ----------------------------------------------------------------------------------------------------
-|  TestTrapit      |  Trapit      |  The assertion module itself, written with core pure function  |
-|                  |              |  to enable unit testing, and make multiple reporters easy      |
+|  test-trapit       |  Trapit      |  The assertion module itself written with core pure function |
+|                    |              |  to enable unit testing, and make multiple reporters easy    |
 ====================================================================================================
 
 Unit test program for simple file-reading and group-counting module, with logging to file. Note that
 this example has two deliberate errors to show how these are displayed
 
 ***************************************************************************************************/
-const Utils = require('../lib/utils');
 const ColGroup = require('../lib/col-group');
 const Trapit = require('../lib/trapit');
 const fs = require('fs');
@@ -62,7 +61,6 @@ function purelyWrapUnit(callScenario) {
 	const text = lastLine.substring(26);
 	const date = lastLine.substring(0, 24);
 	const logDate = new Date(date);
-//	Utils.sleep(2550); // for debugging
 	const now = new Date();
 	const diffDate = now.getTime() - logDate.getTime();
 
@@ -85,6 +83,4 @@ let scenarios = [];
 for (const s in callScenarios) {
 	scenarios[s] = purelyWrapUnit(callScenarios[s]);
 };
-const utOutput = Trapit.getUTResults(meta, scenarios);
-Trapit.prUTResultsText(utOutput);
-Trapit.prUTResultsHTML(utOutput);
+Trapit.prUTResultsTextAndHTML(meta, scenarios);

@@ -47,7 +47,7 @@ SCENARIO 1: 4 lines and comma {
 
             #  #Lines  Date Offset        Text                                             
             -  ------  -----------------  -------------------------------------------------
-            1  1       IN [0, 2000]: 494  File ../inp/ut_group.csv, delimiter ',', column 2
+            1  1       IN [0, 2000]: 136  File ../inp/ut_group.csv, delimiter ',', column 2
 
       } 0 failed of 1: SUCCESS
       ========================
@@ -135,7 +135,7 @@ SCENARIO 2: 2 duplicate lines with double-delimiter {
 
             #  #Lines  Date Offset       Text                                              
             -  ------  ----------------  --------------------------------------------------
-            1  2       IN [0,2000]: 526  File ../inp/ut_group.csv, delimiter ';;', column 0
+            1  2       IN [0,2000]: 142  File ../inp/ut_group.csv, delimiter ';;', column 0
 
       } 0 failed of 1: SUCCESS
       ========================

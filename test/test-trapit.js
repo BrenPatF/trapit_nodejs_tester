@@ -197,7 +197,7 @@ function purelyWrapUnit (callScenario) {
     return {inp: callScenario.inp, out: setOutException(callScenario.out, exceptions)};
   }
 
-  Trapit.prUTResultsText(utOutput); //debugging
+  Trapit.prUTResultsText(inMeta, inScenarios); //debugging
   return {inp: callScenario.inp, out: setOut(callScenario.out, utOutput)};
 };
 const testData = Trapit.getUTData('../inp/trapit.json');
@@ -208,6 +208,4 @@ for (let s in callScenarios) {
   scenarios[s] = purelyWrapUnit(callScenarios[s]);
 };
 
-const utOutput = Trapit.getUTResults(meta, scenarios);
-Trapit.prUTResultsText(utOutput);
-Trapit.prUTResultsHTML(utOutput);
+Trapit.prUTResultsTextAndHTML(meta, scenarios);
