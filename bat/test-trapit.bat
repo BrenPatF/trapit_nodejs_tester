@@ -1,1 +1,0 @@
-node ..\test\test-trapit.js > ..\out\test-trapit.out 2> ..\out\test-trapit.err
