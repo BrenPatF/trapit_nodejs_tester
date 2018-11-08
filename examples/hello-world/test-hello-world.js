@@ -35,7 +35,7 @@ To run from root (trapit) folder:
 $ node examples\hello-world\test-hello-world
 
 ***************************************************************************************************/
-const Trapit = require('../../lib/trapit.js'); //NB To use trapit as npm module: require('trapit');
+const Trapit = require('trapit');
 //const Trapit = require('trapit');
 const Utils = require('../../lib/utils');
 const Hw = require('./hello-world');

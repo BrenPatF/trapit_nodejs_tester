@@ -38,7 +38,7 @@ $ node examples\col-group\test-col-group
 ***************************************************************************************************/
 const ColGroup = require('./col-group');
 const Utils = require('../../lib/utils');
-const Trapit = require('../../lib/trapit'); //NB To use trapit as npm module: require('trapit');
+const Trapit = require('trapit');
 const fs = require('fs');
 const ROOT = './examples/col-group/';
 const INPUT_JSON = ROOT + 'col-group.json';

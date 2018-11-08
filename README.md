@@ -3,6 +3,8 @@
 
 This package supports a new design pattern for unit testing that can be applied in any language, and is here implemented in nodejs. It includes a function to read a JSON file for processing externally-sourced tests, and a set of functions for analysing test results and reporting in plain text and/or html. The package includes several examples of use, for both nodejs programs and externally-sourced tests, and a unit test program for the core function of the package itself, which of course uses the package itself to process results. In this design pattern, the unit test driver program reads the inputs and expected outputs from file, and simply runs the unit under test within a loop, gathering the actual outputs into an object that is passed to the current package for reporting the results.
 
+Tested on Unix and Windows.
+
 ## Background
 On March 23, 2018 I made the following presentation at the Oracle User Group conference in Dublin:
 
@@ -133,13 +135,13 @@ The trapit core function is unit tested, covering five scenarios including excep
         - to run from trapit folder: npm test
 
 ### Design pattern examples
-As well as the unit testing of the package itself, there are three examples of use, two of which have example main programs. To run from the package root, trapit, using the first main program as an example:
+As well as the unit testing of the package itself, there are three examples of use, two of which have example main programs. To run from the package root, trapit, using the first test program as an example:
+#### Windows
+$ node examples\hello-world\test-hello-world
+#### Unix
+$ node examples/hello-world/test-hello-world
 ```
-$ node examples\hello-world\main-hello-world
-```
-
-```
-=================================================================================================
+====================================================================================================
 |  Main/Test         |  Unit Module |  Notes                                                       |
 |====================|==============|===============================================================
 |  main-hello-world  |              |  Simple Hello World program done as pure function to allow   |
@@ -188,6 +190,13 @@ See [trapit_oracle_tester on GitHub](https://github.com/BrenPatF/trapit_oracle_t
 |  tt_view_drivers.tt_hr_test_view_v_out.json |  Batch view getting department, employee data                  |
 ================================================================================================================
 ```
+## Operating Systems
+The package works on both Unix and Wndows and has been tested on:
+### Windows
+Windows 10, node v8.1.4 and node v10.6.0
+### Unix
+Oracle Linux Server 7.5 (via Virtualbox on Windows host), node v8.12.0
+
 ## See also
 
 - [timer-set (npm module that uses trapit for unit testing)](https://github.com/BrenPatF/timer-set-nodejs)
