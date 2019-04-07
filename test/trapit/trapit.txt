@@ -2,12 +2,13 @@ Unit Test Report: Trapit
 ========================
 
    SCENARIO 1: No inp, 1 out group - simple edge-case - Passing : 0 failed of 5: SUCCESS
-   SCENARIO 2: 2 inp/out groups - 1-field/2-field groups; empty/non-empty groups; non-exact matches - Passing : 0 failed of 5: SUCCESS
-   SCENARIO 3: 2 inp/out groups - 1-field/2-field groups; empty/non-empty groups; non-exact matches - Failing : 0 failed of 5: SUCCESS
-   SCENARIO 4: No inp, 1 out group - fields mismatch - Exception : 0 failed of 5: SUCCESS
-   SCENARIO 5: No inp, 1 out group - groups mismatch - Exception : 0 failed of 5: SUCCESS
+   SCENARIO 2: No inp, 1 out group - null value in number range bug fix - should fail : 0 failed of 5: SUCCESS
+   SCENARIO 3: 2 inp/out groups - 1-field/2-field groups; empty/non-empty groups; non-exact matches - Passing : 0 failed of 5: SUCCESS
+   SCENARIO 4: 2 inp/out groups - 1-field/2-field groups; empty/non-empty groups; non-exact matches - Failing : 0 failed of 5: SUCCESS
+   SCENARIO 5: No inp, 1 out group - fields mismatch - Exception : 0 failed of 5: SUCCESS
+   SCENARIO 6: No inp, 1 out group - groups mismatch - Exception : 0 failed of 5: SUCCESS
 
-Test scenarios: 0 failed of 5: SUCCESS
+Test scenarios: 0 failed of 6: SUCCESS
 ======================================
 
 SCENARIO 1: No inp, 1 out group - simple edge-case - Passing {
@@ -107,7 +108,105 @@ SCENARIO 1: No inp, 1 out group - simple edge-case - Passing {
 } 0 failed of 5: SUCCESS
 ========================
 
-SCENARIO 2: 2 inp/out groups - 1-field/2-field groups; empty/non-empty groups; non-exact matches - Passing {
+SCENARIO 2: No inp, 1 out group - null value in number range bug fix - should fail {
+====================================================================================
+
+   INPUTS
+   ======
+
+      GROUP 1: Report {
+      =================
+
+            #  Title                   
+            -  ------------------------
+            1  Null in Number Range Fix
+
+      }
+      =
+
+      GROUP 2: Input Fields: Empty
+      ============================
+
+      GROUP 3: Output Fields {
+      ========================
+
+            #  Group                 Field 
+            -  --------------------  ------
+            1  1-field output group  Single
+
+      }
+      =
+
+      GROUP 4: Input Values: Empty
+      ============================
+
+      GROUP 5: Expected Values {
+      ==========================
+
+            #  Scenario             Group                 Row CSV  
+            -  -------------------  --------------------  ---------
+            1  No inp, 1 out group  1-field output group  IN [0,10]
+
+      }
+      =
+
+      GROUP 6: Actual Values {
+      ========================
+
+            #  Scenario             Group                 Row CSV
+            -  -------------------  --------------------  -------
+            1  No inp, 1 out group  1-field output group         
+
+      }
+      =
+
+   OUTPUTS
+   =======
+
+      GROUP 1: Summaries {
+      ====================
+
+            #  Type          Scenario             Group                 Header 1                                    Header 2        Footer                                  # Records  # Fails  Status 
+            -  ------------  -------------------  --------------------  ------------------------------------------  --------------  --------------------------------------  ---------  -------  -------
+            1  Report                                                   Unit Test Report: Null in Number Range Fix                  Test scenarios: 1 failed of 1: FAILURE  1          1        FAILURE
+            2  Scenario      No inp, 1 out group                        SCENARIO 1: No inp, 1 out group             INPUTS-OUTPUTS  1 failed of 1: FAILURE                  1          1        FAILURE
+            3  Output group  No inp, 1 out group  1-field output group  GROUP 1: 1-field output group                               1 failed of 1: FAILURE                  1          1        FAILURE
+
+      } 0 failed of 3: SUCCESS
+      ========================
+
+      GROUP 2: Input Fields: Empty as expected: SUCCESS
+      =================================================
+
+      GROUP 3: Output Fields {
+      ========================
+
+            #  Scenario             Group                 Name    Length
+            -  -------------------  --------------------  ------  ------
+            1  No inp, 1 out group  1-field output group  #       2     
+            2  No inp, 1 out group  1-field output group  Single  15    
+
+      } 0 failed of 2: SUCCESS
+      ========================
+
+      GROUP 4: Input Values: Empty as expected: SUCCESS
+      =================================================
+
+      GROUP 5: Output Values {
+      ========================
+
+            #  Scenario             Group                 Row CSV           
+            -  -------------------  --------------------  ------------------
+            1  No inp, 1 out group  1-field output group  1~IN [0,10]:      
+            2  No inp, 1 out group  1-field output group  1*~NOT IN [0,10]: 
+
+      } 0 failed of 2: SUCCESS
+      ========================
+
+} 0 failed of 5: SUCCESS
+========================
+
+SCENARIO 3: 2 inp/out groups - 1-field/2-field groups; empty/non-empty groups; non-exact matches - Passing {
 ============================================================================================================
 
    INPUTS
@@ -304,7 +403,7 @@ SCENARIO 2: 2 inp/out groups - 1-field/2-field groups; empty/non-empty groups; n
 } 0 failed of 5: SUCCESS
 ========================
 
-SCENARIO 3: 2 inp/out groups - 1-field/2-field groups; empty/non-empty groups; non-exact matches - Failing {
+SCENARIO 4: 2 inp/out groups - 1-field/2-field groups; empty/non-empty groups; non-exact matches - Failing {
 ============================================================================================================
 
    INPUTS
@@ -504,7 +603,7 @@ SCENARIO 3: 2 inp/out groups - 1-field/2-field groups; empty/non-empty groups; n
 } 0 failed of 5: SUCCESS
 ========================
 
-SCENARIO 4: No inp, 1 out group - fields mismatch - Exception {
+SCENARIO 5: No inp, 1 out group - fields mismatch - Exception {
 ===============================================================
 
    INPUTS
@@ -596,7 +695,7 @@ SCENARIO 4: No inp, 1 out group - fields mismatch - Exception {
 } 0 failed of 5: SUCCESS
 ========================
 
-SCENARIO 5: No inp, 1 out group - groups mismatch - Exception {
+SCENARIO 6: No inp, 1 out group - groups mismatch - Exception {
 ===============================================================
 
    INPUTS

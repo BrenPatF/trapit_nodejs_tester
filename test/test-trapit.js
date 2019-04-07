@@ -35,7 +35,7 @@ $ npm test
 
 ***************************************************************************************************/
 const Utils = require('../lib/utils');
-const Trapit = require('trapit');
+const Trapit = require('../lib/trapit');
 
 const ROOT = 'test/';
 const INPUT_JSON = ROOT + 'trapit.json';

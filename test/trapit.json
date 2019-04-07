@@ -102,6 +102,44 @@
         ]
     }
    },
+   "No inp, 1 out group - null value in number range bug fix - should fail": 
+   {
+    "inp": {
+       "Report": ["Null in Number Range Fix"],
+       "Input Fields": [
+        ],
+        "Output Fields": [
+            "1-field output group|Single"
+        ],
+        "Input Values": [
+        ],
+        "Expected Values": [
+            "No inp, 1 out group|1-field output group|IN [0,10]"
+        ],
+        "Actual Values": [
+            "No inp, 1 out group|1-field output group|"
+        ]
+    },
+    "out": {
+        "Summaries": [
+            "Report|||Unit Test Report: Null in Number Range Fix||Test scenarios: 1 failed of 1: FAILURE|1|1|FAILURE",
+            "Scenario|No inp, 1 out group||SCENARIO 1: No inp, 1 out group|INPUTS-OUTPUTS|1 failed of 1: FAILURE|1|1|FAILURE",
+            "Output group|No inp, 1 out group|1-field output group|GROUP 1: 1-field output group||1 failed of 1: FAILURE|1|1|FAILURE"
+        ],
+        "Input Fields": [
+        ],
+        "Output Fields": [
+            "No inp, 1 out group|1-field output group|#|2",
+            "No inp, 1 out group|1-field output group|Single|15"
+        ],
+        "Input Values": [
+        ],
+        "Output Values": [
+            "No inp, 1 out group|1-field output group|1~IN [0,10]: ",
+            "No inp, 1 out group|1-field output group|1*~NOT IN [0,10]: "
+        ]
+    }
+   },
    "2 inp/out groups - 1-field/2-field groups; empty/non-empty groups; non-exact matches - Passing": 
    {
     "inp": {
