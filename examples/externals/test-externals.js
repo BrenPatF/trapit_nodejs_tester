@@ -44,7 +44,7 @@ function testExternal(fileName) {
 
 	const testData = Trapit.getUTData(fileName);
 	const [meta, scenarios] = [testData.meta, testData.scenarios];
-
+	console.log(fileName + ': ' + Trapit.prUTResultsTextAndHTML(meta, scenarios, ROOT).nFail);
 	return Trapit.prUTResultsTextAndHTML(meta, scenarios, ROOT).nFail;
 }
 
