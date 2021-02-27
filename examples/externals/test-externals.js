@@ -37,7 +37,8 @@ To run from root (trapit) folder:
 $ node examples\externals\test-externals
 
 ***************************************************************************************************/
-const Trapit = require('trapit');
+// const Trapit = require('trapit'); this form for npm usage
+const Trapit = require('../../lib/trapit.js');
 const ROOT = './examples/externals/';
 
 function testExternal(fileName) {

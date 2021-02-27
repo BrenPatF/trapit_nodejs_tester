@@ -1,15 +1,17 @@
 Unit Test Report: TT_Emp_Batch.Load_Emps
 ========================================
 
-   SCENARIO 1: NV/OV/OU/NI/OI/EI: 1/0/0/0/0/0. Existing J/E: 0/0. [1 valid new record from scratch] : 0 failed of 4: SUCCESS
-   SCENARIO 2: NV/OV/OU/NI/OI/EI: 1/1/1/0/0/0. Existing J/E: 1/0. [3 valid records of each kind] : 0 failed of 4: SUCCESS
-   SCENARIO 3: NV/OV/OU/NI/OI/EI: 0/0/0/0/1/0. Existing J/E: 1/1. Uid not found [1 invalid old - exception] : 0 failed of 4: SUCCESS
-   SCENARIO 4: NV/OV/OU/NI/OI/EI: 0/0/0/1/0/0. Existing J/E: 1/1. Email too long [1 invalid new - exception] : 0 failed of 4: SUCCESS
-   SCENARIO 5: NV/OV/OU/NI/OI/EI: 1/0/0/0/1/0. Existing J/E: 1/1. Name too long [1 valid new, 1 invalid old - no exception] : 0 failed of 4: SUCCESS
-   SCENARIO 6: NV/OV/OU/NI/OI/EI: 0/0/0/1/0/0. Existing J/E: 1/1. Invalid job [1 invalid new - exception] : 0 failed of 4: SUCCESS
-   SCENARIO 7: NV/OV/OU/NI/OI/EI: 0/1/0/1/1/0. Existing J/E: 1/2. 2 invalid jobs [1 valid old, 2 invalid: old and new - no exception] : 0 failed of 4: SUCCESS
-   SCENARIO 8: NV/OV/OU/NI/OI/EI: 0/1/0/0/0/1. Existing J/E: 1/2. Name 4001ch [1 valid old, 1 invalid new for external table - no exception; also file had previously failed] : 0 failed of 4: SUCCESS
-   SCENARIO 9: NV/OV/OU/NI/OI/EI: 0/0/0/1/0/0. Existing J/E: 1/1. [File already processed - exception] : 0 failed of 4: SUCCESS
+      #    Scenario                                                                                                                                                        Fails  Groups  Status 
+      ---  --------------------------------------------------------------------------------------------------------------------------------------------------------------  -----  ------  -------
+      1    NV/OV/OU/NI/OI/EI: 1/0/0/0/0/0. Existing J/E: 0/0. [1 valid new record from scratch]                                                                            0      4       SUCCESS
+      2    NV/OV/OU/NI/OI/EI: 1/1/1/0/0/0. Existing J/E: 1/0. [3 valid records of each kind]                                                                               0      4       SUCCESS
+      3    NV/OV/OU/NI/OI/EI: 0/0/0/0/1/0. Existing J/E: 1/1. Uid not found [1 invalid old - exception]                                                                    0      4       SUCCESS
+      4    NV/OV/OU/NI/OI/EI: 0/0/0/1/0/0. Existing J/E: 1/1. Email too long [1 invalid new - exception]                                                                   0      4       SUCCESS
+      5    NV/OV/OU/NI/OI/EI: 1/0/0/0/1/0. Existing J/E: 1/1. Name too long [1 valid new, 1 invalid old - no exception]                                                    0      4       SUCCESS
+      6    NV/OV/OU/NI/OI/EI: 0/0/0/1/0/0. Existing J/E: 1/1. Invalid job [1 invalid new - exception]                                                                      0      4       SUCCESS
+      7    NV/OV/OU/NI/OI/EI: 0/1/0/1/1/0. Existing J/E: 1/2. 2 invalid jobs [1 valid old, 2 invalid: old and new - no exception]                                          0      4       SUCCESS
+      8    NV/OV/OU/NI/OI/EI: 0/1/0/0/0/1. Existing J/E: 1/2. Name 4001ch [1 valid old, 1 invalid new for external table - no exception; also file had previously failed]  0      4       SUCCESS
+      9    NV/OV/OU/NI/OI/EI: 0/0/0/1/0/0. Existing J/E: 1/1. [File already processed - exception]                                                                         0      4       SUCCESS
 
 Test scenarios: 0 failed of 9: SUCCESS
 ======================================
