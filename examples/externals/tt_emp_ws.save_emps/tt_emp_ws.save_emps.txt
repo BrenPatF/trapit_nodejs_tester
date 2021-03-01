@@ -1,12 +1,12 @@
 Unit Test Report: TT_Emp_WS.Save_Emps
 =====================================
 
-      #    Scenario                                                 Fails  Groups  Status 
-      ---  -------------------------------------------------------  -----  ------  -------
-      1    1 valid record                                           0      3       SUCCESS
-      2    1 invalid job id                                         0      3       SUCCESS
-      3    1 invalid number                                         0      3       SUCCESS
-      4*   2 valid records, 1 invalid job id (2 deliberate errors)  1      3       FAILURE
+      #    Scenario                                                 Fails (of 3)  Status 
+      ---  -------------------------------------------------------  ------------  -------
+      1    1 valid record                                           0             SUCCESS
+      2    1 invalid job id                                         0             SUCCESS
+      3    1 invalid number                                         0             SUCCESS
+      4*   2 valid records, 1 invalid job id (2 deliberate errors)  1             FAILURE
 
 Test scenarios: 1 failed of 4: FAILURE
 ======================================
