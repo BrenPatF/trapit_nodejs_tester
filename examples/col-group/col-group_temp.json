@@ -1,0 +1,66 @@
+{
+    "meta":  {
+                 "title":  "title",
+                 "delimiter":  "|",
+                 "inp":  {
+                             "Log":  [
+                                         "Line"
+                                     ],
+                             "Scalars":  [
+                                             "Delimiter",
+                                             "Column#"
+                                         ],
+                             "Lines":  [
+                                           "Line"
+                                       ]
+                         },
+                 "out":  {
+                             "Log":  [
+                                         "#Lines",
+                                         "Date Offset",
+                                         "Text"
+                                     ],
+                             "listAsIs":  [
+                                              "#Instances"
+                                          ],
+                             "sortByKey":  [
+                                               "Key",
+                                               "Value"
+                                           ],
+                             "sortByValue":  [
+                                                 "Key",
+                                                 "Value"
+                                             ]
+                         }
+             },
+    "scenarios":  {
+                      "scenario 1":  {
+                                         "active_yn":  "Y",
+                                         "inp":  {
+                                                     "Log":  [
+                                                                 ""
+                                                             ],
+                                                     "Scalars":  [
+                                                                     "|"
+                                                                 ],
+                                                     "Lines":  [
+                                                                   ""
+                                                               ]
+                                                 },
+                                         "out":  {
+                                                     "Log":  [
+                                                                 "||"
+                                                             ],
+                                                     "listAsIs":  [
+                                                                      ""
+                                                                  ],
+                                                     "sortByKey":  [
+                                                                       "|"
+                                                                   ],
+                                                     "sortByValue":  [
+                                                                         "|"
+                                                                     ]
+                                                 }
+                                     }
+                  }
+}

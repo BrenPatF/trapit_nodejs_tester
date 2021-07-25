@@ -1,0 +1,15 @@
+group,field
+Report,Title
+Input Fields,Group
+Input Fields,Field
+Output Fields,Group
+Output Fields,Field
+Input Values,Scenario
+Input Values,Group
+Input Values,Row CSV
+Expected Values,Scenario
+Expected Values,Group
+Expected Values,Row CSV
+Actual Values,Scenario
+Actual Values,Group
+Actual Values,Row CSV

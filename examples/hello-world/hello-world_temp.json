@@ -1,0 +1,27 @@
+{
+    "meta":  {
+                 "title":  "title",
+                 "delimiter":  "|",
+                 "inp":  {
+
+                         },
+                 "out":  {
+                             "Group":  [
+                                           "Greeting"
+                                       ]
+                         }
+             },
+    "scenarios":  {
+                      "scenario 1":  {
+                                         "active_yn":  "Y",
+                                         "inp":  {
+
+                                                 },
+                                         "out":  {
+                                                     "Group":  [
+                                                                   ""
+                                                               ]
+                                                 }
+                                     }
+                  }
+}

@@ -1,0 +1,326 @@
+Unit Test Report: Col Group
+===========================
+
+      #    Scenario                                                                       Fails (of 4)  Status 
+      ---  -----------------------------------------------------------------------------  ------------  -------
+      1*   Col 3/4; 4 lines; comma-delimiter; no log                                      1             FAILURE
+      2*   Col 1/3; 2 duplicate lines; double-delimiter; 1-line log                       1             FAILURE
+      3    Col 10/10; 3 lines, 2 with same 50-character key; comma-delimiter; 1-line log  0             SUCCESS
+      4    Col 10/10; empty file edge-case; comma-delimiter; 1-line log                   0             SUCCESS
+
+Test scenarios: 2 failed of 4: FAILURE
+======================================
+
+SCENARIO 1: Col 3/4; 4 lines; comma-delimiter; no log {
+=======================================================
+
+   INPUTS
+   ======
+
+      GROUP 1: Log: Empty
+      ===================
+
+      GROUP 2: Scalars {
+      ==================
+
+            #  Delimiter  Column#
+            -  ---------  -------
+            1  ,          2      
+
+      }
+      =
+
+      GROUP 3: Lines {
+      ================
+
+            #  Line       
+            -  -----------
+            1  0,1,Cc,3   
+            2  00,1,A,9   
+            3  000,1,B,27 
+            4  0000,1,A,81
+
+      }
+      =
+
+   OUTPUTS
+   =======
+
+      GROUP 1: Log {
+      ==============
+
+            #  #Lines  Date Offset        Text                                                                                                                                                                 
+            -  ------  -----------------  ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+            1  1       IN [0, 2000]: 602  LIKE /.*: File ./examples/col-group/ut_group.csv, delimiter ',', column 2/: Sun Jul 25 2021 12:10:57: File ./examples/col-group/ut_group.csv, delimiter ',', column 2
+
+      } 0 failed of 1: SUCCESS
+      ========================
+
+      GROUP 2: listAsIs {
+      ===================
+
+            #  #Instances
+            -  ----------
+            1  3         
+
+      } 0 failed of 1: SUCCESS
+      ========================
+
+      GROUP 3: sortByKey {
+      ====================
+
+            #   Key  Value
+            --  ---  -----
+            1   A    2    
+            2   Bx   1    
+            2*  B    1    
+            3   Cc   1    
+
+      } 1 failed of 3: FAILURE
+      ========================
+
+      GROUP 4: sortByValue {
+      ======================
+
+            #  Key  Value
+            -  ---  -----
+            1  B    1    
+            2  Cc   1    
+            3  A    2    
+
+      } 0 failed of 3: SUCCESS
+      ========================
+
+} 1 failed of 4: FAILURE
+========================
+
+SCENARIO 2: Col 1/3; 2 duplicate lines; double-delimiter; 1-line log {
+======================================================================
+
+   INPUTS
+   ======
+
+      GROUP 1: Log {
+      ==============
+
+            #  Line      
+            -  ----------
+            1  Log line 1
+
+      }
+      =
+
+      GROUP 2: Scalars {
+      ==================
+
+            #  Delimiter  Column#
+            -  ---------  -------
+            1  ;;         0      
+
+      }
+      =
+
+      GROUP 3: Lines {
+      ================
+
+            #  Line   
+            -  -------
+            1  X;;1;;A
+            2  X;;1;;A
+
+      }
+      =
+
+   OUTPUTS
+   =======
+
+      GROUP 1: Log {
+      ==============
+
+            #  #Lines  Date Offset       Text                                                                                                                                                                   
+            -  ------  ----------------  -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+            1  2       IN [0,2000]: 607  LIKE /.*: File ./examples/col-group/ut_group.csv, delimiter ';;', column 0/: Sun Jul 25 2021 12:10:57: File ./examples/col-group/ut_group.csv, delimiter ';;', column 0
+
+      } 0 failed of 1: SUCCESS
+      ========================
+
+      GROUP 2: listAsIs {
+      ===================
+
+            #   #Instances
+            --  ----------
+            1   2         
+            1*  1         
+
+      } 1 failed of 1: FAILURE
+      ========================
+
+      GROUP 3: sortByKey {
+      ====================
+
+            #  Key  Value
+            -  ---  -----
+            1  X    2    
+
+      } 0 failed of 1: SUCCESS
+      ========================
+
+      GROUP 4: sortByValue {
+      ======================
+
+            #  Key  Value
+            -  ---  -----
+            1  X    2    
+
+      } 0 failed of 1: SUCCESS
+      ========================
+
+} 1 failed of 4: FAILURE
+========================
+
+SCENARIO 3: Col 10/10; 3 lines, 2 with same 50-character key; comma-delimiter; 1-line log {
+===========================================================================================
+
+   INPUTS
+   ======
+
+      GROUP 1: Log {
+      ==============
+
+            #  Line      
+            -  ----------
+            1  Log line 1
+
+      }
+      =
+
+      GROUP 2: Scalars {
+      ==================
+
+            #  Delimiter  Column#
+            -  ---------  -------
+            1  ,          9      
+
+      }
+      =
+
+      GROUP 3: Lines {
+      ================
+
+            #  Line                                                                
+            -  --------------------------------------------------------------------
+            1  0,1,2,3,4,5,6,7,8,12345678901234567890123456789012345678901234567890
+            2  0,1,2,3,4,5,6,7,8,12345678901234567890123456789012345678901234567890
+            3  0,1,2,3,4,5,6,7,8,abc                                               
+
+      }
+      =
+
+   OUTPUTS
+   =======
+
+      GROUP 1: Log {
+      ==============
+
+            #  #Lines  Date Offset       Text                                                                                                                                                                 
+            -  ------  ----------------  ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+            1  2       IN [0,2000]: 612  LIKE /.*: File ./examples/col-group/ut_group.csv, delimiter ',', column 9/: Sun Jul 25 2021 12:10:57: File ./examples/col-group/ut_group.csv, delimiter ',', column 9
+
+      } 0 failed of 1: SUCCESS
+      ========================
+
+      GROUP 2: listAsIs {
+      ===================
+
+            #  #Instances
+            -  ----------
+            1  2         
+
+      } 0 failed of 1: SUCCESS
+      ========================
+
+      GROUP 3: sortByKey {
+      ====================
+
+            #  Key                                                 Value
+            -  --------------------------------------------------  -----
+            1  12345678901234567890123456789012345678901234567890  2    
+            2  abc                                                 1    
+
+      } 0 failed of 2: SUCCESS
+      ========================
+
+      GROUP 4: sortByValue {
+      ======================
+
+            #  Key                                                 Value
+            -  --------------------------------------------------  -----
+            1  abc                                                 1    
+            2  12345678901234567890123456789012345678901234567890  2    
+
+      } 0 failed of 2: SUCCESS
+      ========================
+
+} 0 failed of 4: SUCCESS
+========================
+
+SCENARIO 4: Col 10/10; empty file edge-case; comma-delimiter; 1-line log {
+==========================================================================
+
+   INPUTS
+   ======
+
+      GROUP 1: Log {
+      ==============
+
+            #  Line      
+            -  ----------
+            1  Log line 1
+
+      }
+      =
+
+      GROUP 2: Scalars {
+      ==================
+
+            #  Delimiter  Column#
+            -  ---------  -------
+            1  ,          9      
+
+      }
+      =
+
+      GROUP 3: Lines: Empty
+      =====================
+
+   OUTPUTS
+   =======
+
+      GROUP 1: Log {
+      ==============
+
+            #  #Lines  Date Offset       Text                                                                                                                                                                 
+            -  ------  ----------------  ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+            1  2       IN [0,2000]: 616  LIKE /.*: File ./examples/col-group/ut_group.csv, delimiter ',', column 9/: Sun Jul 25 2021 12:10:57: File ./examples/col-group/ut_group.csv, delimiter ',', column 9
+
+      } 0 failed of 1: SUCCESS
+      ========================
+
+      GROUP 2: listAsIs {
+      ===================
+
+            #  #Instances
+            -  ----------
+            1  0         
+
+      } 0 failed of 1: SUCCESS
+      ========================
+
+      GROUP 3: sortByKey: Empty as expected: SUCCESS
+      ==============================================
+
+      GROUP 4: sortByValue: Empty as expected: SUCCESS
+      ================================================
+
+} 0 failed of 4: SUCCESS
+========================

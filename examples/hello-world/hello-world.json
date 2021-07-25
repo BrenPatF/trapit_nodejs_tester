@@ -10,6 +10,7 @@
 "scenarios" : { 
    "Scenario": 
    {
+    "active_yn" : "Y",
     "inp": {},
     "out": {
         "Group": [

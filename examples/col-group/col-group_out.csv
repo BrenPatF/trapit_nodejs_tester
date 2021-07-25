@@ -1,0 +1,9 @@
+group,field
+Log,#Lines
+Log,Date Offset
+Log,Text
+listAsIs,#Instances
+sortByKey,Key
+sortByKey,Value
+sortByValue,Key
+sortByValue,Value

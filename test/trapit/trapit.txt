@@ -1,16 +1,17 @@
 Unit Test Report: Trapit
 ========================
 
-      #    Scenario                                                                                        Fails  Groups  Status 
-      ---  ----------------------------------------------------------------------------------------------  -----  ------  -------
-      1    No inp, 1 out group - simple edge-case - Passing                                                0      5       SUCCESS
-      2    No inp, 1 out group - null value in number range bug fix - should fail                          0      5       SUCCESS
-      3    2 inp/out groups - 1-field/2-field groups; empty/non-empty groups; non-exact matches - Passing  0      5       SUCCESS
-      4    2 inp/out groups - 1-field/2-field groups; empty/non-empty groups; non-exact matches - Failing  0      5       SUCCESS
-      5    No inp, 1 out group - fields mismatch - Exception                                               0      5       SUCCESS
-      6    No inp, 1 out group - groups mismatch - Exception                                               0      5       SUCCESS
+      #    Scenario                                                                                        Fails (of 5)  Status 
+      ---  ----------------------------------------------------------------------------------------------  ------------  -------
+      1    No inp, 1 out group - simple edge-case - Passing                                                0             SUCCESS
+      2    1 inp, no out group - simple edge-case - Passing                                                0             SUCCESS
+      3    No inp, 1 out group - null value in number range bug fix - should fail                          0             SUCCESS
+      4    2 inp/out groups - 1-field/2-field groups; empty/non-empty groups; non-exact matches - Passing  0             SUCCESS
+      5    2 inp/out groups - 1-field/2-field groups; empty/non-empty groups; non-exact matches - Failing  0             SUCCESS
+      6    No inp, 1 out group - fields mismatch - Exception                                               0             SUCCESS
+      7    No inp, 1 out group - groups mismatch - Exception                                               0             SUCCESS
 
-Test scenarios: 0 failed of 6: SUCCESS
+Test scenarios: 0 failed of 7: SUCCESS
 ======================================
 
 SCENARIO 1: No inp, 1 out group - simple edge-case - Passing {
@@ -110,7 +111,97 @@ SCENARIO 1: No inp, 1 out group - simple edge-case - Passing {
 } 0 failed of 5: SUCCESS
 ========================
 
-SCENARIO 2: No inp, 1 out group - null value in number range bug fix - should fail {
+SCENARIO 2: 1 inp, no out group - simple edge-case - Passing {
+==============================================================
+
+   INPUTS
+   ======
+
+      GROUP 1: Report {
+      =================
+
+            #  Title              
+            -  -------------------
+            1  No output Edge Case
+
+      }
+      =
+
+      GROUP 2: Input Fields {
+      =======================
+
+            #  Group                Field 
+            -  -------------------  ------
+            1  1-field input group  Single
+
+      }
+      =
+
+      GROUP 3: Output Fields: Empty
+      =============================
+
+      GROUP 4: Input Values {
+      =======================
+
+            #  Scenario      Group                Row CSV       
+            -  ------------  -------------------  --------------
+            1  Simple input  1-field input group  Goodbye World!
+
+      }
+      =
+
+      GROUP 5: Expected Values: Empty
+      ===============================
+
+      GROUP 6: Actual Values: Empty
+      =============================
+
+   OUTPUTS
+   =======
+
+      GROUP 1: Summaries {
+      ====================
+
+            #  Type         Scenario      Group                Header 1                               Header 2        Footer                                  # Records  # Fails  Status 
+            -  -----------  ------------  -------------------  -------------------------------------  --------------  --------------------------------------  ---------  -------  -------
+            1  Report                                          Unit Test Report: No output Edge Case                  Test scenarios: 0 failed of 1: SUCCESS  1          0        SUCCESS
+            2  Scenario     Simple input                       SCENARIO 1: Simple input               INPUTS-OUTPUTS  0 failed of 0: SUCCESS                  0          0        SUCCESS
+            3  Input group  Simple input  1-field input group  GROUP 1: 1-field input group                                                                                              
+
+      } 0 failed of 3: SUCCESS
+      ========================
+
+      GROUP 2: Input Fields {
+      =======================
+
+            #  Scenario      Group                Name    Length
+            -  ------------  -------------------  ------  ------
+            1  Simple input  1-field input group  #       1     
+            2  Simple input  1-field input group  Single  14    
+
+      } 0 failed of 2: SUCCESS
+      ========================
+
+      GROUP 3: Output Fields: Empty as expected: SUCCESS
+      ==================================================
+
+      GROUP 4: Input Values {
+      =======================
+
+            #  Scenario      Group                Row CSV         
+            -  ------------  -------------------  ----------------
+            1  Simple input  1-field input group  1~Goodbye World!
+
+      } 0 failed of 1: SUCCESS
+      ========================
+
+      GROUP 5: Output Values: Empty as expected: SUCCESS
+      ==================================================
+
+} 0 failed of 5: SUCCESS
+========================
+
+SCENARIO 3: No inp, 1 out group - null value in number range bug fix - should fail {
 ====================================================================================
 
    INPUTS
@@ -208,7 +299,7 @@ SCENARIO 2: No inp, 1 out group - null value in number range bug fix - should fa
 } 0 failed of 5: SUCCESS
 ========================
 
-SCENARIO 3: 2 inp/out groups - 1-field/2-field groups; empty/non-empty groups; non-exact matches - Passing {
+SCENARIO 4: 2 inp/out groups - 1-field/2-field groups; empty/non-empty groups; non-exact matches - Passing {
 ============================================================================================================
 
    INPUTS
@@ -405,7 +496,7 @@ SCENARIO 3: 2 inp/out groups - 1-field/2-field groups; empty/non-empty groups; n
 } 0 failed of 5: SUCCESS
 ========================
 
-SCENARIO 4: 2 inp/out groups - 1-field/2-field groups; empty/non-empty groups; non-exact matches - Failing {
+SCENARIO 5: 2 inp/out groups - 1-field/2-field groups; empty/non-empty groups; non-exact matches - Failing {
 ============================================================================================================
 
    INPUTS
@@ -605,7 +696,7 @@ SCENARIO 4: 2 inp/out groups - 1-field/2-field groups; empty/non-empty groups; n
 } 0 failed of 5: SUCCESS
 ========================
 
-SCENARIO 5: No inp, 1 out group - fields mismatch - Exception {
+SCENARIO 6: No inp, 1 out group - fields mismatch - Exception {
 ===============================================================
 
    INPUTS
@@ -676,20 +767,20 @@ SCENARIO 5: No inp, 1 out group - fields mismatch - Exception {
       GROUP 5: Output Values {
       ========================
 
-            #  Scenario             Group              Row CSV                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
-            -  -------------------  -----------------  -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-            1  No inp, 1 out group  Exception Message  Error, exp #fields 1, expected 2 [s: No inp, 1 out group, g: 2-field output group, r: First value]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+            #  Scenario             Group              Row CSV                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
+            -  -------------------  -----------------  ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+            1  No inp, 1 out group  Exception Message  Error, exp #fields 1, expected 2 [s: No inp, 1 out group, g: 2-field output group, r: First value]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
             2  No inp, 1 out group  Exception Stack    UNTESTED: Error: Error, exp #fields 1, expected 2 [s: No inp, 1 out group, g: 2-field output group, r: First value]
-    at chkRec (C:\Users\Brend\OneDrive\Documents\GitHub\trapit_nodejs_tester\lib\trapit.js:246:11)
-    at chkInputs (C:\Users\Brend\OneDrive\Documents\GitHub\trapit_nodejs_tester\lib\trapit.js:307:9)
-    at Object.getUTResults (C:\Users\Brend\OneDrive\Documents\GitHub\trapit_nodejs_tester\lib\trapit.js:382:5)
-    at purelyWrapUnit (C:\Users\Brend\OneDrive\Documents\GitHub\trapit_nodejs_tester\test\test-trapit.js:202:23)
-    at Object.<anonymous> (C:\Users\Brend\OneDrive\Documents\GitHub\trapit_nodejs_tester\test\test-trapit.js:217:18)
+    at chkRec (C:\Users\Brend\OneDrive\Documents\GitHub\trapit_nodejs_tester\lib\trapit.js:253:11)
+    at chkInputs (C:\Users\Brend\OneDrive\Documents\GitHub\trapit_nodejs_tester\lib\trapit.js:314:9)
+    at Object.getUTResults (C:\Users\Brend\OneDrive\Documents\GitHub\trapit_nodejs_tester\lib\trapit.js:379:5)
+    at purelyWrapUnit (C:\Users\Brend\OneDrive\Documents\GitHub\trapit_nodejs_tester\test\test-trapit.js:205:23)
+    at Object.testUnit (C:\Users\Brend\OneDrive\Documents\GitHub\trapit_nodejs_tester\lib\trapit-utils.js:175:70)
+    at Object.<anonymous> (C:\Users\Brend\OneDrive\Documents\GitHub\trapit_nodejs_tester\test\test-trapit.js:215:13)
     at Module._compile (internal/modules/cjs/loader.js:1158:30)
     at Object.Module._extensions..js (internal/modules/cjs/loader.js:1178:10)
     at Module.load (internal/modules/cjs/loader.js:1002:32)
     at Function.Module._load (internal/modules/cjs/loader.js:901:14)
-    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)
 
       } 0 failed of 2: SUCCESS
       ========================
@@ -697,7 +788,7 @@ SCENARIO 5: No inp, 1 out group - fields mismatch - Exception {
 } 0 failed of 5: SUCCESS
 ========================
 
-SCENARIO 6: No inp, 1 out group - groups mismatch - Exception {
+SCENARIO 7: No inp, 1 out group - groups mismatch - Exception {
 ===============================================================
 
    INPUTS
@@ -768,20 +859,20 @@ SCENARIO 6: No inp, 1 out group - groups mismatch - Exception {
       GROUP 5: Output Values {
       ========================
 
-            #  Scenario             Group              Row CSV                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
-            -  -------------------  -----------------  ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-            1  No inp, 1 out group  Exception Message  Error, s: Out: No inp, 1 out group: expected #groups = 1, actual #groups = 2                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+            #  Scenario             Group              Row CSV                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
+            -  -------------------  -----------------  --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+            1  No inp, 1 out group  Exception Message  Error, s: Out: No inp, 1 out group: expected #groups = 1, actual #groups = 2                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
             2  No inp, 1 out group  Exception Stack    UNTESTED: Error: Error, s: Out: No inp, 1 out group: expected #groups = 1, actual #groups = 2
-    at chkGrpLen (C:\Users\Brend\OneDrive\Documents\GitHub\trapit_nodejs_tester\lib\trapit.js:258:11)
-    at chkInputs (C:\Users\Brend\OneDrive\Documents\GitHub\trapit_nodejs_tester\lib\trapit.js:292:5)
-    at Object.getUTResults (C:\Users\Brend\OneDrive\Documents\GitHub\trapit_nodejs_tester\lib\trapit.js:382:5)
-    at purelyWrapUnit (C:\Users\Brend\OneDrive\Documents\GitHub\trapit_nodejs_tester\test\test-trapit.js:202:23)
-    at Object.<anonymous> (C:\Users\Brend\OneDrive\Documents\GitHub\trapit_nodejs_tester\test\test-trapit.js:217:18)
+    at chkGrpLen (C:\Users\Brend\OneDrive\Documents\GitHub\trapit_nodejs_tester\lib\trapit.js:265:11)
+    at chkInputs (C:\Users\Brend\OneDrive\Documents\GitHub\trapit_nodejs_tester\lib\trapit.js:299:5)
+    at Object.getUTResults (C:\Users\Brend\OneDrive\Documents\GitHub\trapit_nodejs_tester\lib\trapit.js:379:5)
+    at purelyWrapUnit (C:\Users\Brend\OneDrive\Documents\GitHub\trapit_nodejs_tester\test\test-trapit.js:205:23)
+    at Object.testUnit (C:\Users\Brend\OneDrive\Documents\GitHub\trapit_nodejs_tester\lib\trapit-utils.js:175:70)
+    at Object.<anonymous> (C:\Users\Brend\OneDrive\Documents\GitHub\trapit_nodejs_tester\test\test-trapit.js:215:13)
     at Module._compile (internal/modules/cjs/loader.js:1158:30)
     at Object.Module._extensions..js (internal/modules/cjs/loader.js:1178:10)
     at Module.load (internal/modules/cjs/loader.js:1002:32)
     at Function.Module._load (internal/modules/cjs/loader.js:901:14)
-    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)
 
       } 0 failed of 2: SUCCESS
       ========================

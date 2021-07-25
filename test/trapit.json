@@ -67,6 +67,7 @@
 "scenarios" : { 
    "No inp, 1 out group - simple edge-case - Passing": 
    {
+    "active_yn" : "Y",
     "inp": {
        "Report": ["Hello World Edge Case"],
        "Input Fields": [
@@ -102,8 +103,46 @@
         ]
     }
    },
+   "1 inp, no out group - simple edge-case - Passing": 
+   {
+    "active_yn" : "Y",
+    "inp": {
+       "Report": ["No output Edge Case"],
+       "Input Fields": [
+            "1-field input group|Single"
+        ],
+        "Output Fields": [
+        ],
+        "Input Values": [
+            "Simple input|1-field input group|Goodbye World!"
+        ],
+        "Expected Values": [
+        ],
+        "Actual Values": [
+        ]
+    },
+    "out": {
+        "Summaries": [
+            "Report|||Unit Test Report: No output Edge Case||Test scenarios: 0 failed of 1: SUCCESS|1|0|SUCCESS",
+            "Scenario|Simple input||SCENARIO 1: Simple input|INPUTS-OUTPUTS|0 failed of 0: SUCCESS|0|0|SUCCESS",
+            "Input group|Simple input|1-field input group|GROUP 1: 1-field input group|||||"
+        ],
+        "Input Fields": [
+            "Simple input|1-field input group|#|1",
+            "Simple input|1-field input group|Single|14"
+        ],
+        "Output Fields": [
+        ],
+        "Input Values": [
+            "Simple input|1-field input group|1~Goodbye World!"
+        ],
+        "Output Values": [
+        ]
+    }
+   },
    "No inp, 1 out group - null value in number range bug fix - should fail": 
    {
+    "active_yn" : "Y",
     "inp": {
        "Report": ["Null in Number Range Fix"],
        "Input Fields": [
@@ -142,6 +181,7 @@
    },
    "2 inp/out groups - 1-field/2-field groups; empty/non-empty groups; non-exact matches - Passing": 
    {
+    "active_yn" : "Y",
     "inp": {
        "Report": ["Passing case"],
        "Input Fields": [
@@ -255,6 +295,7 @@
    },
    "2 inp/out groups - 1-field/2-field groups; empty/non-empty groups; non-exact matches - Failing": 
    {
+    "active_yn" : "Y",
     "inp": {
        "Report": ["Failing case"],
        "Input Fields": [
@@ -371,6 +412,7 @@
    },
    "No inp, 1 out group - fields mismatch - Exception": 
    {
+    "active_yn" : "Y",
     "inp": {
        "Report": ["Fields Mismatch Exception"],
        "Input Fields": [
@@ -405,6 +447,7 @@
    },
    "No inp, 1 out group - groups mismatch - Exception": 
    {
+    "active_yn" : "Y",
     "inp": {
        "Report": ["Groups Mismatch Exception"],
        "Input Fields": [

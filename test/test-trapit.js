@@ -7,53 +7,57 @@ Component module in: The Math Function Unit Testing design pattern, implemented 
 GitHub: https://github.com/BrenPatF/trapit_nodejs_tester
 
 See: 'Database API Viewed As A Mathematical Function: Insights into Testing'
-     https://tinyurl.com/yaayvnhn
-     Brendan Furey, March 2018
+    https://www.slideshare.net/brendanfurey7/database-api-viewed-as-a-mathematical-function-insights-into-testing
+    Brendan Furey, March 2018
 
 Design pattern examples: There are three test programs, two with example main programs
 ====================================================================================================
 |  Main/Test         |  Unit Module |  Notes                                                       |
-|====================|==============|===============================================================
+|==================================================================================================|
 |  main-hello-world  |              |  Simple Hello World program done as pure function to allow   |
 |  test-hello-world  |  HelloWorld  |  for unit testing as a simple edge case                      |
-----------------------------------------------------------------------------------------------------
+|--------------------|--------------|--------------------------------------------------------------|
 |  main-col-group    |              |  Simple file-reading and group-counting module, with logging |
 |  test-col-group    |  ColGroup    |  to file. Example of testing impure units, and error display |
-----------------------------------------------------------------------------------------------------
-| *test-trapit*      |  Trapit      |  The assertion module itself written with core pure function |
-|                    |              |  to enable unit testing, and make multiple reporters easy    |
+|--------------------|--------------|--------------------------------------------------------------|
+|  format-externals  |              |                                                              |
+|--------------------|  Trapit      |  Entry point module for the unit test formaatting functions  |
+|                    |--------------|--------------------------------------------------------------|
+| *test-trapit*      |  TrapitUtils |  Entry point module for testUnit, the main function called   |
+|                    |              |  by unit test scripts                                        |
 ====================================================================================================
 The trapit package can be used to facilitate unit testing in *any* language, so long as the same 
 design pattern is followed, and the test driver program outputs a JSON file in the required format.
 The separate externals example shows how to process externally generated files.
 
-This file is a unit test program for the assertion module itself.
+This file is a unit test program for the unit test results formaatting module.
 
 To run from root (trapit) folder:
 
 $ npm test
 
 ***************************************************************************************************/
-const Utils = require('../lib/utils');
-const Trapit = require('../lib/trapit');
+const [Trapit,                   TrapitUtils                   ] =
+      [require('../lib/trapit'), require('../lib/trapit-utils')];
 
-const ROOT = 'test/';
-const INPUT_JSON = ROOT + 'trapit.json';
+const ROOT = 'test/',
+      INPUT_JSON = ROOT + 'trapit.json';
 
-const [DELIM, SUB_DELIM] = ['|', '~'];
-const [INP_TITLE, INP_FIELDS,     OUT_FIELDS,       INP_VALUES] = 
-      ['Report',  'Input Fields', 'Output Fields',  'Input Values'];
-const [EXP_VALUES,         ACT_VALUES,      OUT_VALUES,      SUMMARIES] = 
-      ['Expected Values',  'Actual Values', 'Output Values', 'Summaries'];
-const [EX_MESSAGE,          EX_STACK] = 
+const [DELIM, SUB_DELIM] = 
+      ['|',   '~'      ];
+const [INP_TITLE,           INP_FIELDS,      OUT_FIELDS,       INP_VALUES    ] = 
+      ['Report',            'Input Fields',  'Output Fields',  'Input Values'],
+      [EXP_VALUES,          ACT_VALUES,      OUT_VALUES,       SUMMARIES     ] = 
+      ['Expected Values',   'Actual Values', 'Output Values',  'Summaries'   ],
+      [EX_MESSAGE,          EX_STACK         ] = 
       ['Exception Message', 'Exception Stack'];
 
-function lisToCsv(lis) { return lis.join(DELIM) };
-function lisToCsvSub(lis) { return lis.join(SUB_DELIM) };
-function csvToLis(csv) { return csv.split(DELIM) }
-function csvLisToLol(csvLis) { return csvLis.map((r) => csvToLis(r)) }
+function lisToCsv(lis)       { return lis.join(DELIM) };
+function lisToCsvSub(lis)    { return lis.join(SUB_DELIM) };
+function csvToLis(csv)       { return csv.split(DELIM) };
+function csvLisToLol(csvLis) { return csvLis.map((r) => csvToLis(r)) };
 
-function setOut(exp, utOutput) {
+function setOut(utOutput) {
 
   let summaries = [];
   let [i_s, i_if, i_of, i_iv, i_ov] = [0, 0, 0, 0, 0];
@@ -104,24 +108,23 @@ function setOut(exp, utOutput) {
     }
   }
   return {
-      [SUMMARIES]  : {exp: exp[SUMMARIES],  act: summaries},
-      [INP_FIELDS] : {exp: exp[INP_FIELDS], act: actInpFlds},
-      [OUT_FIELDS] : {exp: exp[OUT_FIELDS], act: actOutFlds},
-      [INP_VALUES] : {exp: exp[INP_VALUES], act: actInpRows},
-      [OUT_VALUES] : {exp: exp[OUT_VALUES], act: actOutRows}
+      [SUMMARIES]  : summaries,
+      [INP_FIELDS] : actInpFlds,
+      [OUT_FIELDS] : actOutFlds,
+      [INP_VALUES] : actInpRows,
+      [OUT_VALUES] : actOutRows
   };
 }
-function setOutException(exp, exceptions) {
-  const s = csvToLis(exp[OUT_VALUES][0])[0];
+function setOutException(s, exceptions) {
   let actOutRows = [];
   actOutRows[0] = lisToCsv([s, EX_MESSAGE, exceptions[0]]);
   actOutRows[1] = lisToCsv([s, EX_STACK, exceptions[1]]);
   return {
-      [SUMMARIES]  : {exp: exp[SUMMARIES],  act: []},
-      [INP_FIELDS] : {exp: exp[INP_FIELDS], act: []},
-      [OUT_FIELDS] : {exp: exp[OUT_FIELDS], act: []},
-      [INP_VALUES] : {exp: exp[INP_VALUES], act: []},
-      [OUT_VALUES] : {exp: exp[OUT_VALUES], act: actOutRows}
+      [SUMMARIES]  : [],
+      [INP_FIELDS] : [],
+      [OUT_FIELDS] : [],
+      [INP_VALUES] : [],
+      [OUT_VALUES] : actOutRows
   };
 }
 function getGroups(fields) {
@@ -182,19 +185,19 @@ function getInScenarios(inpGroups, outGroups, inpValues, expValues, actValues) {
   }
   return sce;
 }
-function purelyWrapUnit (callScenario) {
+function purelyWrapUnit(inpGroups) {
 
   let inMeta = {};
   let exceptions = [];
   let utOutput = {};
-  const inpFields = callScenario.inp[INP_FIELDS];
-  const outFields = callScenario.inp[OUT_FIELDS];
-  inMeta.title = callScenario.inp[INP_TITLE][0];
+  const inpFields = inpGroups[INP_FIELDS];
+  const outFields = inpGroups[OUT_FIELDS];
+  inMeta.title = inpGroups[INP_TITLE][0];
   inMeta.inp = getGroups(inpFields);
   inMeta.out = getGroups(outFields);
 
-  const [inpValues,                    expValues,                    actValues] = 
-        [callScenario.inp[INP_VALUES], callScenario.inp[EXP_VALUES], callScenario.inp[ACT_VALUES]];
+  const [inpValues,             expValues,             actValues] = 
+        [inpGroups[INP_VALUES], inpGroups[EXP_VALUES], inpGroups[ACT_VALUES]];
 
   const inScenarios = getInScenarios(Object.keys(inMeta.inp), Object.keys(inMeta.out), 
                                      inpValues, expValues, actValues);
@@ -203,20 +206,10 @@ function purelyWrapUnit (callScenario) {
   } catch(e) {
     exceptions[0] = e.message;
     exceptions[1] = e.stack;
-    return {inp: callScenario.inp, out: setOutException(callScenario.out, exceptions)};
+
+    return setOutException(csvToLis(inpGroups[EXP_VALUES][0])[0], exceptions);
   }
 
-//  Trapit.prUTResultsText(inMeta, inScenarios); //debugging: writes output to .
-  return {inp: callScenario.inp, out: setOut(callScenario.out, utOutput)};
-};
-const testData = Trapit.getUTData(INPUT_JSON);
-const [meta, callScenarios] = [testData.meta, testData.scenarios];
-
-let scenarios = {};
-for (let s in callScenarios) {
-  scenarios[s] = purelyWrapUnit(callScenarios[s]);
-};
-
-const result = Trapit.prUTResultsTextAndHTML(meta, scenarios, ROOT)
-console.log(Utils.heading(result.nFail + ' of ' + result.nTest + ' scenarios failed, see ' +
-   ROOT + result.resFolder + ' for scenario listings'));
+  return setOut(utOutput);
+}
+TrapitUtils.testUnit(INPUT_JSON, ROOT, purelyWrapUnit);
