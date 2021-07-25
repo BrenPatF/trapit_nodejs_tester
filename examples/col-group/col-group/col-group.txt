@@ -51,7 +51,7 @@ SCENARIO 1: Col 3/4; 4 lines; comma-delimiter; no log {
 
             #  #Lines  Date Offset        Text                                                                                                                                                                 
             -  ------  -----------------  ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
-            1  1       IN [0, 2000]: 602  LIKE /.*: File ./examples/col-group/ut_group.csv, delimiter ',', column 2/: Sun Jul 25 2021 12:10:57: File ./examples/col-group/ut_group.csv, delimiter ',', column 2
+            1  1       IN [0, 2000]: 297  LIKE /.*: File ./examples/col-group/ut_group.csv, delimiter ',', column 2/: Sun Jul 25 2021 15:06:16: File ./examples/col-group/ut_group.csv, delimiter ',', column 2
 
       } 0 failed of 1: SUCCESS
       ========================
@@ -139,7 +139,7 @@ SCENARIO 2: Col 1/3; 2 duplicate lines; double-delimiter; 1-line log {
 
             #  #Lines  Date Offset       Text                                                                                                                                                                   
             -  ------  ----------------  -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
-            1  2       IN [0,2000]: 607  LIKE /.*: File ./examples/col-group/ut_group.csv, delimiter ';;', column 0/: Sun Jul 25 2021 12:10:57: File ./examples/col-group/ut_group.csv, delimiter ';;', column 0
+            1  2       IN [0,2000]: 303  LIKE /.*: File ./examples/col-group/ut_group.csv, delimiter ';;', column 0/: Sun Jul 25 2021 15:06:16: File ./examples/col-group/ut_group.csv, delimiter ';;', column 0
 
       } 0 failed of 1: SUCCESS
       ========================
@@ -224,7 +224,7 @@ SCENARIO 3: Col 10/10; 3 lines, 2 with same 50-character key; comma-delimiter; 1
 
             #  #Lines  Date Offset       Text                                                                                                                                                                 
             -  ------  ----------------  ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
-            1  2       IN [0,2000]: 612  LIKE /.*: File ./examples/col-group/ut_group.csv, delimiter ',', column 9/: Sun Jul 25 2021 12:10:57: File ./examples/col-group/ut_group.csv, delimiter ',', column 9
+            1  2       IN [0,2000]: 308  LIKE /.*: File ./examples/col-group/ut_group.csv, delimiter ',', column 9/: Sun Jul 25 2021 15:06:16: File ./examples/col-group/ut_group.csv, delimiter ',', column 9
 
       } 0 failed of 1: SUCCESS
       ========================
@@ -301,7 +301,7 @@ SCENARIO 4: Col 10/10; empty file edge-case; comma-delimiter; 1-line log {
 
             #  #Lines  Date Offset       Text                                                                                                                                                                 
             -  ------  ----------------  ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
-            1  2       IN [0,2000]: 616  LIKE /.*: File ./examples/col-group/ut_group.csv, delimiter ',', column 9/: Sun Jul 25 2021 12:10:57: File ./examples/col-group/ut_group.csv, delimiter ',', column 9
+            1  2       IN [0,2000]: 312  LIKE /.*: File ./examples/col-group/ut_group.csv, delimiter ',', column 9/: Sun Jul 25 2021 15:06:16: File ./examples/col-group/ut_group.csv, delimiter ',', column 9
 
       } 0 failed of 1: SUCCESS
       ========================

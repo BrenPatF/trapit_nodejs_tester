@@ -54,6 +54,6 @@ $ node examples\externals\test-externals
 
 ***************************************************************************************************/
 const [ROOT,          subFolder,       Trapit           ] =
-      ['./externals', process.argv[2], require('trapit')];
+      ['./externals', process.argv[2], require('../lib/trapit-utils')]; //require('trapit') -- npm install, using index.js
 
 Trapit.tabMkUTExternalResultsFolders(ROOT + (subFolder === undefined ? '' : '/' + subFolder), 'B'); // H/T/B : Format in HTML/Text/Both

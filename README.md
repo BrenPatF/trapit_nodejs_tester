@@ -14,7 +14,7 @@ There are three short screen recordings on the module in the root folder:
 - Trapit nodejs tester 2 - Testing JavaScript programs.mp4
 - Trapit nodejs tester 3 - Formatting external unit test results JSON files.mp4
 
-These are also available in this [Twitter thread]().
+These are also available in this [Twitter thread](https://twitter.com/BrenPatF/status/1419306890002059270).
 
 ## In this README...
 [&darr; Background](https://github.com/BrenPatF/trapit_nodejs_tester#background)<br/>
@@ -348,7 +348,7 @@ The template is then updated with test data for 4 scenarios (showing just the fi
 Notice the syntax for the expected values for the second and third fields in the 3-field output record for the log group. This specifies matching against a numeric range and a regular expression, respectively, as follows:
 
 - Date Offset: "IN [0, 2000]" - the datetime offset in microseconds must be between 0 and 2000 microseconds from the datetime at the start of execution
-- Text: "LIKE /.*: File ./examples/col-group/ut_group.csv, delimiter ',', column 2/" - the line of text written must match the regualr expression betwen the '/' delimiters, allowing us to ignore the precise timestamp for testing purposes, but still to display it for information
+- Text: "LIKE /.*: File ./examples/col-group/ut_group.csv, delimiter ',', column 2/" - the line of text written must match the regular expression betwen the '/' delimiters, allowing us to ignore the precise timestamp for testing purposes, but still to display it for information
 
 
 #### Unit Test Wrapper Function
