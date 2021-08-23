@@ -55,5 +55,8 @@ $ node examples\externals\test-externals
 ***************************************************************************************************/
 const [ROOT,          subFolder,       Trapit           ] =
       ['./externals', process.argv[2], require('../lib/trapit-utils')]; //require('trapit') -- npm install, using index.js
+const DEFAULT_COLORS = {h1: '#FFFF00', h2: '#2AE6C1', h3: '#33F0FF', h4: '#7DFF33'};
+let colors = DEFAULT_COLORS;
+//colors.h2 = '#a232a8';
 
-Trapit.tabMkUTExternalResultsFolders(ROOT + (subFolder === undefined ? '' : '/' + subFolder), 'B'); // H/T/B : Format in HTML/Text/Both
+Trapit.tabMkUTExternalResultsFolders(ROOT + (subFolder === undefined ? '' : '/' + subFolder), 'B', colors); // H/T/B : Format in HTML/Text/Both

@@ -58,7 +58,7 @@ function prListsAsLine(fields, lengths, ofile, tag = 'td') {
   }
   prLine('<tr' + addStyle + '>' + strings.join ('') + '</tr>', ofile);
 }
-function prHTMLHeader(ofile, colors, isRoot = false) {
+function prHTMLHeader(ofile, isRoot = false) {
 
   let td = `
     td {
@@ -103,25 +103,25 @@ h1 {margin-top: 0em; margin-bottom: 0em;
   font-family: arial, sans-serif;
   width: 100%;
   font-size: 300%;
-  background-color: ` + colors.h1 + `;
+  background-color: #FFFF00;
 }
 h2 {margin-top: 0em; margin-bottom: 0em;
   font-family: arial, sans-serif;
   width: 100%;
   font-size: 200%;
-  background-color: ` + colors.h2 + `;
+  background-color: #2AE6C1; //#7DFF33;
 }
 h3 {margin-top: 0em; margin-bottom: 0em;
   font-family: arial, sans-serif;
   width: 100%;
   font-size: 150%;
-  background-color: ` + colors.h3 + `;
+  background-color: #33F0FF;
 }
 h4 {margin-top: 0em; margin-bottom: 0em;
   font-family: arial, sans-serif;
   width: 100%;
   font-size: 125%;
-  background-color: ` + colors.h4 + `;
+  background-color: #7DFF33;//#F933FF;
 }
 </style>
 </head>
@@ -138,9 +138,9 @@ function hdrLis(nOutGroups, fields) {
 
 const self = module.exports = {
 
-  prRepHdr: (text, root, ofile, fields, nOutGroups, maxSce, colors) => {
+  prRepHdr: (text, root, ofile, fields, nOutGroups, maxSce) => {
     pg = new pgs(ofile, root);
-    prHTMLHeader(ofile, colors, true);
+    prHTMLHeader(ofile, true);
     prField(text, ofile, 1);
     self.prColHdrs(hdrLis(nOutGroups, fields), [], ofile)
   },
@@ -155,8 +155,8 @@ const self = module.exports = {
     const fields = [sceLin.sceNum, hLink, sceLin.nFail, sceLin.status];
     self.prRec(fields, [], ofile);
   },
-  prSceHdr: (text, ofile, colors) => {
-    prHTMLHeader(ofile, colors);
+  prSceHdr: (text, ofile) => {
+    prHTMLHeader(ofile);
     prField(text, ofile, 2);
   },
   prSceFtr: (text, ofile) => {

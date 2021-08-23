@@ -870,6 +870,7 @@ This is the base entry point for testing JavaAcript programs. It writes the outp
   - Input parameter: 3-level list with test inputs as an object with groups as properties having 2-level arrays of record/field as values: {GROUP: [[String]], ...}
   - Return Value:    2-level list with test outputs as an object with groups as properties having an array of records as delimited fields strings as value: {GROUP: [String], ...}
 - `formatType`: format type = H/T/B - Format in HTML/Text/Both; default 'B'
+- `colors`: object with HTML heading colours; default {h1: '#FFFF00', h2: '#2AE6C1', h3: '#33F0FF', h4: '#7DFF33'}
 
 and object return value with the following fields:
 - `nTest`: number of test scenarios
@@ -892,6 +893,7 @@ This is the base entry point for formatting results JSON files from external pro
 
 - `extFolder`: external folder, where the results output files are to be written, in a subfolder with name based on the report title
 - `formatType`: format type = H/T/B - Format in HTML/Text/Both; default 'B'
+- `colors`: object with HTML heading colours; default {h1: '#FFFF00', h2: '#2AE6C1', h3: '#33F0FF', h4: '#7DFF33'}
 
 and array return value with the following fields:
 - `file`: JSON results file name

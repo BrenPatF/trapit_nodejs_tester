@@ -327,16 +327,17 @@ _mkUTResultsFolder: Private function called by the public methods to print resul
               p       - module containing functions used in printing in either text or html format
 
 ***************************************************************************************************/
-function _mkUTResultsFolder(results, ext, p, rootFolder, colors) {
+function _mkUTResultsFolder(results, ext, p, rootFolder) {
   const root = results.result.resFolder,
         ifile = root + ext;
+
   const maxSce = Math.max(ROOT_HDRS[1].length, Object.keys(results.sceLis).reduce( (a, b) => { return a.length > b.length ? a : b; }).length);
-  p.prRepHdr(results.repHdr, rootFolder + root, ifile, ROOT_HDRS, results.nOutGroups, maxSce, colors);
+  p.prRepHdr(results.repHdr, rootFolder + root, ifile, ROOT_HDRS, results.nOutGroups, maxSce);
   for (const s in results.sceLis)  {
     const sfile = Utils.repSpaces(s) + ext;
     const sceObj = results.sceLis[s];
     const [inpGroups, outGroups] = [sceObj.inpGroups, sceObj.outGroups];
-    p.prSceHdr(sceObj.sceHdr, sfile, colors);
+    p.prSceHdr(sceObj.sceHdr, sfile);
     p.prIOHdr(sceObj.inpHdr, sfile);
     for (const g in inpGroups)  {
       const [val2Lis, lenLis] = [inpGroups[g].val2Lis, inpGroups[g].lenLis]
@@ -426,10 +427,10 @@ const self = module.exports = {
   mkUTResultsFolder: Print results in text or html format, or both
 
   *************************************************************************************************/
-  mkUTResultsFolder: (meta, scenarios, formatType, rootFolder, colors) => {
+  mkUTResultsFolder: (meta, scenarios, formatType = 'B', rootFolder = './') => {
     const results = self.getUTResults(meta, scenarios);
 
-    if (formatType == 'H' || formatType == 'B') {_mkUTResultsFolder(results, '.html', Html, rootFolder, colors);}
+    if (formatType == 'H' || formatType == 'B') {_mkUTResultsFolder(results, '.html', Html, rootFolder);}
     if (formatType == 'T' || formatType == 'B') {_mkUTResultsFolder(results, '.txt', Text, rootFolder);}
 
     return {

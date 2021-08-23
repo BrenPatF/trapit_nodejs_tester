@@ -773,7 +773,7 @@ SCENARIO 6: No inp, 1 out group - fields mismatch - Exception {
             2  No inp, 1 out group  Exception Stack    UNTESTED: Error: Error, exp #fields 1, expected 2 [s: No inp, 1 out group, g: 2-field output group, r: First value]
     at chkRec (C:\Users\Brend\OneDrive\Documents\GitHub\trapit_nodejs_tester\lib\trapit.js:253:11)
     at chkInputs (C:\Users\Brend\OneDrive\Documents\GitHub\trapit_nodejs_tester\lib\trapit.js:314:9)
-    at Object.getUTResults (C:\Users\Brend\OneDrive\Documents\GitHub\trapit_nodejs_tester\lib\trapit.js:379:5)
+    at Object.getUTResults (C:\Users\Brend\OneDrive\Documents\GitHub\trapit_nodejs_tester\lib\trapit.js:378:5)
     at purelyWrapUnit (C:\Users\Brend\OneDrive\Documents\GitHub\trapit_nodejs_tester\test\test-trapit.js:205:23)
     at Object.testUnit (C:\Users\Brend\OneDrive\Documents\GitHub\trapit_nodejs_tester\lib\trapit-utils.js:175:70)
     at Object.<anonymous> (C:\Users\Brend\OneDrive\Documents\GitHub\trapit_nodejs_tester\test\test-trapit.js:215:13)
@@ -865,7 +865,7 @@ SCENARIO 7: No inp, 1 out group - groups mismatch - Exception {
             2  No inp, 1 out group  Exception Stack    UNTESTED: Error: Error, s: Out: No inp, 1 out group: expected #groups = 1, actual #groups = 2
     at chkGrpLen (C:\Users\Brend\OneDrive\Documents\GitHub\trapit_nodejs_tester\lib\trapit.js:265:11)
     at chkInputs (C:\Users\Brend\OneDrive\Documents\GitHub\trapit_nodejs_tester\lib\trapit.js:299:5)
-    at Object.getUTResults (C:\Users\Brend\OneDrive\Documents\GitHub\trapit_nodejs_tester\lib\trapit.js:379:5)
+    at Object.getUTResults (C:\Users\Brend\OneDrive\Documents\GitHub\trapit_nodejs_tester\lib\trapit.js:378:5)
     at purelyWrapUnit (C:\Users\Brend\OneDrive\Documents\GitHub\trapit_nodejs_tester\test\test-trapit.js:205:23)
     at Object.testUnit (C:\Users\Brend\OneDrive\Documents\GitHub\trapit_nodejs_tester\lib\trapit-utils.js:175:70)
     at Object.<anonymous> (C:\Users\Brend\OneDrive\Documents\GitHub\trapit_nodejs_tester\test\test-trapit.js:215:13)

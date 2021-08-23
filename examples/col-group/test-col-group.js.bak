@@ -46,10 +46,6 @@ const [INPUT_JSON,              INPUT_FILE,            LOG_FILE                 
 const [GRP_LOG,   GRP_SCA,   GRP_LIN, GRP_LAI,    GRP_SBK,     GRP_SBV      ]  =
       ['Log',     'Scalars', 'Lines', 'listAsIs', 'sortByKey', 'sortByValue'];
 
-const DEFAULT_COLORS = {h1: '#FFFF00', h2: '#2AE6C1', h3: '#33F0FF', h4: '#7DFF33'};
-let colors = DEFAULT_COLORS;
-colors.h2 = '#FFFF00';
-
 function fromCSV(csv, col) {return csv.split(DELIM)[col]};
 function joinTuple(t) {return t.join(DELIM)}
 
@@ -83,4 +79,4 @@ function purelyWrapUnit(inpGroups) {
     [GRP_SBV] : colGroup[GRP_SBV]().map(joinTuple)
   };
 }
-Trapit.fmtTestUnit(INPUT_JSON, ROOT, purelyWrapUnit, 'B', colors);
+Trapit.fmtTestUnit(INPUT_JSON, ROOT, purelyWrapUnit);
