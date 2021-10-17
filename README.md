@@ -16,6 +16,10 @@ There are three short screen recordings on the module in the root folder:
 
 These are also available in this [Twitter thread](https://twitter.com/BrenPatF/status/1419306890002059270).
 
+There is a blog post on scenario selection in unit testing that may be of interest:
+
+- [Unit Testing, Scenarios and Categories: The SCAN Method](https://brenpatf.github.io/jekyll/update/2021/10/17/unit-testing-scenarios-and-categories-the-scan-method.html)
+
 ## In this README...
 [&darr; Background](https://github.com/BrenPatF/trapit_nodejs_tester#background)<br/>
 [&darr; Usage 1 - JavaScript Unit Testing](https://github.com/BrenPatF/trapit_nodejs_tester#usage-1---javascript-unit-testing)<br/>
