@@ -1146,7 +1146,7 @@ There are four subfolders below the trapit root folder:
 [&uarr; In this README...](https://github.com/BrenPatF/trapit_nodejs_tester#in-this-readme)
 - [Database API Viewed As A Mathematical Function: Insights into Testing](https://www.slideshare.net/brendanfurey7/database-api-viewed-as-a-mathematical-function-insights-into-testing)
 - [timer-set - JavaScript code timing module)](https://github.com/BrenPatF/timer-set-nodejs)
-- [timerset_python - Python code timing module](timerset_python)
+- [timerset_python - Python code timing module](https://github.com/BrenPatF/timerset_python)
 - [Powershell utilities module](powershell_utils)
 - [Utils - Oracle PL/SQL general utilities module](https://github.com/BrenPatF/oracle_plsql_utils)
 - [Log_Set - Oracle logging module](https://github.com/BrenPatF/log_set_oracle)
