@@ -1,7 +1,7 @@
 # Trapit
 <img src="mountains.png">
 
-> The Math Function Unit Testing design pattern, implemented in nodejs
+> The Math Function Unit Testing design pattern, implemented in JavaScript
 
 :detective:
 
@@ -81,7 +81,7 @@ Advantages of the design pattern include:
 - Once the unit test wrapper function is written for one scenario, no further programming is required to handle additional scenarios, facilitating good scenario coverage
 - The formatted results show exactly what the program does in terms of data inputs and outputs
 - All unit test programs can follow a single, straightfoward pattern with minimal programming
-- The nodejs Trapit module can be used to process results files generated from any language as JSON files (several examples are included with the project)
+- The JavaScript Trapit module can be used to process results files generated from any language as JSON files (several examples are included with the project)
 
 ## Usage 1 - JavaScript Unit Testing
 [&uarr; In this README...](https://github.com/BrenPatF/trapit_nodejs_tester#in-this-readme)<br/>
@@ -421,7 +421,8 @@ $ node ./examples/col-group/test-col-group
 
 The art of unit testing lies in choosing a set of scenarios that will produce a high degree of confidence in the functioning of the unit under test across the often very large range of possible inputs.
 
-A useful approach to this can be to think in terms of categories of inputs, where we reduce large ranges to representative categories. In our case we might consider the following category sets, and create scenarios accordingly:
+A useful approach to this can be to think in terms of categories of inputs, where we reduce large ranges to representative categories.
+In our case we might consider the following category sets, and create scenarios accordingly:
 
 ##### Input Data Category Sets
 [&uarr; Unit Test Scenarios](https://github.com/BrenPatF/trapit_nodejs_tester#unit-test-scenarios)<br/>
@@ -960,7 +961,11 @@ This creates a subfolder trapit in the test folder with text results in trapit.t
 
 The art of unit testing lies in choosing a set of scenarios that will produce a high degree of confidence in the functioning of the unit under test across the often very large range of possible inputs.
 
-A useful approach to this can be to think in terms of categories of inputs, where we reduce large ranges to representative categories. In our case we might consider the following category sets, and create scenarios accordingly:
+A useful approach to this can be to think in terms of categories of inputs, where we reduce large ranges to representative categories.  I explore this approach further in a subsequent article:
+
+- [Unit Testing, Scenarios and Categories: The SCAN Method](https://brenpatf.github.io/jekyll/update/2021/10/17/unit-testing-scenarios-and-categories-the-scan-method.html)
+
+In our case we might consider the following category sets, and create scenarios accordingly:
 
 ##### Multiplicity
 [&uarr; Input Data Category Sets](https://github.com/BrenPatF/trapit_nodejs_tester#input-data-category-sets-2)
@@ -1145,6 +1150,7 @@ There are four subfolders below the trapit root folder:
 ## See Also
 [&uarr; In this README...](https://github.com/BrenPatF/trapit_nodejs_tester#in-this-readme)
 - [Database API Viewed As A Mathematical Function: Insights into Testing](https://www.slideshare.net/brendanfurey7/database-api-viewed-as-a-mathematical-function-insights-into-testing)
+- [Unit Testing, Scenarios and Categories: The SCAN Method](https://brenpatf.github.io/jekyll/update/2021/10/17/unit-testing-scenarios-and-categories-the-scan-method.html)
 - [timer-set - JavaScript code timing module)](https://github.com/BrenPatF/timer-set-nodejs)
 - [timerset_python - Python code timing module](https://github.com/BrenPatF/timerset_python)
 - [Powershell utilities module](powershell_utils)
