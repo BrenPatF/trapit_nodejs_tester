@@ -2,61 +2,50 @@
 /***************************************************************************************************
 Name: format-externals.js              Author: Brendan Furey                       Date: 05-Jul-2018
 
-Component module in: The Math Function Unit Testing design pattern, implemented in nodejs
+Component script in the JavaScript repository 'Trapit - JavaScript Unit Tester/Formatter'.
 
-GitHub: https://github.com/BrenPatF/trapit_nodejs_tester
+    GitHub: https://github.com/BrenPatF/trapit_nodejs_tester
 
-See: 'Database API Viewed As A Mathematical Function: Insights into Testing'
-    https://www.slideshare.net/brendanfurey7/database-api-viewed-as-a-mathematical-function-insights-into-testing
-    Brendan Furey, March 2018
-
-
+The table shows the driver scripts for the relevant modules: There are two examples of use, with
+main and test scripts; three scripts for formatting results from external (i.e. non-JavaScript) unit
+tests; and a test script for the Trapit.getUTResults function.
 ====================================================================================================
-|  Main/Test         |  Unit Module |  Notes                                                       |
+|  Main/Test               | Unit Module   | Notes                                                 |
 |==================================================================================================|
-|  format-externals  |  Trapit      |  Simple Hello World program done as pure function to allow   |
-|                    |  HelloWorld  |  for unit testing as a simple edge case                      |
-|--------------------|--------------|--------------------------------------------------------------|
-|  main-col-group    |              |  Simple file-reading and group-counting module, with logging |
-|  test-col-group    |  ColGroup    |  to file. Example of testing impure units, and error display |
-|--------------------|--------------|--------------------------------------------------------------|
-|                    |              |                                                              |
-|                    |              |  Entry point module for the unit test formaatting functions  |
-| *test-trapit*      |--------------|--------------------------------------------------------------|
-|                    |  TrapitUtils |  Entry point module for testUnit, the main function called   |
-|                    |              |  by unit test scripts                                        |
+|  main-helloworld         |               | Hello World program implemented as pure function to   |
+|  test-helloworld         |  helloWorld   | allow for unit testing as a simple edge case          |
+|--------------------------|---------------|-------------------------------------------------------|
+|  main-colgroup           |               | Simple file-reading/group-counting module, logging to |
+|  test-colgroup           |  ColGroup     | file. Example of testing impure units, error display  |
+|--------------------------|-----------------------------------------------------------------------|
+|  format-external-file    |                 External formatting scripts                           |
+|  format-external-folder  |-----------------------------------------------------------------------|
+| *format-externals*       |  Trapit       | Unit test formatting functions                        |
+|--------------------------|  TrapitUtils  | Unit test entry points for scripts                    |
+|                          |-----------------------------------------------------------------------|
+|  test-getutresults       |                 Unit test script                                      |
 ====================================================================================================
-Unit test formatting driver program for JSON output files that are externally sourced. The trapit
-package can be used to facilitate unit testing in *any* language, so long as the same design pattern
-is followed, and the test driver program outputs a JSON file in the required format.
+This file contains a unit test formatting driver program for JSON output files that are externally
+sourced. The trapit package can be used to facilitate unit testing in *any* language, so long as the
+same design pattern is followed, and the test driver program outputs a JSON file in the required
+format.
 
 This program loops over all .json files in a specified folder and creates results files formatted in
 HTML and text in a subfolder named from the unit test title. The source JSON files contain a meta 
 object and a scenarios object in a standard data model.
 
-The example files come from an Oracle unit testing project, where all input test data are read from
-JSON files, and output written to JSON files, to then be formatted here via the nodejs programs.
+To run from the root folder:
 
-The files from the Oracle project, named {package}.{procedure}_out.json, are:
+    $ node externals\test-externals subFolder
 
-	tt_emp_batch.load_emps_out.json
-	tt_emp_ws.get_dept_emps_out.json
-	tt_emp_ws.save_emps_out.json
-	tt_view_drivers.tt_hr_test_view_v_out.json
+where:
 
-See https://github.com/BrenPatF/oracle_plsql_api_demos for the project that creates these files.
-
-Example using text and HTML function prUTResultsTextAndHTML.
-
-To run from root (trapit) folder:
-
-$ node examples\externals\test-externals
-
+- subFolder = subfolder (of externals folder) for JSON files, and where the results output files are
+              to be written, in subfolders with names based on the report titles
 ***************************************************************************************************/
-const [ROOT,          subFolder,       Trapit           ] =
-      ['./externals', process.argv[2], require('../lib/trapit-utils')]; //require('trapit') -- npm install, using index.js
+const [subFolder,       Trapit           ] =
+      [process.argv[2], require('trapit')];
 const DEFAULT_COLORS = {h1: '#FFFF00', h2: '#2AE6C1', h3: '#33F0FF', h4: '#7DFF33'};
 let colors = DEFAULT_COLORS;
 //colors.h2 = '#a232a8';
-
-Trapit.tabMkUTExternalResultsFolders(ROOT + (subFolder === undefined ? '' : '/' + subFolder), 'B', colors); // H/T/B : Format in HTML/Text/Both
+Trapit.tabMkUTExternalResultsFolders(__dirname + (subFolder === undefined ? '' : '\\' + subFolder), 'B', colors); // H/T/B : Format in HTML/Text/Both

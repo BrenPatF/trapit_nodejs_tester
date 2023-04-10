@@ -27,6 +27,7 @@ Unit Test Report: Oracle PL/SQL Log Set
 
 Test scenarios: 0 failed of 21: SUCCESS
 =======================================
+Tested: 2023-04-10 06:33:41, Formatted: 2023-04-10 06:33:41
 
 SCENARIO 1: Simple defaulted {
 ==============================

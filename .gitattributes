@@ -1,1 +1,7 @@
-test/*/* linguist-vendored
+unit_test/*/* linguist-vendored
+examples/colgroup/*/* linguist-vendored
+examples/helloworld/*/* linguist-vendored
+externals/*/*/* linguist-vendored
+powershell/* linguist-vendored
+readme/* linguist-vendored
+readme/*/* linguist-vendored

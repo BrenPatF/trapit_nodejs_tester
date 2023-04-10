@@ -12,6 +12,7 @@ Unit Test Report: Powershell Utils
 
 Test scenarios: 0 failed of 6: SUCCESS
 ======================================
+Tested: 2023-04-10 06:33:42, Formatted: 2023-04-10 06:33:42
 
 SCENARIO 1: Base case, defaulting {
 ===================================

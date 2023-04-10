@@ -15,6 +15,7 @@ Unit Test Report: Oracle PL/SQL API Demos: TT_Emp_Batch.Load_Emps
 
 Test scenarios: 0 failed of 9: SUCCESS
 ======================================
+Tested: 2021-06-27 13:27:36, Formatted: 2023-02-26 10:34:20
 
 SCENARIO 1: NV/OV/OU/NI/OI/EI: 1/0/0/0/0/0. Existing J/E: 0/0. [1 valid new record from scratch] {
 ==================================================================================================

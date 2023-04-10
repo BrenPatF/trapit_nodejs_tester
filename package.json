@@ -1,14 +1,14 @@
 {
   "name": "trapit",
-  "version": "1.0.11",
-  "description": "Unit testing assertion package supporting Math Function Unit Testing design pattern",
+  "version": "1.0.18",
+  "description": "Trapit - JavaScript Unit Tester/Formatter",
   "homepage": "https://github.com/BrenPatF/trapit_nodejs_tester#readme",
   "repository": {
     "type": "git",
     "url": "git://github.com/BrenPatF/trapit_nodejs_tester.git"
   },
   "scripts": {
-    "test": "node test/test-trapit"
+    "test": "node unit_test/test-getutresults"
   },
   "keywords": [
     "testing",
@@ -17,7 +17,7 @@
     "unit test"
   ],
   "author": "Brendan Furey",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "patch": "0.0.1"
   }
