@@ -337,13 +337,13 @@ This is the summary page in text format.
 Unit Test Report: Hello World - JavaScript
 ==========================================
 
-      #    Scenario  Fails (of 2)  Status
-      ---  --------  ------------  -------
-      1    Scenario  0             SUCCESS
+      #    Category Set  Scenario  Fails (of 2)  Status
+      ---  ------------  --------  ------------  -------
+      1    Global        No input  0             SUCCESS
 
 Test scenarios: 0 failed of 1: SUCCESS
 ======================================
-Formatted: 2023-04-09 13:49:09
+Formatted: 2023-04-12 05:52:48
 ```
 
 ###### Scenario 1: No input
@@ -1189,7 +1189,7 @@ As noted, in this JavaScript version, the entry point goes on to execute step 3,
 
 You can review the HTML formatted unit test results here:
 
-- [Unit Test Report: getUTResults](http://htmlpreview.github.io/?https://github.com/BrenPatF/powershell_utils/blob/master/TrapitUtils/unit_test/getutresults/getutresults.html)
+- [Unit Test Report: getUTResults](http://htmlpreview.github.io/?https://github.com/BrenPatF/trapit_nodejs_tester/blob/master/unit_test/getutresults/getutresults.html)
 
 #### Unit Test Report - getUTResults
 [&uarr; Step 3: Format Results](#step-3-format-results-1)<br />
