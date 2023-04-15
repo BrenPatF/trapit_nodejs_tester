@@ -34,7 +34,7 @@ I later named the approach 'The Math Function Unit Testing design pattern' when 
 - [Trapit - JavaScript Unit Tester/Formatter](https://github.com/BrenPatF/trapit_nodejs_tester)
 
 The module also allowed for the formatting of results obtained from testing in languages other than JavaScript by means of an intermediate output JSON file. In 2021 I developed a powershell module that included a utility to generate a template for the JSON input scenarios file required by the design pattern:
-- [Powershell Trapit Unit Testing Utilities module.](https://github.com/BrenPatF/powershell_utils/tree/master/TrapitUtils)
+- [Powershell Trapit Unit Testing Utilities module](https://github.com/BrenPatF/powershell_utils/tree/master/TrapitUtils)
 
 Also in 2021 I developed a systematic approach to the selection of unit test scenarios:
 - [Unit Testing, Scenarios and Categories: The SCAN Method](https://brenpatf.github.io/jekyll/update/2021/10/17/unit-testing-scenarios-and-categories-the-scan-method.html)
@@ -100,7 +100,7 @@ The API can be run (after installing the TrapitUtils module) with the following 
 Import-Module TrapitUtils
 Write-UT_Template 'stem' '|'
 ```
-This creates the template JSON file, `stem`_temp.json based on the CSV files having prefix `stem` and using the field delimiter '|'.
+This creates the template JSON file, `stem`_temp.json based on the CSV files having prefix `stem` and using the field delimiter '|'. The template file is then updated manually with data appropriate to each scenario.
 
 This powershell API can be used for testing in any language.
 
@@ -467,6 +467,32 @@ From the input and output groups depicted we can construct CSV files with flatte
 ###### Scenario Category ANalysis (SCAN) - ColGroup
 [&uarr; Step 1: Create JSON File - ColGroup](#step-1-create-json-file---colgroup)<br />
 
+As noted earlier, a useful approach to scenario selection can be to think in terms of categories of inputs, where we reduce large ranges to representative categories.
+
+###### Generic Category Sets
+
+As explained in the article mentioned earlier, it can be very useful to think in terms of generic category sets that apply in many situations. Multiplicity is relevant here (as it often is):
+
+###### Multiplicity
+
+There are several entities where the generic category set of multiplicity applies, and we should check each of the None / One / Multiple instance categories.
+
+| Code     | Description     |
+|:--------:|:----------------|
+| None     | No values       |
+| One      | One value       |
+| Multiple | Multiple values |
+
+Apply to:
+<ul>
+<li>Lines</li>
+<li>File Columns (one or multiple only)</li>
+<li>Key Instance (one or multiple only)</li>
+<li>Delimiter (one or multiple only)</li>
+</ul>
+
+###### Categories and Scenarios
+
 After analysis of the possible scenarios in terms of categories and category sets, we can depict them on a Category Structure diagram:
 
 <img src="png/CSD-CG.png">
@@ -586,109 +612,15 @@ You can review the HTML formatted unit test results here:
 ###### Unit Test Report - ColGroup
 [&uarr; Step 3: Format Results - ColGroup](#step-3-format-results---colgroup)<br />
 
-This is the summary page in text format.
-
-```
-Unit Test Report: ColGroup - JavaScript
-=======================================
-
-      #    Category Set               Scenario                                  Fails (of 5)  Status
-      ---  -------------------------  ----------------------------------------  ------------  -------
-      1    Lines Multiplicity         No lines                                  0             SUCCESS
-      2    Lines Multiplicity         One line                                  0             SUCCESS
-      3    Lines Multiplicity         Multiple lines                            0             SUCCESS
-      4    File Column Multiplicity   One column in file                        0             SUCCESS
-      5    File Column Multiplicity   Multiple columns in file                  0             SUCCESS
-      6    Key Instance Multiplicity  One key instance                          0             SUCCESS
-      7    Key Instance Multiplicity  Multiple key instances                    0             SUCCESS
-      8    Delimiter Multiplicity     One delimiter character                   0             SUCCESS
-      9    Delimiter Multiplicity     Multiple delimiter characters             0             SUCCESS
-      10   Key Size                   Short key                                 0             SUCCESS
-      11   Key Size                   Long key                                  0             SUCCESS
-      12   Log file existence         Log file does not exist at time of call   0             SUCCESS
-      13   Log file existence         Log file exists at time of call           0             SUCCESS
-      14   Key/Value Ordering         Order by key differs from order by value  0             SUCCESS
-      15   Key/Value Ordering         Order by key same as order by value       0             SUCCESS
-      16*  Errors                     Actual/expected mismatch                  1             FAILURE
-      17*  Errors                     Unhandled exception                       5             FAILURE
-
-Test scenarios: 2 failed of 17: FAILURE
-=======================================
-Formatted: 2023-04-09 13:49:09
-```
+This is a screenshot of the summary page in HTML format.
+<img src="png/summary-colgroup.png">
 
 ###### Scenario 16: Actual/expected mismatch [Category Set: Errors]
 [&uarr; Step 3: Format Results - ColGroup](#step-3-format-results---colgroup)<br />
 
 This scenario is designed to fail, with one of the expected values in group 4 set to 9999 instead of the correct value of 2,  just to show how mismatches are displayed.
+<img src="png/scenario_16-colgroup.png">
 
-```
-SCENARIO 16: Actual/expected mismatch [Category Set: Errors] {
-==============================================================
-   INPUTS
-   ======
-      GROUP 1: Log {
-      ==============
-            #  Line
-            -  ----
-            1
-      }
-      =
-      GROUP 2: Scalars {
-      ==================
-            #  Delimiter  Column#  Throw Error
-            -  ---------  -------  -----------
-            1  ,          1        N
-      }
-      =
-      GROUP 3: Lines {
-      ================
-            #  Line
-            -  ------------------
-            1  col_0,col_1,col_2
-            2  val_0,val_11,val_2
-            3  val_0,val_10,val_2
-            4  val_0,val_11,val_2
-      }
-      =
-   OUTPUTS
-   =======
-      GROUP 1: Log {
-      ==============
-            #  #Lines  Date Offset       Text
-            -  ------  ----------------  -------------------------------------------------------------------------------------------------------------------------------------------------
-            1  2       IN [0,2000]: 665  LIKE /.*: File .*ut_group.csv, delimiter ',', column 1/: Mon Jan 23 2023 16:18:24: File ./examples/colgroup/ut_group.csv, delimiter ',', column 1
-      } 0 failed of 1: SUCCESS
-      ========================
-      GROUP 2: listAsIs {
-      ===================
-            #  #Instances
-            -  ----------
-            1  2
-      } 0 failed of 1: SUCCESS
-      ========================
-      GROUP 3: sortByKey {
-      ====================
-            #  Key     Value
-            -  ------  -----
-            1  val_10  1
-            2  val_11  2
-      } 0 failed of 2: SUCCESS
-      ========================
-      GROUP 4: sortByValue {
-      ======================
-            #   Key     Value
-            --  ------  -----
-            1   val_10  1
-            2   val_11  9999
-            2*  val_11  2
-      } 1 failed of 2: FAILURE
-      ========================
-      GROUP 5: Unhandled Exception: Empty as expected: SUCCESS
-      ========================================================
-} 1 failed of 5: FAILURE
-========================
-```
 ### Usage 2 - Formatting Test Results for External Programs
 [&uarr; Usage](#usage)<br />
 [&darr; Results Summaries for External Folders](#results-summaries-for-external-folders)<br />
@@ -1068,32 +1000,28 @@ A useful approach to this can be to think in terms of categories of inputs, wher
 
 ##### Generic Category Sets
 [&uarr; Scenario Category ANalysis (SCAN)](#scenario-category-analysis-scan)<br />
-[&darr; Multiplicity](#multiplicity)<br />
 
-As explained in the article mentioned above, it can be very useful to think in terms of generic category sets that apply in many situations. Multiplicity is relevant here.
+As explained in the article mentioned above, it can be very useful to think in terms of generic category sets that apply in many situations. Multiplicity is relevant here (as it often is):
 
 ###### Multiplicity
-[&uarr; Generic Category Sets](#generic-category-sets)<br />
 
-There are several entities where the generic category set of multiplicity applies, and we should check the zero edge cases as well as 1 and multiple instances.
+There are several entities where the generic category set of multiplicity applies, and we should check each of the None / One / Multiple instance categories.
 
-| Code | Description     |
-|:----:|:----------------|
-|  0   | No values       |
-|  1   | One value       |
-|  m   | Multiple values |
+| Code     | Description     |
+|:--------:|:----------------|
+| None     | No values       |
+| One      | One value       |
+| Multiple | Multiple values |
 
 Apply to:
 <ul>
-<ul>
 <li>Input Groups</li>
 <li>Output Groups</li>
-<li>Input Group Fields (1 or multiple only)</li>
-<li>Output Group Fields (1 or multiple only)</li>
+<li>Input Group Fields (one or multiple only)</li>
+<li>Output Group Fields (one or multiple only)</li>
 <li>Input Group Records</li>
 <li>Output Group Records</li>
 <li>Scenarios</li>
-</ul>
 </ul>
 
 ##### Categories and Scenarios
