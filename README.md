@@ -5,7 +5,7 @@
 
 :detective:
 
-This module supports a new design pattern for unit testing that can be applied in any language, and is here implemented in JavaScript. The module name is derived from 'TRansactional API Testing' (TRAPIT), and the 'unit' should be considered to be a transactional unit. This is not micro-testing: It is data-driven and fully supports multi-scenario testing and re-factoring.
+This module supports a new design pattern for unit testing, [The Math Function Unit Testing Design Pattern](https://brenpatf.github.io/2023/06/05/the-math-function-unit-testing-design-pattern.html), that can be applied in any language, and is here implemented in JavaScript. The module name is derived from 'TRansactional API Testing' (TRAPIT), and the 'unit' should be considered to be a transactional unit. This is not micro-testing: It is data-driven and fully supports multi-scenario testing and re-factoring.
 
 The Trapit module supports the complete process for testing JavaScript programs, and, for non-JavaScript programs following the design pattern, formats the results by reading in a results object from a JSON file materialized by the external unit test program.
 
@@ -30,7 +30,7 @@ I explained the concepts for the unit testing design pattern in relation specifi
 
 - [The Database API Viewed As A Mathematical Function: Insights into Testing](https://www.slideshare.net/brendanfurey7/database-api-viewed-as-a-mathematical-function-insights-into-testing)
 
-I later named the approach 'The Math Function Unit Testing design pattern' when I applied it in Javascript and wrote a JavaScript program to format results both in plain text and as HTML pages:
+I later named the approach [The Math Function Unit Testing Design Pattern](https://brenpatf.github.io/2023/06/05/the-math-function-unit-testing-design-pattern.html) when I applied it in Javascript and wrote a JavaScript program to format results both in plain text and as HTML pages:
 - [Trapit - JavaScript Unit Tester/Formatter](https://github.com/BrenPatF/trapit_nodejs_tester)
 
 The module also allowed for the formatting of results obtained from testing in languages other than JavaScript by means of an intermediate output JSON file. In 2021 I developed a powershell module that included a utility to generate a template for the JSON input scenarios file required by the design pattern:
@@ -48,7 +48,7 @@ In early 2023 I extended both the the JavaScript results formatter, and the powe
 
 As noted above, the JavaScript module allows for unit testing of JavaScript programs and also the formatting of test results for both JavaScript and non-JavaScript programs. Similarly, the powershell module mentioned allows for unit testing of powershell programs, and also the generation of the JSON input scenarios file template for testing in any language.
 
-In this section we'll start by describing the steps involved in The Math Function Unit Testing design pattern at an overview level. This will show how the generic powershell and JavaScript utilities fit in alongside the language-specific driver utilities.
+In this section we'll start by describing the steps involved in [The Math Function Unit Testing Design Pattern](https://brenpatf.github.io/2023/06/05/the-math-function-unit-testing-design-pattern.html) at an overview level. This will show how the generic powershell and JavaScript utilities fit in alongside the language-specific driver utilities.
 
 Secondly, we'll show how to use the design pattern in unit testing JavaScript programs by means of two simple examples.
 
@@ -60,13 +60,13 @@ Finally, we'll show how to use the JavaScript formatting utility in unit testing
 [&darr; Step 2: Create Results Object](#step-2-create-results-object)<br />
 [&darr; Step 3: Format Results](#step-3-format-results)<br />
 
-At a high level the Math Function Unit Testing design pattern involves three main steps:
+At a high level [The Math Function Unit Testing Design Pattern](https://brenpatf.github.io/2023/06/05/the-math-function-unit-testing-design-pattern.html) involves three main steps:
 
 1. Create an input file containing all test scenarios with input data and expected output data for each scenario, as well as metadata describing the structure
 2. Create a results object based on the input file, but with actual outputs merged in, based on calls to the unit under test
 3. Use the results object to generate unit test results files formatted in HTML and/or text
 
-<img src="png/Math Function UT DP - HL Flow.png">
+<img src="png/HLS.png">
 <br />
 The first and third of these steps are supported by generic utilities that can be used in unit testing in any language. The second step uses a language-specific unit test driver utility.
 
@@ -187,9 +187,9 @@ For JavaScript programs tested using the Math Function Unit Testing design patte
 This creates a subfolder with name based on the unit test title within the input JSON file, and also outputs a table of summary results. The processing is split between three code units:
 - Trapit library package with Test Unit function that drives the unit testing with a callback to a specific wrapper function, then calls the Format Results function to do the formatting
 - Specific Test Package: This has a 1-line main program to call the library driver function, passing in the callback wrapper function
-- Unit Under Test: Called by the wrapper function, which converts between its specific inputs and outputs and the generic version used by the library package
+- Unit Under Test (API): Called by the wrapper function, which converts between its specific inputs and outputs and the generic version used by the library package
 
-<img src="png/MFUTDP - Flow-JS.png">
+<img src="png/PFD-JS.png">
 
 This section illustrates the usage of the package for testing JavaScript programs by means of two examples. The first is a version of the 'Hello World' program traditionally used as a starting point in learning a new programming language. This is useful as it shows the core structures involved in following the design pattern with a minimalist unit under test.
 
@@ -235,7 +235,7 @@ Hello World!
 
 Here is a diagram of the input and output groups for this example:
 
-<img src="png/JSD-HW.png">
+<img src="png/JSD - HW.png">
 
 From the input and output groups depicted we can construct CSV files with flattened group/field structures, and default values added, as follows (with `helloworld_inp.csv` left, `helloworld_out.csv` right):
 <img src="png/groups - helloworld.png">
@@ -459,7 +459,7 @@ The example illustrates how a wrapper function can handle `impure` features of t
 
 Here is a diagram of the input and output groups for this example:
 
-<img src="png/JSD-CG.png">
+<img src="png/JSD - CG.png">
 
 From the input and output groups depicted we can construct CSV files with flattened group/field structures, and default values added, as follows (with `colgroup_inp.csv` left, `colgroup_out.csv` right):
 <img src="png/groups - colgroup.png">
@@ -632,9 +632,9 @@ For non-JavaScript programs tested using the Math Function Unit Testing design p
 This creates a subfolder for each JSON file with name based on the unit test title within the file, and also outputs a table of summary results for each file. The processing is split between three code units in a similar way to the JavaScript case:
 - Test Unit: External library function that drives the unit testing with a callback to a specific wrapper function
 - Specific Test Package: This has a 1-line main program to call the library driver function, passing in the callback wrapper function
-- Unit Under Test: Called by the wrapper function, which converts between its specific inputs and outputs and the generic version used by the library package
+- Unit Under Test (API): Called by the wrapper function, which converts between its specific inputs and outputs and the generic version used by the library package
 
-<img src="png/MFUTDP - Flow-Ext.png">
+<img src="png/PFD-Ext.png">
 
 In the first step the external program creates the output results JSON file, while in the second step the file is read into an object by the Trapit library package, which then formats the results in exactly the same way as for JavaScript testing.
 
@@ -959,7 +959,7 @@ $ npm install trapit
 [&darr; Step 2: Create Results Object](#step-2-create-results-object-1)<br />
 [&darr; Step 3: Format Results](#step-3-format-results-1)<br />
 
-The package itself is tested using the Math Function Unit Testing design pattern. A 'pure' wrapper function is constructed that takes input parameters and returns a value, and is tested within a loop over scenario records read from a JSON file.
+The package itself is tested using [The Math Function Unit Testing Design Pattern](https://brenpatf.github.io/2023/06/05/the-math-function-unit-testing-design-pattern.html). A 'pure' wrapper function is constructed that takes input parameters and returns a value, and is tested within a loop over scenario records read from a JSON file.
 
 In this case, the pure function getUTResults is unit tested explicitly, while the function fmtTestUnit is called as the main section of the unit test script, test-trapit.js.
 
@@ -981,7 +981,7 @@ where the parameters are input metadata and scenarios objects. The diagram below
 ##### Wrapper Function Signature Diagram
 [&uarr; Unit Test Wrapper Function](#unit-test-wrapper-function)<br />
 
-<img src="png/Math Function UT DP - JSD.png">
+<img src="png/JSD-UT.png">
 
 From the input and output groups depicted we can construct CSV files with flattened group/field structures, and default values added, as follows (with `getutresults_inp.csv` left, `getutresults_out.csv` right):
 
@@ -1307,6 +1307,7 @@ There are five subfolders below the trapit root folder:
 
 ## See Also
 [&uarr; In This README...](#in-this-readme)<br />
+- [The Math Function Unit Testing Design Pattern](https://brenpatf.github.io/2023/06/05/the-math-function-unit-testing-design-pattern.html)
 - [Database API Viewed As A Mathematical Function: Insights into Testing](https://www.slideshare.net/brendanfurey7/database-api-viewed-as-a-mathematical-function-insights-into-testing)
 - [Unit Testing, Scenarios and Categories: The SCAN Method](https://brenpatf.github.io/jekyll/update/2021/10/17/unit-testing-scenarios-and-categories-the-scan-method.html)
 - [Powershell Trapit Unit Testing Utilities module](https://github.com/BrenPatF/powershell_utils/tree/master/TrapitUtils)
@@ -1321,6 +1322,7 @@ There are five subfolders below the trapit root folder:
 - [Oracle Unit Test Examples](https://github.com/BrenPatF/oracle_unit_test_examples)
 - [Shortest Path Analysis of Large Networks by SQL and PL/SQL](https://github.com/BrenPatF/shortest_path_sql)
 - [Node.js Downloads](https://nodejs.org/en/download)
+- [Trapit - JavaScript Unit Tester/Formatter](https://github.com/BrenPatF/trapit_nodejs_tester)
 
 ## Software Versions
 
