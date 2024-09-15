@@ -31,7 +31,7 @@ To run from the root folder:
 
     $ node unit_test\test-getutresults
 ***************************************************************************************************/
-const Trapit = require('trapit');
+const Trapit = require('../index');
 const ROOT = __dirname + '/';
 const [DELIM, SUB_DELIM, INPUT_JSON] = 
       ['|',   '~',       ROOT + 'getutresults.json'];
