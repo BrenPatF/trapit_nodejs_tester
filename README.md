@@ -989,14 +989,14 @@ From the input and output groups depicted we can construct CSV files with flatte
 
 #### Scenario Category ANalysis (SCAN)
 [&uarr; Step 1: Create JSON File](#step-1-create-json-file-1)<br />
-[&darr; Generic Category Sets](#generic-category-sets)<br />
-[&darr; Categories and Scenarios](#categories-and-scenarios)<br />
+[&darr; Generic Category Sets](#generic-category-sets-1)<br />
+[&darr; Categories and Scenarios](#categories-and-scenarios-1)<br />
 
 The art of unit testing lies in choosing a set of scenarios that will produce a high degree of confidence in the functioning of the unit under test across the often very large range of possible inputs.
 
 A useful approach to this can be to think in terms of categories of inputs, where we reduce large ranges to representative categories.  I explore this approach further in this article:
 
-- [Unit Testing, Scenarios and Categories: The SCAN Method](https://brenpatf.github.io/jekyll/update/2021/10/17/unit-testing-scenarios-and-categories-the-scan-method.html)
+- [Unit Testing, Scenarios and Categories: The SCAN Method](https://brenpatf.github.io/2021/10/17/unit-testing-scenarios-and-categories-the-scan-method.html)
 
 ##### Generic Category Sets
 [&uarr; Scenario Category ANalysis (SCAN)](#scenario-category-analysis-scan)<br />
@@ -1309,7 +1309,7 @@ There are five subfolders below the trapit root folder:
 [&uarr; In This README...](#in-this-readme)<br />
 - [The Math Function Unit Testing Design Pattern](https://brenpatf.github.io/2023/06/05/the-math-function-unit-testing-design-pattern.html)
 - [Database API Viewed As A Mathematical Function: Insights into Testing](https://www.slideshare.net/brendanfurey7/database-api-viewed-as-a-mathematical-function-insights-into-testing)
-- [Unit Testing, Scenarios and Categories: The SCAN Method](https://brenpatf.github.io/jekyll/update/2021/10/17/unit-testing-scenarios-and-categories-the-scan-method.html)
+- [Unit Testing, Scenarios and Categories: The SCAN Method](https://brenpatf.github.io/2021/10/17/unit-testing-scenarios-and-categories-the-scan-method.html)
 - [Powershell Trapit Unit Testing Utilities module](https://github.com/BrenPatF/powershell_utils/tree/master/TrapitUtils)
 - [timer-set - JavaScript Code Timing module](https://github.com/BrenPatF/timer-set-nodejs)
 - [timerset_python - Python Code Timing module](https://github.com/BrenPatF/timerset_python)
