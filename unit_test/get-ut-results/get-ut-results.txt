@@ -1,5 +1,5 @@
-Unit Test Report: getUTResults
-==============================
+Unit Test Report: Get UT Results
+================================
 
       #    Category Set                Scenario                                              Fails (of 6)  Status 
       ---  --------------------------  ----------------------------------------------------  ------------  -------
@@ -43,7 +43,7 @@ Unit Test Report: getUTResults
 
 Test scenarios: 0 failed of 37: SUCCESS
 =======================================
-Formatted: 15/9/2024, 15:25:54
+Formatted: 25/6/2025, 11:34:02
 
 SCENARIO 1: No input groups [Category Set: Input Group Multiplicity] {
 ======================================================================
@@ -4393,13 +4393,13 @@ SCENARIO 32: Groups number mismatch [Category Set: Exception] {
             -  ----------  -----------------  --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
             1  Scenario 1  Exception Message  Error, s: Out: Scenario 1: expected #groups = 1, actual #groups = 2                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
             2  Scenario 1  Exception Stack    UNTESTED: Error: Error, s: Out: Scenario 1: expected #groups = 1, actual #groups = 2
-    at chkGrpLen (C:\Users\Brend\OneDrive\Documents\GitHub\trapit_nodejs_tester\lib\trapit.js:267:11)
-    at chkInputs (C:\Users\Brend\OneDrive\Documents\GitHub\trapit_nodejs_tester\lib\trapit.js:301:5)
-    at Object.getUTResults (C:\Users\Brend\OneDrive\Documents\GitHub\trapit_nodejs_tester\lib\trapit.js:383:5)
+    at chkGrpLen (C:\Users\Brend\OneDrive\Documents\GitHub\trapit_nodejs_tester\lib\trapit.js:284:11)
+    at chkInputs (C:\Users\Brend\OneDrive\Documents\GitHub\trapit_nodejs_tester\lib\trapit.js:318:5)
+    at Object.getUTResults (C:\Users\Brend\OneDrive\Documents\GitHub\trapit_nodejs_tester\lib\trapit.js:400:5)
     at purelyWrapUnit (C:\Users\Brend\OneDrive\Documents\GitHub\trapit_nodejs_tester\unit_test\test-getutresults.js:229:23)
-    at callPWU (C:\Users\Brend\OneDrive\Documents\GitHub\trapit_nodejs_tester\lib\trapit-utils.js:81:14)
-    at Object.testUnit (C:\Users\Brend\OneDrive\Documents\GitHub\trapit_nodejs_tester\lib\trapit-utils.js:211:62)
-    at Object.fmtTestUnit (C:\Users\Brend\OneDrive\Documents\GitHub\trapit_nodejs_tester\lib\trapit-utils.js:221:20)
+    at callPWU (C:\Users\Brend\OneDrive\Documents\GitHub\trapit_nodejs_tester\lib\trapit-utils.js:98:14)
+    at Object.testUnit (C:\Users\Brend\OneDrive\Documents\GitHub\trapit_nodejs_tester\lib\trapit-utils.js:228:62)
+    at Object.fmtTestUnit (C:\Users\Brend\OneDrive\Documents\GitHub\trapit_nodejs_tester\lib\trapit-utils.js:238:20)
     at Object.<anonymous> (C:\Users\Brend\OneDrive\Documents\GitHub\trapit_nodejs_tester\unit_test\test-getutresults.js:235:8)
     at Module._compile (node:internal/modules/cjs/loader:1369:14)
     at Module._extensions..js (node:internal/modules/cjs/loader:1427:10)
@@ -4512,13 +4512,13 @@ SCENARIO 33: Fields number mismatch [Category Set: Exception] {
             -  ----------  -----------------  ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
             1  Scenario 1  Exception Message  Error, exp #fields 1, expected 2 [s: Scenario 1, g: Output group 1, r: Output Value 1]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
             2  Scenario 1  Exception Stack    UNTESTED: Error: Error, exp #fields 1, expected 2 [s: Scenario 1, g: Output group 1, r: Output Value 1]
-    at chkRec (C:\Users\Brend\OneDrive\Documents\GitHub\trapit_nodejs_tester\lib\trapit.js:255:11)
-    at chkInputs (C:\Users\Brend\OneDrive\Documents\GitHub\trapit_nodejs_tester\lib\trapit.js:316:9)
-    at Object.getUTResults (C:\Users\Brend\OneDrive\Documents\GitHub\trapit_nodejs_tester\lib\trapit.js:383:5)
+    at chkRec (C:\Users\Brend\OneDrive\Documents\GitHub\trapit_nodejs_tester\lib\trapit.js:272:11)
+    at chkInputs (C:\Users\Brend\OneDrive\Documents\GitHub\trapit_nodejs_tester\lib\trapit.js:333:9)
+    at Object.getUTResults (C:\Users\Brend\OneDrive\Documents\GitHub\trapit_nodejs_tester\lib\trapit.js:400:5)
     at purelyWrapUnit (C:\Users\Brend\OneDrive\Documents\GitHub\trapit_nodejs_tester\unit_test\test-getutresults.js:229:23)
-    at callPWU (C:\Users\Brend\OneDrive\Documents\GitHub\trapit_nodejs_tester\lib\trapit-utils.js:81:14)
-    at Object.testUnit (C:\Users\Brend\OneDrive\Documents\GitHub\trapit_nodejs_tester\lib\trapit-utils.js:211:62)
-    at Object.fmtTestUnit (C:\Users\Brend\OneDrive\Documents\GitHub\trapit_nodejs_tester\lib\trapit-utils.js:221:20)
+    at callPWU (C:\Users\Brend\OneDrive\Documents\GitHub\trapit_nodejs_tester\lib\trapit-utils.js:98:14)
+    at Object.testUnit (C:\Users\Brend\OneDrive\Documents\GitHub\trapit_nodejs_tester\lib\trapit-utils.js:228:62)
+    at Object.fmtTestUnit (C:\Users\Brend\OneDrive\Documents\GitHub\trapit_nodejs_tester\lib\trapit-utils.js:238:20)
     at Object.<anonymous> (C:\Users\Brend\OneDrive\Documents\GitHub\trapit_nodejs_tester\unit_test\test-getutresults.js:235:8)
     at Module._compile (node:internal/modules/cjs/loader:1369:14)
     at Module._extensions..js (node:internal/modules/cjs/loader:1427:10)

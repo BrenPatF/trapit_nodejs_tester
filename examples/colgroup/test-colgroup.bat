@@ -1,0 +1,1 @@
+node .\test-colgroup  > .\test-colgroup.out 2> .\test-colgroup.err

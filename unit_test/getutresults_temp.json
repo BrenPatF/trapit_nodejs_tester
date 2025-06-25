@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "title",
+    "title": "Get UT Results",
     "delimiter": "|",
     "inp": {
       "Report": [
@@ -86,33 +86,51 @@
           "Output group 1|Output field 1"
         ],
         "Scenarios": [
-          "Scenario 1|Category set 1"
+          "Scenario 1|Category set 1",
+          "Scenario 2|Category set 1"
         ],
         "Input Values": [
-          "Scenario 1|Input group 1|Input Value 1"
+          "Scenario 1|Input group 1|Input Value 1-1",
+          "Scenario 2|Input group 1|Input Value 2-1"
         ],
         "Expected Values": [
-          "Scenario 1|Output group 1|Output Value 1"
+          "Scenario 1|Output group 1|Output Value 1-1",
+          "Scenario 2|Output group 1|Output Value 2-1"
         ],
         "Actual Values": [
-          "Scenario 1|Output group 1|Output Value 1"
+          "Scenario 1|Output group 1|Output Value 1-1",
+          "Scenario 2|Output group 1|Output Value 2-1"
         ]
       },
       "out": {
         "Summaries": [
-          "Report|||Unit Test Report: UUT|Category Set|Test scenarios: 0 failed of 1: SUCCESS|1|0|SUCCESS"
+          "Report|||Unit Test Report: UUT|Category Set|Test scenarios: 0 failed of 2: SUCCESS|2|0|SUCCESS",
+          "Scenario|Scenario 1||SCENARIO 1: Scenario 1 [Category Set: Category set 1]|INPUTS-OUTPUTS|0 failed of 1: SUCCESS|1|0|SUCCESS",
+          "Input group|Scenario 1|Input group 1|GROUP 1: Input group 1|||||",
+          "Output group|Scenario 1|Output group 1|GROUP 1: Output group 1||0 failed of 1: SUCCESS|1|0|SUCCESS",
+          "Scenario|Scenario 2||SCENARIO 2: Scenario 2 [Category Set: Category set 1]|INPUTS-OUTPUTS|0 failed of 1: SUCCESS|1|0|SUCCESS",
+          "Input group|Scenario 2|Input group 1|GROUP 1: Input group 1|||||",
+          "Output group|Scenario 2|Output group 1|GROUP 1: Output group 1||0 failed of 1: SUCCESS|1|0|SUCCESS"
         ],
         "Input Fields": [
-          "Scenario 1|Input group 1|#|1"
+          "Scenario 1|Input group 1|#|1",
+          "Scenario 1|Input group 1|Input field 1|15",
+          "Scenario 2|Input group 1|#|1",
+          "Scenario 2|Input group 1|Input field 1|15"
         ],
         "Output Fields": [
-          "Scenario 1|Output group 1|#|1"
+          "Scenario 1|Output group 1|#|1",
+          "Scenario 1|Output group 1|Output field 1|16",
+          "Scenario 2|Output group 1|#|1",
+          "Scenario 2|Output group 1|Output field 1|16"
         ],
         "Input Values": [
-          "Scenario 1|Input group 1|1~Input Value 1"
+          "Scenario 1|Input group 1|1~Input Value 1-1",
+          "Scenario 2|Input group 1|1~Input Value 2-1"
         ],
         "Output Values": [
-          "Scenario 1|Output group 1|1~Output Value 1"
+          "Scenario 1|Output group 1|1~Output Value 1-1",
+          "Scenario 2|Output group 1|1~Output Value 2-1"
         ]
       }
     },
@@ -130,33 +148,51 @@
           "Output group 1|Output field 1"
         ],
         "Scenarios": [
-          "Scenario 1|Category set 1"
+          "Scenario 1|Category set 1",
+          "Scenario 2|Category set 1"
         ],
         "Input Values": [
-          "Scenario 1|Input group 1|Input Value 1"
+          "Scenario 1|Input group 1|Input Value 1-1",
+          "Scenario 2|Input group 1|Input Value 2-1"
         ],
         "Expected Values": [
-          "Scenario 1|Output group 1|Output Value 1"
+          "Scenario 1|Output group 1|Output Value 1-1",
+          "Scenario 2|Output group 1|Output Value 2-1"
         ],
         "Actual Values": [
-          "Scenario 1|Output group 1|Output Value 1"
+          "Scenario 1|Output group 1|Output Value 1-1",
+          "Scenario 2|Output group 1|Output Value 2-1"
         ]
       },
       "out": {
         "Summaries": [
-          "Report|||Unit Test Report: UUT|Category Set|Test scenarios: 0 failed of 1: SUCCESS|1|0|SUCCESS"
+          "Report|||Unit Test Report: UUT|Category Set|Test scenarios: 0 failed of 2: SUCCESS|2|0|SUCCESS",
+          "Scenario|Scenario 1||SCENARIO 1: Scenario 1 [Category Set: Category set 1]|INPUTS-OUTPUTS|0 failed of 1: SUCCESS|1|0|SUCCESS",
+          "Input group|Scenario 1|Input group 1|GROUP 1: Input group 1|||||",
+          "Output group|Scenario 1|Output group 1|GROUP 1: Output group 1||0 failed of 1: SUCCESS|1|0|SUCCESS",
+          "Scenario|Scenario 2||SCENARIO 2: Scenario 2 [Category Set: Category set 1]|INPUTS-OUTPUTS|0 failed of 1: SUCCESS|1|0|SUCCESS",
+          "Input group|Scenario 2|Input group 1|GROUP 1: Input group 1|||||",
+          "Output group|Scenario 2|Output group 1|GROUP 1: Output group 1||0 failed of 1: SUCCESS|1|0|SUCCESS"
         ],
         "Input Fields": [
-          "Scenario 1|Input group 1|#|1"
+          "Scenario 1|Input group 1|#|1",
+          "Scenario 1|Input group 1|Input field 1|15",
+          "Scenario 2|Input group 1|#|1",
+          "Scenario 2|Input group 1|Input field 1|15"
         ],
         "Output Fields": [
-          "Scenario 1|Output group 1|#|1"
+          "Scenario 1|Output group 1|#|1",
+          "Scenario 1|Output group 1|Output field 1|16",
+          "Scenario 2|Output group 1|#|1",
+          "Scenario 2|Output group 1|Output field 1|16"
         ],
         "Input Values": [
-          "Scenario 1|Input group 1|1~Input Value 1"
+          "Scenario 1|Input group 1|1~Input Value 1-1",
+          "Scenario 2|Input group 1|1~Input Value 2-1"
         ],
         "Output Values": [
-          "Scenario 1|Output group 1|1~Output Value 1"
+          "Scenario 1|Output group 1|1~Output Value 1-1",
+          "Scenario 2|Output group 1|1~Output Value 2-1"
         ]
       }
     },
@@ -174,33 +210,51 @@
           "Output group 1|Output field 1"
         ],
         "Scenarios": [
-          "Scenario 1|Category set 1"
+          "Scenario 1|Category set 1",
+          "Scenario 2|Category set 1"
         ],
         "Input Values": [
-          "Scenario 1|Input group 1|Input Value 1"
+          "Scenario 1|Input group 1|Input Value 1-1",
+          "Scenario 2|Input group 1|Input Value 2-1"
         ],
         "Expected Values": [
-          "Scenario 1|Output group 1|Output Value 1"
+          "Scenario 1|Output group 1|Output Value 1-1",
+          "Scenario 2|Output group 1|Output Value 2-1"
         ],
         "Actual Values": [
-          "Scenario 1|Output group 1|Output Value 1"
+          "Scenario 1|Output group 1|Output Value 1-1",
+          "Scenario 2|Output group 1|Output Value 2-1"
         ]
       },
       "out": {
         "Summaries": [
-          "Report|||Unit Test Report: UUT|Category Set|Test scenarios: 0 failed of 1: SUCCESS|1|0|SUCCESS"
+          "Report|||Unit Test Report: UUT|Category Set|Test scenarios: 0 failed of 2: SUCCESS|2|0|SUCCESS",
+          "Scenario|Scenario 1||SCENARIO 1: Scenario 1 [Category Set: Category set 1]|INPUTS-OUTPUTS|0 failed of 1: SUCCESS|1|0|SUCCESS",
+          "Input group|Scenario 1|Input group 1|GROUP 1: Input group 1|||||",
+          "Output group|Scenario 1|Output group 1|GROUP 1: Output group 1||0 failed of 1: SUCCESS|1|0|SUCCESS",
+          "Scenario|Scenario 2||SCENARIO 2: Scenario 2 [Category Set: Category set 1]|INPUTS-OUTPUTS|0 failed of 1: SUCCESS|1|0|SUCCESS",
+          "Input group|Scenario 2|Input group 1|GROUP 1: Input group 1|||||",
+          "Output group|Scenario 2|Output group 1|GROUP 1: Output group 1||0 failed of 1: SUCCESS|1|0|SUCCESS"
         ],
         "Input Fields": [
-          "Scenario 1|Input group 1|#|1"
+          "Scenario 1|Input group 1|#|1",
+          "Scenario 1|Input group 1|Input field 1|15",
+          "Scenario 2|Input group 1|#|1",
+          "Scenario 2|Input group 1|Input field 1|15"
         ],
         "Output Fields": [
-          "Scenario 1|Output group 1|#|1"
+          "Scenario 1|Output group 1|#|1",
+          "Scenario 1|Output group 1|Output field 1|16",
+          "Scenario 2|Output group 1|#|1",
+          "Scenario 2|Output group 1|Output field 1|16"
         ],
         "Input Values": [
-          "Scenario 1|Input group 1|1~Input Value 1"
+          "Scenario 1|Input group 1|1~Input Value 1-1",
+          "Scenario 2|Input group 1|1~Input Value 2-1"
         ],
         "Output Values": [
-          "Scenario 1|Output group 1|1~Output Value 1"
+          "Scenario 1|Output group 1|1~Output Value 1-1",
+          "Scenario 2|Output group 1|1~Output Value 2-1"
         ]
       }
     },
@@ -218,33 +272,51 @@
           "Output group 1|Output field 1"
         ],
         "Scenarios": [
-          "Scenario 1|Category set 1"
+          "Scenario 1|Category set 1",
+          "Scenario 2|Category set 1"
         ],
         "Input Values": [
-          "Scenario 1|Input group 1|Input Value 1"
+          "Scenario 1|Input group 1|Input Value 1-1",
+          "Scenario 2|Input group 1|Input Value 2-1"
         ],
         "Expected Values": [
-          "Scenario 1|Output group 1|Output Value 1"
+          "Scenario 1|Output group 1|Output Value 1-1",
+          "Scenario 2|Output group 1|Output Value 2-1"
         ],
         "Actual Values": [
-          "Scenario 1|Output group 1|Output Value 1"
+          "Scenario 1|Output group 1|Output Value 1-1",
+          "Scenario 2|Output group 1|Output Value 2-1"
         ]
       },
       "out": {
         "Summaries": [
-          "Report|||Unit Test Report: UUT|Category Set|Test scenarios: 0 failed of 1: SUCCESS|1|0|SUCCESS"
+          "Report|||Unit Test Report: UUT|Category Set|Test scenarios: 0 failed of 2: SUCCESS|2|0|SUCCESS",
+          "Scenario|Scenario 1||SCENARIO 1: Scenario 1 [Category Set: Category set 1]|INPUTS-OUTPUTS|0 failed of 1: SUCCESS|1|0|SUCCESS",
+          "Input group|Scenario 1|Input group 1|GROUP 1: Input group 1|||||",
+          "Output group|Scenario 1|Output group 1|GROUP 1: Output group 1||0 failed of 1: SUCCESS|1|0|SUCCESS",
+          "Scenario|Scenario 2||SCENARIO 2: Scenario 2 [Category Set: Category set 1]|INPUTS-OUTPUTS|0 failed of 1: SUCCESS|1|0|SUCCESS",
+          "Input group|Scenario 2|Input group 1|GROUP 1: Input group 1|||||",
+          "Output group|Scenario 2|Output group 1|GROUP 1: Output group 1||0 failed of 1: SUCCESS|1|0|SUCCESS"
         ],
         "Input Fields": [
-          "Scenario 1|Input group 1|#|1"
+          "Scenario 1|Input group 1|#|1",
+          "Scenario 1|Input group 1|Input field 1|15",
+          "Scenario 2|Input group 1|#|1",
+          "Scenario 2|Input group 1|Input field 1|15"
         ],
         "Output Fields": [
-          "Scenario 1|Output group 1|#|1"
+          "Scenario 1|Output group 1|#|1",
+          "Scenario 1|Output group 1|Output field 1|16",
+          "Scenario 2|Output group 1|#|1",
+          "Scenario 2|Output group 1|Output field 1|16"
         ],
         "Input Values": [
-          "Scenario 1|Input group 1|1~Input Value 1"
+          "Scenario 1|Input group 1|1~Input Value 1-1",
+          "Scenario 2|Input group 1|1~Input Value 2-1"
         ],
         "Output Values": [
-          "Scenario 1|Output group 1|1~Output Value 1"
+          "Scenario 1|Output group 1|1~Output Value 1-1",
+          "Scenario 2|Output group 1|1~Output Value 2-1"
         ]
       }
     },
@@ -262,33 +334,51 @@
           "Output group 1|Output field 1"
         ],
         "Scenarios": [
-          "Scenario 1|Category set 1"
+          "Scenario 1|Category set 1",
+          "Scenario 2|Category set 1"
         ],
         "Input Values": [
-          "Scenario 1|Input group 1|Input Value 1"
+          "Scenario 1|Input group 1|Input Value 1-1",
+          "Scenario 2|Input group 1|Input Value 2-1"
         ],
         "Expected Values": [
-          "Scenario 1|Output group 1|Output Value 1"
+          "Scenario 1|Output group 1|Output Value 1-1",
+          "Scenario 2|Output group 1|Output Value 2-1"
         ],
         "Actual Values": [
-          "Scenario 1|Output group 1|Output Value 1"
+          "Scenario 1|Output group 1|Output Value 1-1",
+          "Scenario 2|Output group 1|Output Value 2-1"
         ]
       },
       "out": {
         "Summaries": [
-          "Report|||Unit Test Report: UUT|Category Set|Test scenarios: 0 failed of 1: SUCCESS|1|0|SUCCESS"
+          "Report|||Unit Test Report: UUT|Category Set|Test scenarios: 0 failed of 2: SUCCESS|2|0|SUCCESS",
+          "Scenario|Scenario 1||SCENARIO 1: Scenario 1 [Category Set: Category set 1]|INPUTS-OUTPUTS|0 failed of 1: SUCCESS|1|0|SUCCESS",
+          "Input group|Scenario 1|Input group 1|GROUP 1: Input group 1|||||",
+          "Output group|Scenario 1|Output group 1|GROUP 1: Output group 1||0 failed of 1: SUCCESS|1|0|SUCCESS",
+          "Scenario|Scenario 2||SCENARIO 2: Scenario 2 [Category Set: Category set 1]|INPUTS-OUTPUTS|0 failed of 1: SUCCESS|1|0|SUCCESS",
+          "Input group|Scenario 2|Input group 1|GROUP 1: Input group 1|||||",
+          "Output group|Scenario 2|Output group 1|GROUP 1: Output group 1||0 failed of 1: SUCCESS|1|0|SUCCESS"
         ],
         "Input Fields": [
-          "Scenario 1|Input group 1|#|1"
+          "Scenario 1|Input group 1|#|1",
+          "Scenario 1|Input group 1|Input field 1|15",
+          "Scenario 2|Input group 1|#|1",
+          "Scenario 2|Input group 1|Input field 1|15"
         ],
         "Output Fields": [
-          "Scenario 1|Output group 1|#|1"
+          "Scenario 1|Output group 1|#|1",
+          "Scenario 1|Output group 1|Output field 1|16",
+          "Scenario 2|Output group 1|#|1",
+          "Scenario 2|Output group 1|Output field 1|16"
         ],
         "Input Values": [
-          "Scenario 1|Input group 1|1~Input Value 1"
+          "Scenario 1|Input group 1|1~Input Value 1-1",
+          "Scenario 2|Input group 1|1~Input Value 2-1"
         ],
         "Output Values": [
-          "Scenario 1|Output group 1|1~Output Value 1"
+          "Scenario 1|Output group 1|1~Output Value 1-1",
+          "Scenario 2|Output group 1|1~Output Value 2-1"
         ]
       }
     },
@@ -306,33 +396,51 @@
           "Output group 1|Output field 1"
         ],
         "Scenarios": [
-          "Scenario 1|Category set 1"
+          "Scenario 1|Category set 1",
+          "Scenario 2|Category set 1"
         ],
         "Input Values": [
-          "Scenario 1|Input group 1|Input Value 1"
+          "Scenario 1|Input group 1|Input Value 1-1",
+          "Scenario 2|Input group 1|Input Value 2-1"
         ],
         "Expected Values": [
-          "Scenario 1|Output group 1|Output Value 1"
+          "Scenario 1|Output group 1|Output Value 1-1",
+          "Scenario 2|Output group 1|Output Value 2-1"
         ],
         "Actual Values": [
-          "Scenario 1|Output group 1|Output Value 1"
+          "Scenario 1|Output group 1|Output Value 1-1",
+          "Scenario 2|Output group 1|Output Value 2-1"
         ]
       },
       "out": {
         "Summaries": [
-          "Report|||Unit Test Report: UUT|Category Set|Test scenarios: 0 failed of 1: SUCCESS|1|0|SUCCESS"
+          "Report|||Unit Test Report: UUT|Category Set|Test scenarios: 0 failed of 2: SUCCESS|2|0|SUCCESS",
+          "Scenario|Scenario 1||SCENARIO 1: Scenario 1 [Category Set: Category set 1]|INPUTS-OUTPUTS|0 failed of 1: SUCCESS|1|0|SUCCESS",
+          "Input group|Scenario 1|Input group 1|GROUP 1: Input group 1|||||",
+          "Output group|Scenario 1|Output group 1|GROUP 1: Output group 1||0 failed of 1: SUCCESS|1|0|SUCCESS",
+          "Scenario|Scenario 2||SCENARIO 2: Scenario 2 [Category Set: Category set 1]|INPUTS-OUTPUTS|0 failed of 1: SUCCESS|1|0|SUCCESS",
+          "Input group|Scenario 2|Input group 1|GROUP 1: Input group 1|||||",
+          "Output group|Scenario 2|Output group 1|GROUP 1: Output group 1||0 failed of 1: SUCCESS|1|0|SUCCESS"
         ],
         "Input Fields": [
-          "Scenario 1|Input group 1|#|1"
+          "Scenario 1|Input group 1|#|1",
+          "Scenario 1|Input group 1|Input field 1|15",
+          "Scenario 2|Input group 1|#|1",
+          "Scenario 2|Input group 1|Input field 1|15"
         ],
         "Output Fields": [
-          "Scenario 1|Output group 1|#|1"
+          "Scenario 1|Output group 1|#|1",
+          "Scenario 1|Output group 1|Output field 1|16",
+          "Scenario 2|Output group 1|#|1",
+          "Scenario 2|Output group 1|Output field 1|16"
         ],
         "Input Values": [
-          "Scenario 1|Input group 1|1~Input Value 1"
+          "Scenario 1|Input group 1|1~Input Value 1-1",
+          "Scenario 2|Input group 1|1~Input Value 2-1"
         ],
         "Output Values": [
-          "Scenario 1|Output group 1|1~Output Value 1"
+          "Scenario 1|Output group 1|1~Output Value 1-1",
+          "Scenario 2|Output group 1|1~Output Value 2-1"
         ]
       }
     },
@@ -350,33 +458,51 @@
           "Output group 1|Output field 1"
         ],
         "Scenarios": [
-          "Scenario 1|Category set 1"
+          "Scenario 1|Category set 1",
+          "Scenario 2|Category set 1"
         ],
         "Input Values": [
-          "Scenario 1|Input group 1|Input Value 1"
+          "Scenario 1|Input group 1|Input Value 1-1",
+          "Scenario 2|Input group 1|Input Value 2-1"
         ],
         "Expected Values": [
-          "Scenario 1|Output group 1|Output Value 1"
+          "Scenario 1|Output group 1|Output Value 1-1",
+          "Scenario 2|Output group 1|Output Value 2-1"
         ],
         "Actual Values": [
-          "Scenario 1|Output group 1|Output Value 1"
+          "Scenario 1|Output group 1|Output Value 1-1",
+          "Scenario 2|Output group 1|Output Value 2-1"
         ]
       },
       "out": {
         "Summaries": [
-          "Report|||Unit Test Report: UUT|Category Set|Test scenarios: 0 failed of 1: SUCCESS|1|0|SUCCESS"
+          "Report|||Unit Test Report: UUT|Category Set|Test scenarios: 0 failed of 2: SUCCESS|2|0|SUCCESS",
+          "Scenario|Scenario 1||SCENARIO 1: Scenario 1 [Category Set: Category set 1]|INPUTS-OUTPUTS|0 failed of 1: SUCCESS|1|0|SUCCESS",
+          "Input group|Scenario 1|Input group 1|GROUP 1: Input group 1|||||",
+          "Output group|Scenario 1|Output group 1|GROUP 1: Output group 1||0 failed of 1: SUCCESS|1|0|SUCCESS",
+          "Scenario|Scenario 2||SCENARIO 2: Scenario 2 [Category Set: Category set 1]|INPUTS-OUTPUTS|0 failed of 1: SUCCESS|1|0|SUCCESS",
+          "Input group|Scenario 2|Input group 1|GROUP 1: Input group 1|||||",
+          "Output group|Scenario 2|Output group 1|GROUP 1: Output group 1||0 failed of 1: SUCCESS|1|0|SUCCESS"
         ],
         "Input Fields": [
-          "Scenario 1|Input group 1|#|1"
+          "Scenario 1|Input group 1|#|1",
+          "Scenario 1|Input group 1|Input field 1|15",
+          "Scenario 2|Input group 1|#|1",
+          "Scenario 2|Input group 1|Input field 1|15"
         ],
         "Output Fields": [
-          "Scenario 1|Output group 1|#|1"
+          "Scenario 1|Output group 1|#|1",
+          "Scenario 1|Output group 1|Output field 1|16",
+          "Scenario 2|Output group 1|#|1",
+          "Scenario 2|Output group 1|Output field 1|16"
         ],
         "Input Values": [
-          "Scenario 1|Input group 1|1~Input Value 1"
+          "Scenario 1|Input group 1|1~Input Value 1-1",
+          "Scenario 2|Input group 1|1~Input Value 2-1"
         ],
         "Output Values": [
-          "Scenario 1|Output group 1|1~Output Value 1"
+          "Scenario 1|Output group 1|1~Output Value 1-1",
+          "Scenario 2|Output group 1|1~Output Value 2-1"
         ]
       }
     },
@@ -394,33 +520,51 @@
           "Output group 1|Output field 1"
         ],
         "Scenarios": [
-          "Scenario 1|Category set 1"
+          "Scenario 1|Category set 1",
+          "Scenario 2|Category set 1"
         ],
         "Input Values": [
-          "Scenario 1|Input group 1|Input Value 1"
+          "Scenario 1|Input group 1|Input Value 1-1",
+          "Scenario 2|Input group 1|Input Value 2-1"
         ],
         "Expected Values": [
-          "Scenario 1|Output group 1|Output Value 1"
+          "Scenario 1|Output group 1|Output Value 1-1",
+          "Scenario 2|Output group 1|Output Value 2-1"
         ],
         "Actual Values": [
-          "Scenario 1|Output group 1|Output Value 1"
+          "Scenario 1|Output group 1|Output Value 1-1",
+          "Scenario 2|Output group 1|Output Value 2-1"
         ]
       },
       "out": {
         "Summaries": [
-          "Report|||Unit Test Report: UUT|Category Set|Test scenarios: 0 failed of 1: SUCCESS|1|0|SUCCESS"
+          "Report|||Unit Test Report: UUT|Category Set|Test scenarios: 0 failed of 2: SUCCESS|2|0|SUCCESS",
+          "Scenario|Scenario 1||SCENARIO 1: Scenario 1 [Category Set: Category set 1]|INPUTS-OUTPUTS|0 failed of 1: SUCCESS|1|0|SUCCESS",
+          "Input group|Scenario 1|Input group 1|GROUP 1: Input group 1|||||",
+          "Output group|Scenario 1|Output group 1|GROUP 1: Output group 1||0 failed of 1: SUCCESS|1|0|SUCCESS",
+          "Scenario|Scenario 2||SCENARIO 2: Scenario 2 [Category Set: Category set 1]|INPUTS-OUTPUTS|0 failed of 1: SUCCESS|1|0|SUCCESS",
+          "Input group|Scenario 2|Input group 1|GROUP 1: Input group 1|||||",
+          "Output group|Scenario 2|Output group 1|GROUP 1: Output group 1||0 failed of 1: SUCCESS|1|0|SUCCESS"
         ],
         "Input Fields": [
-          "Scenario 1|Input group 1|#|1"
+          "Scenario 1|Input group 1|#|1",
+          "Scenario 1|Input group 1|Input field 1|15",
+          "Scenario 2|Input group 1|#|1",
+          "Scenario 2|Input group 1|Input field 1|15"
         ],
         "Output Fields": [
-          "Scenario 1|Output group 1|#|1"
+          "Scenario 1|Output group 1|#|1",
+          "Scenario 1|Output group 1|Output field 1|16",
+          "Scenario 2|Output group 1|#|1",
+          "Scenario 2|Output group 1|Output field 1|16"
         ],
         "Input Values": [
-          "Scenario 1|Input group 1|1~Input Value 1"
+          "Scenario 1|Input group 1|1~Input Value 1-1",
+          "Scenario 2|Input group 1|1~Input Value 2-1"
         ],
         "Output Values": [
-          "Scenario 1|Output group 1|1~Output Value 1"
+          "Scenario 1|Output group 1|1~Output Value 1-1",
+          "Scenario 2|Output group 1|1~Output Value 2-1"
         ]
       }
     },
@@ -438,33 +582,51 @@
           "Output group 1|Output field 1"
         ],
         "Scenarios": [
-          "Scenario 1|Category set 1"
+          "Scenario 1|Category set 1",
+          "Scenario 2|Category set 1"
         ],
         "Input Values": [
-          "Scenario 1|Input group 1|Input Value 1"
+          "Scenario 1|Input group 1|Input Value 1-1",
+          "Scenario 2|Input group 1|Input Value 2-1"
         ],
         "Expected Values": [
-          "Scenario 1|Output group 1|Output Value 1"
+          "Scenario 1|Output group 1|Output Value 1-1",
+          "Scenario 2|Output group 1|Output Value 2-1"
         ],
         "Actual Values": [
-          "Scenario 1|Output group 1|Output Value 1"
+          "Scenario 1|Output group 1|Output Value 1-1",
+          "Scenario 2|Output group 1|Output Value 2-1"
         ]
       },
       "out": {
         "Summaries": [
-          "Report|||Unit Test Report: UUT|Category Set|Test scenarios: 0 failed of 1: SUCCESS|1|0|SUCCESS"
+          "Report|||Unit Test Report: UUT|Category Set|Test scenarios: 0 failed of 2: SUCCESS|2|0|SUCCESS",
+          "Scenario|Scenario 1||SCENARIO 1: Scenario 1 [Category Set: Category set 1]|INPUTS-OUTPUTS|0 failed of 1: SUCCESS|1|0|SUCCESS",
+          "Input group|Scenario 1|Input group 1|GROUP 1: Input group 1|||||",
+          "Output group|Scenario 1|Output group 1|GROUP 1: Output group 1||0 failed of 1: SUCCESS|1|0|SUCCESS",
+          "Scenario|Scenario 2||SCENARIO 2: Scenario 2 [Category Set: Category set 1]|INPUTS-OUTPUTS|0 failed of 1: SUCCESS|1|0|SUCCESS",
+          "Input group|Scenario 2|Input group 1|GROUP 1: Input group 1|||||",
+          "Output group|Scenario 2|Output group 1|GROUP 1: Output group 1||0 failed of 1: SUCCESS|1|0|SUCCESS"
         ],
         "Input Fields": [
-          "Scenario 1|Input group 1|#|1"
+          "Scenario 1|Input group 1|#|1",
+          "Scenario 1|Input group 1|Input field 1|15",
+          "Scenario 2|Input group 1|#|1",
+          "Scenario 2|Input group 1|Input field 1|15"
         ],
         "Output Fields": [
-          "Scenario 1|Output group 1|#|1"
+          "Scenario 1|Output group 1|#|1",
+          "Scenario 1|Output group 1|Output field 1|16",
+          "Scenario 2|Output group 1|#|1",
+          "Scenario 2|Output group 1|Output field 1|16"
         ],
         "Input Values": [
-          "Scenario 1|Input group 1|1~Input Value 1"
+          "Scenario 1|Input group 1|1~Input Value 1-1",
+          "Scenario 2|Input group 1|1~Input Value 2-1"
         ],
         "Output Values": [
-          "Scenario 1|Output group 1|1~Output Value 1"
+          "Scenario 1|Output group 1|1~Output Value 1-1",
+          "Scenario 2|Output group 1|1~Output Value 2-1"
         ]
       }
     },
@@ -482,33 +644,51 @@
           "Output group 1|Output field 1"
         ],
         "Scenarios": [
-          "Scenario 1|Category set 1"
+          "Scenario 1|Category set 1",
+          "Scenario 2|Category set 1"
         ],
         "Input Values": [
-          "Scenario 1|Input group 1|Input Value 1"
+          "Scenario 1|Input group 1|Input Value 1-1",
+          "Scenario 2|Input group 1|Input Value 2-1"
         ],
         "Expected Values": [
-          "Scenario 1|Output group 1|Output Value 1"
+          "Scenario 1|Output group 1|Output Value 1-1",
+          "Scenario 2|Output group 1|Output Value 2-1"
         ],
         "Actual Values": [
-          "Scenario 1|Output group 1|Output Value 1"
+          "Scenario 1|Output group 1|Output Value 1-1",
+          "Scenario 2|Output group 1|Output Value 2-1"
         ]
       },
       "out": {
         "Summaries": [
-          "Report|||Unit Test Report: UUT|Category Set|Test scenarios: 0 failed of 1: SUCCESS|1|0|SUCCESS"
+          "Report|||Unit Test Report: UUT|Category Set|Test scenarios: 0 failed of 2: SUCCESS|2|0|SUCCESS",
+          "Scenario|Scenario 1||SCENARIO 1: Scenario 1 [Category Set: Category set 1]|INPUTS-OUTPUTS|0 failed of 1: SUCCESS|1|0|SUCCESS",
+          "Input group|Scenario 1|Input group 1|GROUP 1: Input group 1|||||",
+          "Output group|Scenario 1|Output group 1|GROUP 1: Output group 1||0 failed of 1: SUCCESS|1|0|SUCCESS",
+          "Scenario|Scenario 2||SCENARIO 2: Scenario 2 [Category Set: Category set 1]|INPUTS-OUTPUTS|0 failed of 1: SUCCESS|1|0|SUCCESS",
+          "Input group|Scenario 2|Input group 1|GROUP 1: Input group 1|||||",
+          "Output group|Scenario 2|Output group 1|GROUP 1: Output group 1||0 failed of 1: SUCCESS|1|0|SUCCESS"
         ],
         "Input Fields": [
-          "Scenario 1|Input group 1|#|1"
+          "Scenario 1|Input group 1|#|1",
+          "Scenario 1|Input group 1|Input field 1|15",
+          "Scenario 2|Input group 1|#|1",
+          "Scenario 2|Input group 1|Input field 1|15"
         ],
         "Output Fields": [
-          "Scenario 1|Output group 1|#|1"
+          "Scenario 1|Output group 1|#|1",
+          "Scenario 1|Output group 1|Output field 1|16",
+          "Scenario 2|Output group 1|#|1",
+          "Scenario 2|Output group 1|Output field 1|16"
         ],
         "Input Values": [
-          "Scenario 1|Input group 1|1~Input Value 1"
+          "Scenario 1|Input group 1|1~Input Value 1-1",
+          "Scenario 2|Input group 1|1~Input Value 2-1"
         ],
         "Output Values": [
-          "Scenario 1|Output group 1|1~Output Value 1"
+          "Scenario 1|Output group 1|1~Output Value 1-1",
+          "Scenario 2|Output group 1|1~Output Value 2-1"
         ]
       }
     },
@@ -526,33 +706,51 @@
           "Output group 1|Output field 1"
         ],
         "Scenarios": [
-          "Scenario 1|Category set 1"
+          "Scenario 1|Category set 1",
+          "Scenario 2|Category set 1"
         ],
         "Input Values": [
-          "Scenario 1|Input group 1|Input Value 1"
+          "Scenario 1|Input group 1|Input Value 1-1",
+          "Scenario 2|Input group 1|Input Value 2-1"
         ],
         "Expected Values": [
-          "Scenario 1|Output group 1|Output Value 1"
+          "Scenario 1|Output group 1|Output Value 1-1",
+          "Scenario 2|Output group 1|Output Value 2-1"
         ],
         "Actual Values": [
-          "Scenario 1|Output group 1|Output Value 1"
+          "Scenario 1|Output group 1|Output Value 1-1",
+          "Scenario 2|Output group 1|Output Value 2-1"
         ]
       },
       "out": {
         "Summaries": [
-          "Report|||Unit Test Report: UUT|Category Set|Test scenarios: 0 failed of 1: SUCCESS|1|0|SUCCESS"
+          "Report|||Unit Test Report: UUT|Category Set|Test scenarios: 0 failed of 2: SUCCESS|2|0|SUCCESS",
+          "Scenario|Scenario 1||SCENARIO 1: Scenario 1 [Category Set: Category set 1]|INPUTS-OUTPUTS|0 failed of 1: SUCCESS|1|0|SUCCESS",
+          "Input group|Scenario 1|Input group 1|GROUP 1: Input group 1|||||",
+          "Output group|Scenario 1|Output group 1|GROUP 1: Output group 1||0 failed of 1: SUCCESS|1|0|SUCCESS",
+          "Scenario|Scenario 2||SCENARIO 2: Scenario 2 [Category Set: Category set 1]|INPUTS-OUTPUTS|0 failed of 1: SUCCESS|1|0|SUCCESS",
+          "Input group|Scenario 2|Input group 1|GROUP 1: Input group 1|||||",
+          "Output group|Scenario 2|Output group 1|GROUP 1: Output group 1||0 failed of 1: SUCCESS|1|0|SUCCESS"
         ],
         "Input Fields": [
-          "Scenario 1|Input group 1|#|1"
+          "Scenario 1|Input group 1|#|1",
+          "Scenario 1|Input group 1|Input field 1|15",
+          "Scenario 2|Input group 1|#|1",
+          "Scenario 2|Input group 1|Input field 1|15"
         ],
         "Output Fields": [
-          "Scenario 1|Output group 1|#|1"
+          "Scenario 1|Output group 1|#|1",
+          "Scenario 1|Output group 1|Output field 1|16",
+          "Scenario 2|Output group 1|#|1",
+          "Scenario 2|Output group 1|Output field 1|16"
         ],
         "Input Values": [
-          "Scenario 1|Input group 1|1~Input Value 1"
+          "Scenario 1|Input group 1|1~Input Value 1-1",
+          "Scenario 2|Input group 1|1~Input Value 2-1"
         ],
         "Output Values": [
-          "Scenario 1|Output group 1|1~Output Value 1"
+          "Scenario 1|Output group 1|1~Output Value 1-1",
+          "Scenario 2|Output group 1|1~Output Value 2-1"
         ]
       }
     },
@@ -570,33 +768,51 @@
           "Output group 1|Output field 1"
         ],
         "Scenarios": [
-          "Scenario 1|Category set 1"
+          "Scenario 1|Category set 1",
+          "Scenario 2|Category set 1"
         ],
         "Input Values": [
-          "Scenario 1|Input group 1|Input Value 1"
+          "Scenario 1|Input group 1|Input Value 1-1",
+          "Scenario 2|Input group 1|Input Value 2-1"
         ],
         "Expected Values": [
-          "Scenario 1|Output group 1|Output Value 1"
+          "Scenario 1|Output group 1|Output Value 1-1",
+          "Scenario 2|Output group 1|Output Value 2-1"
         ],
         "Actual Values": [
-          "Scenario 1|Output group 1|Output Value 1"
+          "Scenario 1|Output group 1|Output Value 1-1",
+          "Scenario 2|Output group 1|Output Value 2-1"
         ]
       },
       "out": {
         "Summaries": [
-          "Report|||Unit Test Report: UUT|Category Set|Test scenarios: 0 failed of 1: SUCCESS|1|0|SUCCESS"
+          "Report|||Unit Test Report: UUT|Category Set|Test scenarios: 0 failed of 2: SUCCESS|2|0|SUCCESS",
+          "Scenario|Scenario 1||SCENARIO 1: Scenario 1 [Category Set: Category set 1]|INPUTS-OUTPUTS|0 failed of 1: SUCCESS|1|0|SUCCESS",
+          "Input group|Scenario 1|Input group 1|GROUP 1: Input group 1|||||",
+          "Output group|Scenario 1|Output group 1|GROUP 1: Output group 1||0 failed of 1: SUCCESS|1|0|SUCCESS",
+          "Scenario|Scenario 2||SCENARIO 2: Scenario 2 [Category Set: Category set 1]|INPUTS-OUTPUTS|0 failed of 1: SUCCESS|1|0|SUCCESS",
+          "Input group|Scenario 2|Input group 1|GROUP 1: Input group 1|||||",
+          "Output group|Scenario 2|Output group 1|GROUP 1: Output group 1||0 failed of 1: SUCCESS|1|0|SUCCESS"
         ],
         "Input Fields": [
-          "Scenario 1|Input group 1|#|1"
+          "Scenario 1|Input group 1|#|1",
+          "Scenario 1|Input group 1|Input field 1|15",
+          "Scenario 2|Input group 1|#|1",
+          "Scenario 2|Input group 1|Input field 1|15"
         ],
         "Output Fields": [
-          "Scenario 1|Output group 1|#|1"
+          "Scenario 1|Output group 1|#|1",
+          "Scenario 1|Output group 1|Output field 1|16",
+          "Scenario 2|Output group 1|#|1",
+          "Scenario 2|Output group 1|Output field 1|16"
         ],
         "Input Values": [
-          "Scenario 1|Input group 1|1~Input Value 1"
+          "Scenario 1|Input group 1|1~Input Value 1-1",
+          "Scenario 2|Input group 1|1~Input Value 2-1"
         ],
         "Output Values": [
-          "Scenario 1|Output group 1|1~Output Value 1"
+          "Scenario 1|Output group 1|1~Output Value 1-1",
+          "Scenario 2|Output group 1|1~Output Value 2-1"
         ]
       }
     },
@@ -614,33 +830,51 @@
           "Output group 1|Output field 1"
         ],
         "Scenarios": [
-          "Scenario 1|Category set 1"
+          "Scenario 1|Category set 1",
+          "Scenario 2|Category set 1"
         ],
         "Input Values": [
-          "Scenario 1|Input group 1|Input Value 1"
+          "Scenario 1|Input group 1|Input Value 1-1",
+          "Scenario 2|Input group 1|Input Value 2-1"
         ],
         "Expected Values": [
-          "Scenario 1|Output group 1|Output Value 1"
+          "Scenario 1|Output group 1|Output Value 1-1",
+          "Scenario 2|Output group 1|Output Value 2-1"
         ],
         "Actual Values": [
-          "Scenario 1|Output group 1|Output Value 1"
+          "Scenario 1|Output group 1|Output Value 1-1",
+          "Scenario 2|Output group 1|Output Value 2-1"
         ]
       },
       "out": {
         "Summaries": [
-          "Report|||Unit Test Report: UUT|Category Set|Test scenarios: 0 failed of 1: SUCCESS|1|0|SUCCESS"
+          "Report|||Unit Test Report: UUT|Category Set|Test scenarios: 0 failed of 2: SUCCESS|2|0|SUCCESS",
+          "Scenario|Scenario 1||SCENARIO 1: Scenario 1 [Category Set: Category set 1]|INPUTS-OUTPUTS|0 failed of 1: SUCCESS|1|0|SUCCESS",
+          "Input group|Scenario 1|Input group 1|GROUP 1: Input group 1|||||",
+          "Output group|Scenario 1|Output group 1|GROUP 1: Output group 1||0 failed of 1: SUCCESS|1|0|SUCCESS",
+          "Scenario|Scenario 2||SCENARIO 2: Scenario 2 [Category Set: Category set 1]|INPUTS-OUTPUTS|0 failed of 1: SUCCESS|1|0|SUCCESS",
+          "Input group|Scenario 2|Input group 1|GROUP 1: Input group 1|||||",
+          "Output group|Scenario 2|Output group 1|GROUP 1: Output group 1||0 failed of 1: SUCCESS|1|0|SUCCESS"
         ],
         "Input Fields": [
-          "Scenario 1|Input group 1|#|1"
+          "Scenario 1|Input group 1|#|1",
+          "Scenario 1|Input group 1|Input field 1|15",
+          "Scenario 2|Input group 1|#|1",
+          "Scenario 2|Input group 1|Input field 1|15"
         ],
         "Output Fields": [
-          "Scenario 1|Output group 1|#|1"
+          "Scenario 1|Output group 1|#|1",
+          "Scenario 1|Output group 1|Output field 1|16",
+          "Scenario 2|Output group 1|#|1",
+          "Scenario 2|Output group 1|Output field 1|16"
         ],
         "Input Values": [
-          "Scenario 1|Input group 1|1~Input Value 1"
+          "Scenario 1|Input group 1|1~Input Value 1-1",
+          "Scenario 2|Input group 1|1~Input Value 2-1"
         ],
         "Output Values": [
-          "Scenario 1|Output group 1|1~Output Value 1"
+          "Scenario 1|Output group 1|1~Output Value 1-1",
+          "Scenario 2|Output group 1|1~Output Value 2-1"
         ]
       }
     },
@@ -658,33 +892,51 @@
           "Output group 1|Output field 1"
         ],
         "Scenarios": [
-          "Scenario 1|Category set 1"
+          "Scenario 1|Category set 1",
+          "Scenario 2|Category set 1"
         ],
         "Input Values": [
-          "Scenario 1|Input group 1|Input Value 1"
+          "Scenario 1|Input group 1|Input Value 1-1",
+          "Scenario 2|Input group 1|Input Value 2-1"
         ],
         "Expected Values": [
-          "Scenario 1|Output group 1|Output Value 1"
+          "Scenario 1|Output group 1|Output Value 1-1",
+          "Scenario 2|Output group 1|Output Value 2-1"
         ],
         "Actual Values": [
-          "Scenario 1|Output group 1|Output Value 1"
+          "Scenario 1|Output group 1|Output Value 1-1",
+          "Scenario 2|Output group 1|Output Value 2-1"
         ]
       },
       "out": {
         "Summaries": [
-          "Report|||Unit Test Report: UUT|Category Set|Test scenarios: 0 failed of 1: SUCCESS|1|0|SUCCESS"
+          "Report|||Unit Test Report: UUT|Category Set|Test scenarios: 0 failed of 2: SUCCESS|2|0|SUCCESS",
+          "Scenario|Scenario 1||SCENARIO 1: Scenario 1 [Category Set: Category set 1]|INPUTS-OUTPUTS|0 failed of 1: SUCCESS|1|0|SUCCESS",
+          "Input group|Scenario 1|Input group 1|GROUP 1: Input group 1|||||",
+          "Output group|Scenario 1|Output group 1|GROUP 1: Output group 1||0 failed of 1: SUCCESS|1|0|SUCCESS",
+          "Scenario|Scenario 2||SCENARIO 2: Scenario 2 [Category Set: Category set 1]|INPUTS-OUTPUTS|0 failed of 1: SUCCESS|1|0|SUCCESS",
+          "Input group|Scenario 2|Input group 1|GROUP 1: Input group 1|||||",
+          "Output group|Scenario 2|Output group 1|GROUP 1: Output group 1||0 failed of 1: SUCCESS|1|0|SUCCESS"
         ],
         "Input Fields": [
-          "Scenario 1|Input group 1|#|1"
+          "Scenario 1|Input group 1|#|1",
+          "Scenario 1|Input group 1|Input field 1|15",
+          "Scenario 2|Input group 1|#|1",
+          "Scenario 2|Input group 1|Input field 1|15"
         ],
         "Output Fields": [
-          "Scenario 1|Output group 1|#|1"
+          "Scenario 1|Output group 1|#|1",
+          "Scenario 1|Output group 1|Output field 1|16",
+          "Scenario 2|Output group 1|#|1",
+          "Scenario 2|Output group 1|Output field 1|16"
         ],
         "Input Values": [
-          "Scenario 1|Input group 1|1~Input Value 1"
+          "Scenario 1|Input group 1|1~Input Value 1-1",
+          "Scenario 2|Input group 1|1~Input Value 2-1"
         ],
         "Output Values": [
-          "Scenario 1|Output group 1|1~Output Value 1"
+          "Scenario 1|Output group 1|1~Output Value 1-1",
+          "Scenario 2|Output group 1|1~Output Value 2-1"
         ]
       }
     },
@@ -702,33 +954,51 @@
           "Output group 1|Output field 1"
         ],
         "Scenarios": [
-          "Scenario 1|Category set 1"
+          "Scenario 1|Category set 1",
+          "Scenario 2|Category set 1"
         ],
         "Input Values": [
-          "Scenario 1|Input group 1|Input Value 1"
+          "Scenario 1|Input group 1|Input Value 1-1",
+          "Scenario 2|Input group 1|Input Value 2-1"
         ],
         "Expected Values": [
-          "Scenario 1|Output group 1|Output Value 1"
+          "Scenario 1|Output group 1|Output Value 1-1",
+          "Scenario 2|Output group 1|Output Value 2-1"
         ],
         "Actual Values": [
-          "Scenario 1|Output group 1|Output Value 1"
+          "Scenario 1|Output group 1|Output Value 1-1",
+          "Scenario 2|Output group 1|Output Value 2-1"
         ]
       },
       "out": {
         "Summaries": [
-          "Report|||Unit Test Report: UUT|Category Set|Test scenarios: 0 failed of 1: SUCCESS|1|0|SUCCESS"
+          "Report|||Unit Test Report: UUT|Category Set|Test scenarios: 0 failed of 2: SUCCESS|2|0|SUCCESS",
+          "Scenario|Scenario 1||SCENARIO 1: Scenario 1 [Category Set: Category set 1]|INPUTS-OUTPUTS|0 failed of 1: SUCCESS|1|0|SUCCESS",
+          "Input group|Scenario 1|Input group 1|GROUP 1: Input group 1|||||",
+          "Output group|Scenario 1|Output group 1|GROUP 1: Output group 1||0 failed of 1: SUCCESS|1|0|SUCCESS",
+          "Scenario|Scenario 2||SCENARIO 2: Scenario 2 [Category Set: Category set 1]|INPUTS-OUTPUTS|0 failed of 1: SUCCESS|1|0|SUCCESS",
+          "Input group|Scenario 2|Input group 1|GROUP 1: Input group 1|||||",
+          "Output group|Scenario 2|Output group 1|GROUP 1: Output group 1||0 failed of 1: SUCCESS|1|0|SUCCESS"
         ],
         "Input Fields": [
-          "Scenario 1|Input group 1|#|1"
+          "Scenario 1|Input group 1|#|1",
+          "Scenario 1|Input group 1|Input field 1|15",
+          "Scenario 2|Input group 1|#|1",
+          "Scenario 2|Input group 1|Input field 1|15"
         ],
         "Output Fields": [
-          "Scenario 1|Output group 1|#|1"
+          "Scenario 1|Output group 1|#|1",
+          "Scenario 1|Output group 1|Output field 1|16",
+          "Scenario 2|Output group 1|#|1",
+          "Scenario 2|Output group 1|Output field 1|16"
         ],
         "Input Values": [
-          "Scenario 1|Input group 1|1~Input Value 1"
+          "Scenario 1|Input group 1|1~Input Value 1-1",
+          "Scenario 2|Input group 1|1~Input Value 2-1"
         ],
         "Output Values": [
-          "Scenario 1|Output group 1|1~Output Value 1"
+          "Scenario 1|Output group 1|1~Output Value 1-1",
+          "Scenario 2|Output group 1|1~Output Value 2-1"
         ]
       }
     },
@@ -746,33 +1016,51 @@
           "Output group 1|Output field 1"
         ],
         "Scenarios": [
-          "Scenario 1|Category set 1"
+          "Scenario 1|Category set 1",
+          "Scenario 2|Category set 1"
         ],
         "Input Values": [
-          "Scenario 1|Input group 1|Input Value 1"
+          "Scenario 1|Input group 1|Input Value 1-1",
+          "Scenario 2|Input group 1|Input Value 2-1"
         ],
         "Expected Values": [
-          "Scenario 1|Output group 1|Output Value 1"
+          "Scenario 1|Output group 1|Output Value 1-1",
+          "Scenario 2|Output group 1|Output Value 2-1"
         ],
         "Actual Values": [
-          "Scenario 1|Output group 1|Output Value 1"
+          "Scenario 1|Output group 1|Output Value 1-1",
+          "Scenario 2|Output group 1|Output Value 2-1"
         ]
       },
       "out": {
         "Summaries": [
-          "Report|||Unit Test Report: UUT|Category Set|Test scenarios: 0 failed of 1: SUCCESS|1|0|SUCCESS"
+          "Report|||Unit Test Report: UUT|Category Set|Test scenarios: 0 failed of 2: SUCCESS|2|0|SUCCESS",
+          "Scenario|Scenario 1||SCENARIO 1: Scenario 1 [Category Set: Category set 1]|INPUTS-OUTPUTS|0 failed of 1: SUCCESS|1|0|SUCCESS",
+          "Input group|Scenario 1|Input group 1|GROUP 1: Input group 1|||||",
+          "Output group|Scenario 1|Output group 1|GROUP 1: Output group 1||0 failed of 1: SUCCESS|1|0|SUCCESS",
+          "Scenario|Scenario 2||SCENARIO 2: Scenario 2 [Category Set: Category set 1]|INPUTS-OUTPUTS|0 failed of 1: SUCCESS|1|0|SUCCESS",
+          "Input group|Scenario 2|Input group 1|GROUP 1: Input group 1|||||",
+          "Output group|Scenario 2|Output group 1|GROUP 1: Output group 1||0 failed of 1: SUCCESS|1|0|SUCCESS"
         ],
         "Input Fields": [
-          "Scenario 1|Input group 1|#|1"
+          "Scenario 1|Input group 1|#|1",
+          "Scenario 1|Input group 1|Input field 1|15",
+          "Scenario 2|Input group 1|#|1",
+          "Scenario 2|Input group 1|Input field 1|15"
         ],
         "Output Fields": [
-          "Scenario 1|Output group 1|#|1"
+          "Scenario 1|Output group 1|#|1",
+          "Scenario 1|Output group 1|Output field 1|16",
+          "Scenario 2|Output group 1|#|1",
+          "Scenario 2|Output group 1|Output field 1|16"
         ],
         "Input Values": [
-          "Scenario 1|Input group 1|1~Input Value 1"
+          "Scenario 1|Input group 1|1~Input Value 1-1",
+          "Scenario 2|Input group 1|1~Input Value 2-1"
         ],
         "Output Values": [
-          "Scenario 1|Output group 1|1~Output Value 1"
+          "Scenario 1|Output group 1|1~Output Value 1-1",
+          "Scenario 2|Output group 1|1~Output Value 2-1"
         ]
       }
     },
@@ -790,33 +1078,51 @@
           "Output group 1|Output field 1"
         ],
         "Scenarios": [
-          "Scenario 1|Category set 1"
+          "Scenario 1|Category set 1",
+          "Scenario 2|Category set 1"
         ],
         "Input Values": [
-          "Scenario 1|Input group 1|Input Value 1"
+          "Scenario 1|Input group 1|Input Value 1-1",
+          "Scenario 2|Input group 1|Input Value 2-1"
         ],
         "Expected Values": [
-          "Scenario 1|Output group 1|Output Value 1"
+          "Scenario 1|Output group 1|Output Value 1-1",
+          "Scenario 2|Output group 1|Output Value 2-1"
         ],
         "Actual Values": [
-          "Scenario 1|Output group 1|Output Value 1"
+          "Scenario 1|Output group 1|Output Value 1-1",
+          "Scenario 2|Output group 1|Output Value 2-1"
         ]
       },
       "out": {
         "Summaries": [
-          "Report|||Unit Test Report: UUT|Category Set|Test scenarios: 0 failed of 1: SUCCESS|1|0|SUCCESS"
+          "Report|||Unit Test Report: UUT|Category Set|Test scenarios: 0 failed of 2: SUCCESS|2|0|SUCCESS",
+          "Scenario|Scenario 1||SCENARIO 1: Scenario 1 [Category Set: Category set 1]|INPUTS-OUTPUTS|0 failed of 1: SUCCESS|1|0|SUCCESS",
+          "Input group|Scenario 1|Input group 1|GROUP 1: Input group 1|||||",
+          "Output group|Scenario 1|Output group 1|GROUP 1: Output group 1||0 failed of 1: SUCCESS|1|0|SUCCESS",
+          "Scenario|Scenario 2||SCENARIO 2: Scenario 2 [Category Set: Category set 1]|INPUTS-OUTPUTS|0 failed of 1: SUCCESS|1|0|SUCCESS",
+          "Input group|Scenario 2|Input group 1|GROUP 1: Input group 1|||||",
+          "Output group|Scenario 2|Output group 1|GROUP 1: Output group 1||0 failed of 1: SUCCESS|1|0|SUCCESS"
         ],
         "Input Fields": [
-          "Scenario 1|Input group 1|#|1"
+          "Scenario 1|Input group 1|#|1",
+          "Scenario 1|Input group 1|Input field 1|15",
+          "Scenario 2|Input group 1|#|1",
+          "Scenario 2|Input group 1|Input field 1|15"
         ],
         "Output Fields": [
-          "Scenario 1|Output group 1|#|1"
+          "Scenario 1|Output group 1|#|1",
+          "Scenario 1|Output group 1|Output field 1|16",
+          "Scenario 2|Output group 1|#|1",
+          "Scenario 2|Output group 1|Output field 1|16"
         ],
         "Input Values": [
-          "Scenario 1|Input group 1|1~Input Value 1"
+          "Scenario 1|Input group 1|1~Input Value 1-1",
+          "Scenario 2|Input group 1|1~Input Value 2-1"
         ],
         "Output Values": [
-          "Scenario 1|Output group 1|1~Output Value 1"
+          "Scenario 1|Output group 1|1~Output Value 1-1",
+          "Scenario 2|Output group 1|1~Output Value 2-1"
         ]
       }
     },
@@ -834,33 +1140,51 @@
           "Output group 1|Output field 1"
         ],
         "Scenarios": [
-          "Scenario 1|Category set 1"
+          "Scenario 1|Category set 1",
+          "Scenario 2|Category set 1"
         ],
         "Input Values": [
-          "Scenario 1|Input group 1|Input Value 1"
+          "Scenario 1|Input group 1|Input Value 1-1",
+          "Scenario 2|Input group 1|Input Value 2-1"
         ],
         "Expected Values": [
-          "Scenario 1|Output group 1|Output Value 1"
+          "Scenario 1|Output group 1|Output Value 1-1",
+          "Scenario 2|Output group 1|Output Value 2-1"
         ],
         "Actual Values": [
-          "Scenario 1|Output group 1|Output Value 1"
+          "Scenario 1|Output group 1|Output Value 1-1",
+          "Scenario 2|Output group 1|Output Value 2-1"
         ]
       },
       "out": {
         "Summaries": [
-          "Report|||Unit Test Report: UUT|Category Set|Test scenarios: 0 failed of 1: SUCCESS|1|0|SUCCESS"
+          "Report|||Unit Test Report: UUT|Category Set|Test scenarios: 0 failed of 2: SUCCESS|2|0|SUCCESS",
+          "Scenario|Scenario 1||SCENARIO 1: Scenario 1 [Category Set: Category set 1]|INPUTS-OUTPUTS|0 failed of 1: SUCCESS|1|0|SUCCESS",
+          "Input group|Scenario 1|Input group 1|GROUP 1: Input group 1|||||",
+          "Output group|Scenario 1|Output group 1|GROUP 1: Output group 1||0 failed of 1: SUCCESS|1|0|SUCCESS",
+          "Scenario|Scenario 2||SCENARIO 2: Scenario 2 [Category Set: Category set 1]|INPUTS-OUTPUTS|0 failed of 1: SUCCESS|1|0|SUCCESS",
+          "Input group|Scenario 2|Input group 1|GROUP 1: Input group 1|||||",
+          "Output group|Scenario 2|Output group 1|GROUP 1: Output group 1||0 failed of 1: SUCCESS|1|0|SUCCESS"
         ],
         "Input Fields": [
-          "Scenario 1|Input group 1|#|1"
+          "Scenario 1|Input group 1|#|1",
+          "Scenario 1|Input group 1|Input field 1|15",
+          "Scenario 2|Input group 1|#|1",
+          "Scenario 2|Input group 1|Input field 1|15"
         ],
         "Output Fields": [
-          "Scenario 1|Output group 1|#|1"
+          "Scenario 1|Output group 1|#|1",
+          "Scenario 1|Output group 1|Output field 1|16",
+          "Scenario 2|Output group 1|#|1",
+          "Scenario 2|Output group 1|Output field 1|16"
         ],
         "Input Values": [
-          "Scenario 1|Input group 1|1~Input Value 1"
+          "Scenario 1|Input group 1|1~Input Value 1-1",
+          "Scenario 2|Input group 1|1~Input Value 2-1"
         ],
         "Output Values": [
-          "Scenario 1|Output group 1|1~Output Value 1"
+          "Scenario 1|Output group 1|1~Output Value 1-1",
+          "Scenario 2|Output group 1|1~Output Value 2-1"
         ]
       }
     },
@@ -878,33 +1202,51 @@
           "Output group 1|Output field 1"
         ],
         "Scenarios": [
-          "Scenario 1|Category set 1"
+          "Scenario 1|Category set 1",
+          "Scenario 2|Category set 1"
         ],
         "Input Values": [
-          "Scenario 1|Input group 1|Input Value 1"
+          "Scenario 1|Input group 1|Input Value 1-1",
+          "Scenario 2|Input group 1|Input Value 2-1"
         ],
         "Expected Values": [
-          "Scenario 1|Output group 1|Output Value 1"
+          "Scenario 1|Output group 1|Output Value 1-1",
+          "Scenario 2|Output group 1|Output Value 2-1"
         ],
         "Actual Values": [
-          "Scenario 1|Output group 1|Output Value 1"
+          "Scenario 1|Output group 1|Output Value 1-1",
+          "Scenario 2|Output group 1|Output Value 2-1"
         ]
       },
       "out": {
         "Summaries": [
-          "Report|||Unit Test Report: UUT|Category Set|Test scenarios: 0 failed of 1: SUCCESS|1|0|SUCCESS"
+          "Report|||Unit Test Report: UUT|Category Set|Test scenarios: 0 failed of 2: SUCCESS|2|0|SUCCESS",
+          "Scenario|Scenario 1||SCENARIO 1: Scenario 1 [Category Set: Category set 1]|INPUTS-OUTPUTS|0 failed of 1: SUCCESS|1|0|SUCCESS",
+          "Input group|Scenario 1|Input group 1|GROUP 1: Input group 1|||||",
+          "Output group|Scenario 1|Output group 1|GROUP 1: Output group 1||0 failed of 1: SUCCESS|1|0|SUCCESS",
+          "Scenario|Scenario 2||SCENARIO 2: Scenario 2 [Category Set: Category set 1]|INPUTS-OUTPUTS|0 failed of 1: SUCCESS|1|0|SUCCESS",
+          "Input group|Scenario 2|Input group 1|GROUP 1: Input group 1|||||",
+          "Output group|Scenario 2|Output group 1|GROUP 1: Output group 1||0 failed of 1: SUCCESS|1|0|SUCCESS"
         ],
         "Input Fields": [
-          "Scenario 1|Input group 1|#|1"
+          "Scenario 1|Input group 1|#|1",
+          "Scenario 1|Input group 1|Input field 1|15",
+          "Scenario 2|Input group 1|#|1",
+          "Scenario 2|Input group 1|Input field 1|15"
         ],
         "Output Fields": [
-          "Scenario 1|Output group 1|#|1"
+          "Scenario 1|Output group 1|#|1",
+          "Scenario 1|Output group 1|Output field 1|16",
+          "Scenario 2|Output group 1|#|1",
+          "Scenario 2|Output group 1|Output field 1|16"
         ],
         "Input Values": [
-          "Scenario 1|Input group 1|1~Input Value 1"
+          "Scenario 1|Input group 1|1~Input Value 1-1",
+          "Scenario 2|Input group 1|1~Input Value 2-1"
         ],
         "Output Values": [
-          "Scenario 1|Output group 1|1~Output Value 1"
+          "Scenario 1|Output group 1|1~Output Value 1-1",
+          "Scenario 2|Output group 1|1~Output Value 2-1"
         ]
       }
     },
@@ -922,33 +1264,51 @@
           "Output group 1|Output field 1"
         ],
         "Scenarios": [
-          "Scenario 1|Category set 1"
+          "Scenario 1|Category set 1",
+          "Scenario 2|Category set 1"
         ],
         "Input Values": [
-          "Scenario 1|Input group 1|Input Value 1"
+          "Scenario 1|Input group 1|Input Value 1-1",
+          "Scenario 2|Input group 1|Input Value 2-1"
         ],
         "Expected Values": [
-          "Scenario 1|Output group 1|Output Value 1"
+          "Scenario 1|Output group 1|Output Value 1-1",
+          "Scenario 2|Output group 1|Output Value 2-1"
         ],
         "Actual Values": [
-          "Scenario 1|Output group 1|Output Value 1"
+          "Scenario 1|Output group 1|Output Value 1-1",
+          "Scenario 2|Output group 1|Output Value 2-1"
         ]
       },
       "out": {
         "Summaries": [
-          "Report|||Unit Test Report: UUT|Category Set|Test scenarios: 0 failed of 1: SUCCESS|1|0|SUCCESS"
+          "Report|||Unit Test Report: UUT|Category Set|Test scenarios: 0 failed of 2: SUCCESS|2|0|SUCCESS",
+          "Scenario|Scenario 1||SCENARIO 1: Scenario 1 [Category Set: Category set 1]|INPUTS-OUTPUTS|0 failed of 1: SUCCESS|1|0|SUCCESS",
+          "Input group|Scenario 1|Input group 1|GROUP 1: Input group 1|||||",
+          "Output group|Scenario 1|Output group 1|GROUP 1: Output group 1||0 failed of 1: SUCCESS|1|0|SUCCESS",
+          "Scenario|Scenario 2||SCENARIO 2: Scenario 2 [Category Set: Category set 1]|INPUTS-OUTPUTS|0 failed of 1: SUCCESS|1|0|SUCCESS",
+          "Input group|Scenario 2|Input group 1|GROUP 1: Input group 1|||||",
+          "Output group|Scenario 2|Output group 1|GROUP 1: Output group 1||0 failed of 1: SUCCESS|1|0|SUCCESS"
         ],
         "Input Fields": [
-          "Scenario 1|Input group 1|#|1"
+          "Scenario 1|Input group 1|#|1",
+          "Scenario 1|Input group 1|Input field 1|15",
+          "Scenario 2|Input group 1|#|1",
+          "Scenario 2|Input group 1|Input field 1|15"
         ],
         "Output Fields": [
-          "Scenario 1|Output group 1|#|1"
+          "Scenario 1|Output group 1|#|1",
+          "Scenario 1|Output group 1|Output field 1|16",
+          "Scenario 2|Output group 1|#|1",
+          "Scenario 2|Output group 1|Output field 1|16"
         ],
         "Input Values": [
-          "Scenario 1|Input group 1|1~Input Value 1"
+          "Scenario 1|Input group 1|1~Input Value 1-1",
+          "Scenario 2|Input group 1|1~Input Value 2-1"
         ],
         "Output Values": [
-          "Scenario 1|Output group 1|1~Output Value 1"
+          "Scenario 1|Output group 1|1~Output Value 1-1",
+          "Scenario 2|Output group 1|1~Output Value 2-1"
         ]
       }
     },
@@ -966,33 +1326,51 @@
           "Output group 1|Output field 1"
         ],
         "Scenarios": [
-          "Scenario 1|Category set 1"
+          "Scenario 1|Category set 1",
+          "Scenario 2|Category set 1"
         ],
         "Input Values": [
-          "Scenario 1|Input group 1|Input Value 1"
+          "Scenario 1|Input group 1|Input Value 1-1",
+          "Scenario 2|Input group 1|Input Value 2-1"
         ],
         "Expected Values": [
-          "Scenario 1|Output group 1|Output Value 1"
+          "Scenario 1|Output group 1|Output Value 1-1",
+          "Scenario 2|Output group 1|Output Value 2-1"
         ],
         "Actual Values": [
-          "Scenario 1|Output group 1|Output Value 1"
+          "Scenario 1|Output group 1|Output Value 1-1",
+          "Scenario 2|Output group 1|Output Value 2-1"
         ]
       },
       "out": {
         "Summaries": [
-          "Report|||Unit Test Report: UUT|Category Set|Test scenarios: 0 failed of 1: SUCCESS|1|0|SUCCESS"
+          "Report|||Unit Test Report: UUT|Category Set|Test scenarios: 0 failed of 2: SUCCESS|2|0|SUCCESS",
+          "Scenario|Scenario 1||SCENARIO 1: Scenario 1 [Category Set: Category set 1]|INPUTS-OUTPUTS|0 failed of 1: SUCCESS|1|0|SUCCESS",
+          "Input group|Scenario 1|Input group 1|GROUP 1: Input group 1|||||",
+          "Output group|Scenario 1|Output group 1|GROUP 1: Output group 1||0 failed of 1: SUCCESS|1|0|SUCCESS",
+          "Scenario|Scenario 2||SCENARIO 2: Scenario 2 [Category Set: Category set 1]|INPUTS-OUTPUTS|0 failed of 1: SUCCESS|1|0|SUCCESS",
+          "Input group|Scenario 2|Input group 1|GROUP 1: Input group 1|||||",
+          "Output group|Scenario 2|Output group 1|GROUP 1: Output group 1||0 failed of 1: SUCCESS|1|0|SUCCESS"
         ],
         "Input Fields": [
-          "Scenario 1|Input group 1|#|1"
+          "Scenario 1|Input group 1|#|1",
+          "Scenario 1|Input group 1|Input field 1|15",
+          "Scenario 2|Input group 1|#|1",
+          "Scenario 2|Input group 1|Input field 1|15"
         ],
         "Output Fields": [
-          "Scenario 1|Output group 1|#|1"
+          "Scenario 1|Output group 1|#|1",
+          "Scenario 1|Output group 1|Output field 1|16",
+          "Scenario 2|Output group 1|#|1",
+          "Scenario 2|Output group 1|Output field 1|16"
         ],
         "Input Values": [
-          "Scenario 1|Input group 1|1~Input Value 1"
+          "Scenario 1|Input group 1|1~Input Value 1-1",
+          "Scenario 2|Input group 1|1~Input Value 2-1"
         ],
         "Output Values": [
-          "Scenario 1|Output group 1|1~Output Value 1"
+          "Scenario 1|Output group 1|1~Output Value 1-1",
+          "Scenario 2|Output group 1|1~Output Value 2-1"
         ]
       }
     },
@@ -1010,33 +1388,51 @@
           "Output group 1|Output field 1"
         ],
         "Scenarios": [
-          "Scenario 1|Category set 1"
+          "Scenario 1|Category set 1",
+          "Scenario 2|Category set 1"
         ],
         "Input Values": [
-          "Scenario 1|Input group 1|Input Value 1"
+          "Scenario 1|Input group 1|Input Value 1-1",
+          "Scenario 2|Input group 1|Input Value 2-1"
         ],
         "Expected Values": [
-          "Scenario 1|Output group 1|Output Value 1"
+          "Scenario 1|Output group 1|Output Value 1-1",
+          "Scenario 2|Output group 1|Output Value 2-1"
         ],
         "Actual Values": [
-          "Scenario 1|Output group 1|Output Value 1"
+          "Scenario 1|Output group 1|Output Value 1-1",
+          "Scenario 2|Output group 1|Output Value 2-1"
         ]
       },
       "out": {
         "Summaries": [
-          "Report|||Unit Test Report: UUT|Category Set|Test scenarios: 0 failed of 1: SUCCESS|1|0|SUCCESS"
+          "Report|||Unit Test Report: UUT|Category Set|Test scenarios: 0 failed of 2: SUCCESS|2|0|SUCCESS",
+          "Scenario|Scenario 1||SCENARIO 1: Scenario 1 [Category Set: Category set 1]|INPUTS-OUTPUTS|0 failed of 1: SUCCESS|1|0|SUCCESS",
+          "Input group|Scenario 1|Input group 1|GROUP 1: Input group 1|||||",
+          "Output group|Scenario 1|Output group 1|GROUP 1: Output group 1||0 failed of 1: SUCCESS|1|0|SUCCESS",
+          "Scenario|Scenario 2||SCENARIO 2: Scenario 2 [Category Set: Category set 1]|INPUTS-OUTPUTS|0 failed of 1: SUCCESS|1|0|SUCCESS",
+          "Input group|Scenario 2|Input group 1|GROUP 1: Input group 1|||||",
+          "Output group|Scenario 2|Output group 1|GROUP 1: Output group 1||0 failed of 1: SUCCESS|1|0|SUCCESS"
         ],
         "Input Fields": [
-          "Scenario 1|Input group 1|#|1"
+          "Scenario 1|Input group 1|#|1",
+          "Scenario 1|Input group 1|Input field 1|15",
+          "Scenario 2|Input group 1|#|1",
+          "Scenario 2|Input group 1|Input field 1|15"
         ],
         "Output Fields": [
-          "Scenario 1|Output group 1|#|1"
+          "Scenario 1|Output group 1|#|1",
+          "Scenario 1|Output group 1|Output field 1|16",
+          "Scenario 2|Output group 1|#|1",
+          "Scenario 2|Output group 1|Output field 1|16"
         ],
         "Input Values": [
-          "Scenario 1|Input group 1|1~Input Value 1"
+          "Scenario 1|Input group 1|1~Input Value 1-1",
+          "Scenario 2|Input group 1|1~Input Value 2-1"
         ],
         "Output Values": [
-          "Scenario 1|Output group 1|1~Output Value 1"
+          "Scenario 1|Output group 1|1~Output Value 1-1",
+          "Scenario 2|Output group 1|1~Output Value 2-1"
         ]
       }
     },
@@ -1054,33 +1450,51 @@
           "Output group 1|Output field 1"
         ],
         "Scenarios": [
-          "Scenario 1|Category set 1"
+          "Scenario 1|Category set 1",
+          "Scenario 2|Category set 1"
         ],
         "Input Values": [
-          "Scenario 1|Input group 1|Input Value 1"
+          "Scenario 1|Input group 1|Input Value 1-1",
+          "Scenario 2|Input group 1|Input Value 2-1"
         ],
         "Expected Values": [
-          "Scenario 1|Output group 1|Output Value 1"
+          "Scenario 1|Output group 1|Output Value 1-1",
+          "Scenario 2|Output group 1|Output Value 2-1"
         ],
         "Actual Values": [
-          "Scenario 1|Output group 1|Output Value 1"
+          "Scenario 1|Output group 1|Output Value 1-1",
+          "Scenario 2|Output group 1|Output Value 2-1"
         ]
       },
       "out": {
         "Summaries": [
-          "Report|||Unit Test Report: UUT|Category Set|Test scenarios: 0 failed of 1: SUCCESS|1|0|SUCCESS"
+          "Report|||Unit Test Report: UUT|Category Set|Test scenarios: 0 failed of 2: SUCCESS|2|0|SUCCESS",
+          "Scenario|Scenario 1||SCENARIO 1: Scenario 1 [Category Set: Category set 1]|INPUTS-OUTPUTS|0 failed of 1: SUCCESS|1|0|SUCCESS",
+          "Input group|Scenario 1|Input group 1|GROUP 1: Input group 1|||||",
+          "Output group|Scenario 1|Output group 1|GROUP 1: Output group 1||0 failed of 1: SUCCESS|1|0|SUCCESS",
+          "Scenario|Scenario 2||SCENARIO 2: Scenario 2 [Category Set: Category set 1]|INPUTS-OUTPUTS|0 failed of 1: SUCCESS|1|0|SUCCESS",
+          "Input group|Scenario 2|Input group 1|GROUP 1: Input group 1|||||",
+          "Output group|Scenario 2|Output group 1|GROUP 1: Output group 1||0 failed of 1: SUCCESS|1|0|SUCCESS"
         ],
         "Input Fields": [
-          "Scenario 1|Input group 1|#|1"
+          "Scenario 1|Input group 1|#|1",
+          "Scenario 1|Input group 1|Input field 1|15",
+          "Scenario 2|Input group 1|#|1",
+          "Scenario 2|Input group 1|Input field 1|15"
         ],
         "Output Fields": [
-          "Scenario 1|Output group 1|#|1"
+          "Scenario 1|Output group 1|#|1",
+          "Scenario 1|Output group 1|Output field 1|16",
+          "Scenario 2|Output group 1|#|1",
+          "Scenario 2|Output group 1|Output field 1|16"
         ],
         "Input Values": [
-          "Scenario 1|Input group 1|1~Input Value 1"
+          "Scenario 1|Input group 1|1~Input Value 1-1",
+          "Scenario 2|Input group 1|1~Input Value 2-1"
         ],
         "Output Values": [
-          "Scenario 1|Output group 1|1~Output Value 1"
+          "Scenario 1|Output group 1|1~Output Value 1-1",
+          "Scenario 2|Output group 1|1~Output Value 2-1"
         ]
       }
     },
@@ -1098,33 +1512,51 @@
           "Output group 1|Output field 1"
         ],
         "Scenarios": [
-          "Scenario 1|Category set 1"
+          "Scenario 1|Category set 1",
+          "Scenario 2|Category set 1"
         ],
         "Input Values": [
-          "Scenario 1|Input group 1|Input Value 1"
+          "Scenario 1|Input group 1|Input Value 1-1",
+          "Scenario 2|Input group 1|Input Value 2-1"
         ],
         "Expected Values": [
-          "Scenario 1|Output group 1|Output Value 1"
+          "Scenario 1|Output group 1|Output Value 1-1",
+          "Scenario 2|Output group 1|Output Value 2-1"
         ],
         "Actual Values": [
-          "Scenario 1|Output group 1|Output Value 1"
+          "Scenario 1|Output group 1|Output Value 1-1",
+          "Scenario 2|Output group 1|Output Value 2-1"
         ]
       },
       "out": {
         "Summaries": [
-          "Report|||Unit Test Report: UUT|Category Set|Test scenarios: 0 failed of 1: SUCCESS|1|0|SUCCESS"
+          "Report|||Unit Test Report: UUT|Category Set|Test scenarios: 0 failed of 2: SUCCESS|2|0|SUCCESS",
+          "Scenario|Scenario 1||SCENARIO 1: Scenario 1 [Category Set: Category set 1]|INPUTS-OUTPUTS|0 failed of 1: SUCCESS|1|0|SUCCESS",
+          "Input group|Scenario 1|Input group 1|GROUP 1: Input group 1|||||",
+          "Output group|Scenario 1|Output group 1|GROUP 1: Output group 1||0 failed of 1: SUCCESS|1|0|SUCCESS",
+          "Scenario|Scenario 2||SCENARIO 2: Scenario 2 [Category Set: Category set 1]|INPUTS-OUTPUTS|0 failed of 1: SUCCESS|1|0|SUCCESS",
+          "Input group|Scenario 2|Input group 1|GROUP 1: Input group 1|||||",
+          "Output group|Scenario 2|Output group 1|GROUP 1: Output group 1||0 failed of 1: SUCCESS|1|0|SUCCESS"
         ],
         "Input Fields": [
-          "Scenario 1|Input group 1|#|1"
+          "Scenario 1|Input group 1|#|1",
+          "Scenario 1|Input group 1|Input field 1|15",
+          "Scenario 2|Input group 1|#|1",
+          "Scenario 2|Input group 1|Input field 1|15"
         ],
         "Output Fields": [
-          "Scenario 1|Output group 1|#|1"
+          "Scenario 1|Output group 1|#|1",
+          "Scenario 1|Output group 1|Output field 1|16",
+          "Scenario 2|Output group 1|#|1",
+          "Scenario 2|Output group 1|Output field 1|16"
         ],
         "Input Values": [
-          "Scenario 1|Input group 1|1~Input Value 1"
+          "Scenario 1|Input group 1|1~Input Value 1-1",
+          "Scenario 2|Input group 1|1~Input Value 2-1"
         ],
         "Output Values": [
-          "Scenario 1|Output group 1|1~Output Value 1"
+          "Scenario 1|Output group 1|1~Output Value 1-1",
+          "Scenario 2|Output group 1|1~Output Value 2-1"
         ]
       }
     },
@@ -1142,33 +1574,51 @@
           "Output group 1|Output field 1"
         ],
         "Scenarios": [
-          "Scenario 1|Category set 1"
+          "Scenario 1|Category set 1",
+          "Scenario 2|Category set 1"
         ],
         "Input Values": [
-          "Scenario 1|Input group 1|Input Value 1"
+          "Scenario 1|Input group 1|Input Value 1-1",
+          "Scenario 2|Input group 1|Input Value 2-1"
         ],
         "Expected Values": [
-          "Scenario 1|Output group 1|Output Value 1"
+          "Scenario 1|Output group 1|Output Value 1-1",
+          "Scenario 2|Output group 1|Output Value 2-1"
         ],
         "Actual Values": [
-          "Scenario 1|Output group 1|Output Value 1"
+          "Scenario 1|Output group 1|Output Value 1-1",
+          "Scenario 2|Output group 1|Output Value 2-1"
         ]
       },
       "out": {
         "Summaries": [
-          "Report|||Unit Test Report: UUT|Category Set|Test scenarios: 0 failed of 1: SUCCESS|1|0|SUCCESS"
+          "Report|||Unit Test Report: UUT|Category Set|Test scenarios: 0 failed of 2: SUCCESS|2|0|SUCCESS",
+          "Scenario|Scenario 1||SCENARIO 1: Scenario 1 [Category Set: Category set 1]|INPUTS-OUTPUTS|0 failed of 1: SUCCESS|1|0|SUCCESS",
+          "Input group|Scenario 1|Input group 1|GROUP 1: Input group 1|||||",
+          "Output group|Scenario 1|Output group 1|GROUP 1: Output group 1||0 failed of 1: SUCCESS|1|0|SUCCESS",
+          "Scenario|Scenario 2||SCENARIO 2: Scenario 2 [Category Set: Category set 1]|INPUTS-OUTPUTS|0 failed of 1: SUCCESS|1|0|SUCCESS",
+          "Input group|Scenario 2|Input group 1|GROUP 1: Input group 1|||||",
+          "Output group|Scenario 2|Output group 1|GROUP 1: Output group 1||0 failed of 1: SUCCESS|1|0|SUCCESS"
         ],
         "Input Fields": [
-          "Scenario 1|Input group 1|#|1"
+          "Scenario 1|Input group 1|#|1",
+          "Scenario 1|Input group 1|Input field 1|15",
+          "Scenario 2|Input group 1|#|1",
+          "Scenario 2|Input group 1|Input field 1|15"
         ],
         "Output Fields": [
-          "Scenario 1|Output group 1|#|1"
+          "Scenario 1|Output group 1|#|1",
+          "Scenario 1|Output group 1|Output field 1|16",
+          "Scenario 2|Output group 1|#|1",
+          "Scenario 2|Output group 1|Output field 1|16"
         ],
         "Input Values": [
-          "Scenario 1|Input group 1|1~Input Value 1"
+          "Scenario 1|Input group 1|1~Input Value 1-1",
+          "Scenario 2|Input group 1|1~Input Value 2-1"
         ],
         "Output Values": [
-          "Scenario 1|Output group 1|1~Output Value 1"
+          "Scenario 1|Output group 1|1~Output Value 1-1",
+          "Scenario 2|Output group 1|1~Output Value 2-1"
         ]
       }
     },
@@ -1186,33 +1636,51 @@
           "Output group 1|Output field 1"
         ],
         "Scenarios": [
-          "Scenario 1|Category set 1"
+          "Scenario 1|Category set 1",
+          "Scenario 2|Category set 1"
         ],
         "Input Values": [
-          "Scenario 1|Input group 1|Input Value 1"
+          "Scenario 1|Input group 1|Input Value 1-1",
+          "Scenario 2|Input group 1|Input Value 2-1"
         ],
         "Expected Values": [
-          "Scenario 1|Output group 1|Output Value 1"
+          "Scenario 1|Output group 1|Output Value 1-1",
+          "Scenario 2|Output group 1|Output Value 2-1"
         ],
         "Actual Values": [
-          "Scenario 1|Output group 1|Output Value 1"
+          "Scenario 1|Output group 1|Output Value 1-1",
+          "Scenario 2|Output group 1|Output Value 2-1"
         ]
       },
       "out": {
         "Summaries": [
-          "Report|||Unit Test Report: UUT|Category Set|Test scenarios: 0 failed of 1: SUCCESS|1|0|SUCCESS"
+          "Report|||Unit Test Report: UUT|Category Set|Test scenarios: 0 failed of 2: SUCCESS|2|0|SUCCESS",
+          "Scenario|Scenario 1||SCENARIO 1: Scenario 1 [Category Set: Category set 1]|INPUTS-OUTPUTS|0 failed of 1: SUCCESS|1|0|SUCCESS",
+          "Input group|Scenario 1|Input group 1|GROUP 1: Input group 1|||||",
+          "Output group|Scenario 1|Output group 1|GROUP 1: Output group 1||0 failed of 1: SUCCESS|1|0|SUCCESS",
+          "Scenario|Scenario 2||SCENARIO 2: Scenario 2 [Category Set: Category set 1]|INPUTS-OUTPUTS|0 failed of 1: SUCCESS|1|0|SUCCESS",
+          "Input group|Scenario 2|Input group 1|GROUP 1: Input group 1|||||",
+          "Output group|Scenario 2|Output group 1|GROUP 1: Output group 1||0 failed of 1: SUCCESS|1|0|SUCCESS"
         ],
         "Input Fields": [
-          "Scenario 1|Input group 1|#|1"
+          "Scenario 1|Input group 1|#|1",
+          "Scenario 1|Input group 1|Input field 1|15",
+          "Scenario 2|Input group 1|#|1",
+          "Scenario 2|Input group 1|Input field 1|15"
         ],
         "Output Fields": [
-          "Scenario 1|Output group 1|#|1"
+          "Scenario 1|Output group 1|#|1",
+          "Scenario 1|Output group 1|Output field 1|16",
+          "Scenario 2|Output group 1|#|1",
+          "Scenario 2|Output group 1|Output field 1|16"
         ],
         "Input Values": [
-          "Scenario 1|Input group 1|1~Input Value 1"
+          "Scenario 1|Input group 1|1~Input Value 1-1",
+          "Scenario 2|Input group 1|1~Input Value 2-1"
         ],
         "Output Values": [
-          "Scenario 1|Output group 1|1~Output Value 1"
+          "Scenario 1|Output group 1|1~Output Value 1-1",
+          "Scenario 2|Output group 1|1~Output Value 2-1"
         ]
       }
     },
@@ -1230,33 +1698,51 @@
           "Output group 1|Output field 1"
         ],
         "Scenarios": [
-          "Scenario 1|Category set 1"
+          "Scenario 1|Category set 1",
+          "Scenario 2|Category set 1"
         ],
         "Input Values": [
-          "Scenario 1|Input group 1|Input Value 1"
+          "Scenario 1|Input group 1|Input Value 1-1",
+          "Scenario 2|Input group 1|Input Value 2-1"
         ],
         "Expected Values": [
-          "Scenario 1|Output group 1|Output Value 1"
+          "Scenario 1|Output group 1|Output Value 1-1",
+          "Scenario 2|Output group 1|Output Value 2-1"
         ],
         "Actual Values": [
-          "Scenario 1|Output group 1|Output Value 1"
+          "Scenario 1|Output group 1|Output Value 1-1",
+          "Scenario 2|Output group 1|Output Value 2-1"
         ]
       },
       "out": {
         "Summaries": [
-          "Report|||Unit Test Report: UUT|Category Set|Test scenarios: 0 failed of 1: SUCCESS|1|0|SUCCESS"
+          "Report|||Unit Test Report: UUT|Category Set|Test scenarios: 0 failed of 2: SUCCESS|2|0|SUCCESS",
+          "Scenario|Scenario 1||SCENARIO 1: Scenario 1 [Category Set: Category set 1]|INPUTS-OUTPUTS|0 failed of 1: SUCCESS|1|0|SUCCESS",
+          "Input group|Scenario 1|Input group 1|GROUP 1: Input group 1|||||",
+          "Output group|Scenario 1|Output group 1|GROUP 1: Output group 1||0 failed of 1: SUCCESS|1|0|SUCCESS",
+          "Scenario|Scenario 2||SCENARIO 2: Scenario 2 [Category Set: Category set 1]|INPUTS-OUTPUTS|0 failed of 1: SUCCESS|1|0|SUCCESS",
+          "Input group|Scenario 2|Input group 1|GROUP 1: Input group 1|||||",
+          "Output group|Scenario 2|Output group 1|GROUP 1: Output group 1||0 failed of 1: SUCCESS|1|0|SUCCESS"
         ],
         "Input Fields": [
-          "Scenario 1|Input group 1|#|1"
+          "Scenario 1|Input group 1|#|1",
+          "Scenario 1|Input group 1|Input field 1|15",
+          "Scenario 2|Input group 1|#|1",
+          "Scenario 2|Input group 1|Input field 1|15"
         ],
         "Output Fields": [
-          "Scenario 1|Output group 1|#|1"
+          "Scenario 1|Output group 1|#|1",
+          "Scenario 1|Output group 1|Output field 1|16",
+          "Scenario 2|Output group 1|#|1",
+          "Scenario 2|Output group 1|Output field 1|16"
         ],
         "Input Values": [
-          "Scenario 1|Input group 1|1~Input Value 1"
+          "Scenario 1|Input group 1|1~Input Value 1-1",
+          "Scenario 2|Input group 1|1~Input Value 2-1"
         ],
         "Output Values": [
-          "Scenario 1|Output group 1|1~Output Value 1"
+          "Scenario 1|Output group 1|1~Output Value 1-1",
+          "Scenario 2|Output group 1|1~Output Value 2-1"
         ]
       }
     },
@@ -1274,33 +1760,51 @@
           "Output group 1|Output field 1"
         ],
         "Scenarios": [
-          "Scenario 1|Category set 1"
+          "Scenario 1|Category set 1",
+          "Scenario 2|Category set 1"
         ],
         "Input Values": [
-          "Scenario 1|Input group 1|Input Value 1"
+          "Scenario 1|Input group 1|Input Value 1-1",
+          "Scenario 2|Input group 1|Input Value 2-1"
         ],
         "Expected Values": [
-          "Scenario 1|Output group 1|Output Value 1"
+          "Scenario 1|Output group 1|Output Value 1-1",
+          "Scenario 2|Output group 1|Output Value 2-1"
         ],
         "Actual Values": [
-          "Scenario 1|Output group 1|Output Value 1"
+          "Scenario 1|Output group 1|Output Value 1-1",
+          "Scenario 2|Output group 1|Output Value 2-1"
         ]
       },
       "out": {
         "Summaries": [
-          "Report|||Unit Test Report: UUT|Category Set|Test scenarios: 0 failed of 1: SUCCESS|1|0|SUCCESS"
+          "Report|||Unit Test Report: UUT|Category Set|Test scenarios: 0 failed of 2: SUCCESS|2|0|SUCCESS",
+          "Scenario|Scenario 1||SCENARIO 1: Scenario 1 [Category Set: Category set 1]|INPUTS-OUTPUTS|0 failed of 1: SUCCESS|1|0|SUCCESS",
+          "Input group|Scenario 1|Input group 1|GROUP 1: Input group 1|||||",
+          "Output group|Scenario 1|Output group 1|GROUP 1: Output group 1||0 failed of 1: SUCCESS|1|0|SUCCESS",
+          "Scenario|Scenario 2||SCENARIO 2: Scenario 2 [Category Set: Category set 1]|INPUTS-OUTPUTS|0 failed of 1: SUCCESS|1|0|SUCCESS",
+          "Input group|Scenario 2|Input group 1|GROUP 1: Input group 1|||||",
+          "Output group|Scenario 2|Output group 1|GROUP 1: Output group 1||0 failed of 1: SUCCESS|1|0|SUCCESS"
         ],
         "Input Fields": [
-          "Scenario 1|Input group 1|#|1"
+          "Scenario 1|Input group 1|#|1",
+          "Scenario 1|Input group 1|Input field 1|15",
+          "Scenario 2|Input group 1|#|1",
+          "Scenario 2|Input group 1|Input field 1|15"
         ],
         "Output Fields": [
-          "Scenario 1|Output group 1|#|1"
+          "Scenario 1|Output group 1|#|1",
+          "Scenario 1|Output group 1|Output field 1|16",
+          "Scenario 2|Output group 1|#|1",
+          "Scenario 2|Output group 1|Output field 1|16"
         ],
         "Input Values": [
-          "Scenario 1|Input group 1|1~Input Value 1"
+          "Scenario 1|Input group 1|1~Input Value 1-1",
+          "Scenario 2|Input group 1|1~Input Value 2-1"
         ],
         "Output Values": [
-          "Scenario 1|Output group 1|1~Output Value 1"
+          "Scenario 1|Output group 1|1~Output Value 1-1",
+          "Scenario 2|Output group 1|1~Output Value 2-1"
         ]
       }
     },
@@ -1318,33 +1822,51 @@
           "Output group 1|Output field 1"
         ],
         "Scenarios": [
-          "Scenario 1|Category set 1"
+          "Scenario 1|Category set 1",
+          "Scenario 2|Category set 1"
         ],
         "Input Values": [
-          "Scenario 1|Input group 1|Input Value 1"
+          "Scenario 1|Input group 1|Input Value 1-1",
+          "Scenario 2|Input group 1|Input Value 2-1"
         ],
         "Expected Values": [
-          "Scenario 1|Output group 1|Output Value 1"
+          "Scenario 1|Output group 1|Output Value 1-1",
+          "Scenario 2|Output group 1|Output Value 2-1"
         ],
         "Actual Values": [
-          "Scenario 1|Output group 1|Output Value 1"
+          "Scenario 1|Output group 1|Output Value 1-1",
+          "Scenario 2|Output group 1|Output Value 2-1"
         ]
       },
       "out": {
         "Summaries": [
-          "Report|||Unit Test Report: UUT|Category Set|Test scenarios: 0 failed of 1: SUCCESS|1|0|SUCCESS"
+          "Report|||Unit Test Report: UUT|Category Set|Test scenarios: 0 failed of 2: SUCCESS|2|0|SUCCESS",
+          "Scenario|Scenario 1||SCENARIO 1: Scenario 1 [Category Set: Category set 1]|INPUTS-OUTPUTS|0 failed of 1: SUCCESS|1|0|SUCCESS",
+          "Input group|Scenario 1|Input group 1|GROUP 1: Input group 1|||||",
+          "Output group|Scenario 1|Output group 1|GROUP 1: Output group 1||0 failed of 1: SUCCESS|1|0|SUCCESS",
+          "Scenario|Scenario 2||SCENARIO 2: Scenario 2 [Category Set: Category set 1]|INPUTS-OUTPUTS|0 failed of 1: SUCCESS|1|0|SUCCESS",
+          "Input group|Scenario 2|Input group 1|GROUP 1: Input group 1|||||",
+          "Output group|Scenario 2|Output group 1|GROUP 1: Output group 1||0 failed of 1: SUCCESS|1|0|SUCCESS"
         ],
         "Input Fields": [
-          "Scenario 1|Input group 1|#|1"
+          "Scenario 1|Input group 1|#|1",
+          "Scenario 1|Input group 1|Input field 1|15",
+          "Scenario 2|Input group 1|#|1",
+          "Scenario 2|Input group 1|Input field 1|15"
         ],
         "Output Fields": [
-          "Scenario 1|Output group 1|#|1"
+          "Scenario 1|Output group 1|#|1",
+          "Scenario 1|Output group 1|Output field 1|16",
+          "Scenario 2|Output group 1|#|1",
+          "Scenario 2|Output group 1|Output field 1|16"
         ],
         "Input Values": [
-          "Scenario 1|Input group 1|1~Input Value 1"
+          "Scenario 1|Input group 1|1~Input Value 1-1",
+          "Scenario 2|Input group 1|1~Input Value 2-1"
         ],
         "Output Values": [
-          "Scenario 1|Output group 1|1~Output Value 1"
+          "Scenario 1|Output group 1|1~Output Value 1-1",
+          "Scenario 2|Output group 1|1~Output Value 2-1"
         ]
       }
     },
@@ -1362,33 +1884,51 @@
           "Output group 1|Output field 1"
         ],
         "Scenarios": [
-          "Scenario 1|Category set 1"
+          "Scenario 1|Category set 1",
+          "Scenario 2|Category set 1"
         ],
         "Input Values": [
-          "Scenario 1|Input group 1|Input Value 1"
+          "Scenario 1|Input group 1|Input Value 1-1",
+          "Scenario 2|Input group 1|Input Value 2-1"
         ],
         "Expected Values": [
-          "Scenario 1|Output group 1|Output Value 1"
+          "Scenario 1|Output group 1|Output Value 1-1",
+          "Scenario 2|Output group 1|Output Value 2-1"
         ],
         "Actual Values": [
-          "Scenario 1|Output group 1|Output Value 1"
+          "Scenario 1|Output group 1|Output Value 1-1",
+          "Scenario 2|Output group 1|Output Value 2-1"
         ]
       },
       "out": {
         "Summaries": [
-          "Report|||Unit Test Report: UUT|Category Set|Test scenarios: 0 failed of 1: SUCCESS|1|0|SUCCESS"
+          "Report|||Unit Test Report: UUT|Category Set|Test scenarios: 0 failed of 2: SUCCESS|2|0|SUCCESS",
+          "Scenario|Scenario 1||SCENARIO 1: Scenario 1 [Category Set: Category set 1]|INPUTS-OUTPUTS|0 failed of 1: SUCCESS|1|0|SUCCESS",
+          "Input group|Scenario 1|Input group 1|GROUP 1: Input group 1|||||",
+          "Output group|Scenario 1|Output group 1|GROUP 1: Output group 1||0 failed of 1: SUCCESS|1|0|SUCCESS",
+          "Scenario|Scenario 2||SCENARIO 2: Scenario 2 [Category Set: Category set 1]|INPUTS-OUTPUTS|0 failed of 1: SUCCESS|1|0|SUCCESS",
+          "Input group|Scenario 2|Input group 1|GROUP 1: Input group 1|||||",
+          "Output group|Scenario 2|Output group 1|GROUP 1: Output group 1||0 failed of 1: SUCCESS|1|0|SUCCESS"
         ],
         "Input Fields": [
-          "Scenario 1|Input group 1|#|1"
+          "Scenario 1|Input group 1|#|1",
+          "Scenario 1|Input group 1|Input field 1|15",
+          "Scenario 2|Input group 1|#|1",
+          "Scenario 2|Input group 1|Input field 1|15"
         ],
         "Output Fields": [
-          "Scenario 1|Output group 1|#|1"
+          "Scenario 1|Output group 1|#|1",
+          "Scenario 1|Output group 1|Output field 1|16",
+          "Scenario 2|Output group 1|#|1",
+          "Scenario 2|Output group 1|Output field 1|16"
         ],
         "Input Values": [
-          "Scenario 1|Input group 1|1~Input Value 1"
+          "Scenario 1|Input group 1|1~Input Value 1-1",
+          "Scenario 2|Input group 1|1~Input Value 2-1"
         ],
         "Output Values": [
-          "Scenario 1|Output group 1|1~Output Value 1"
+          "Scenario 1|Output group 1|1~Output Value 1-1",
+          "Scenario 2|Output group 1|1~Output Value 2-1"
         ]
       }
     },
@@ -1406,33 +1946,51 @@
           "Output group 1|Output field 1"
         ],
         "Scenarios": [
-          "Scenario 1|Category set 1"
+          "Scenario 1|Category set 1",
+          "Scenario 2|Category set 1"
         ],
         "Input Values": [
-          "Scenario 1|Input group 1|Input Value 1"
+          "Scenario 1|Input group 1|Input Value 1-1",
+          "Scenario 2|Input group 1|Input Value 2-1"
         ],
         "Expected Values": [
-          "Scenario 1|Output group 1|Output Value 1"
+          "Scenario 1|Output group 1|Output Value 1-1",
+          "Scenario 2|Output group 1|Output Value 2-1"
         ],
         "Actual Values": [
-          "Scenario 1|Output group 1|Output Value 1"
+          "Scenario 1|Output group 1|Output Value 1-1",
+          "Scenario 2|Output group 1|Output Value 2-1"
         ]
       },
       "out": {
         "Summaries": [
-          "Report|||Unit Test Report: UUT|Category Set|Test scenarios: 0 failed of 1: SUCCESS|1|0|SUCCESS"
+          "Report|||Unit Test Report: UUT|Category Set|Test scenarios: 0 failed of 2: SUCCESS|2|0|SUCCESS",
+          "Scenario|Scenario 1||SCENARIO 1: Scenario 1 [Category Set: Category set 1]|INPUTS-OUTPUTS|0 failed of 1: SUCCESS|1|0|SUCCESS",
+          "Input group|Scenario 1|Input group 1|GROUP 1: Input group 1|||||",
+          "Output group|Scenario 1|Output group 1|GROUP 1: Output group 1||0 failed of 1: SUCCESS|1|0|SUCCESS",
+          "Scenario|Scenario 2||SCENARIO 2: Scenario 2 [Category Set: Category set 1]|INPUTS-OUTPUTS|0 failed of 1: SUCCESS|1|0|SUCCESS",
+          "Input group|Scenario 2|Input group 1|GROUP 1: Input group 1|||||",
+          "Output group|Scenario 2|Output group 1|GROUP 1: Output group 1||0 failed of 1: SUCCESS|1|0|SUCCESS"
         ],
         "Input Fields": [
-          "Scenario 1|Input group 1|#|1"
+          "Scenario 1|Input group 1|#|1",
+          "Scenario 1|Input group 1|Input field 1|15",
+          "Scenario 2|Input group 1|#|1",
+          "Scenario 2|Input group 1|Input field 1|15"
         ],
         "Output Fields": [
-          "Scenario 1|Output group 1|#|1"
+          "Scenario 1|Output group 1|#|1",
+          "Scenario 1|Output group 1|Output field 1|16",
+          "Scenario 2|Output group 1|#|1",
+          "Scenario 2|Output group 1|Output field 1|16"
         ],
         "Input Values": [
-          "Scenario 1|Input group 1|1~Input Value 1"
+          "Scenario 1|Input group 1|1~Input Value 1-1",
+          "Scenario 2|Input group 1|1~Input Value 2-1"
         ],
         "Output Values": [
-          "Scenario 1|Output group 1|1~Output Value 1"
+          "Scenario 1|Output group 1|1~Output Value 1-1",
+          "Scenario 2|Output group 1|1~Output Value 2-1"
         ]
       }
     },
@@ -1450,33 +2008,51 @@
           "Output group 1|Output field 1"
         ],
         "Scenarios": [
-          "Scenario 1|Category set 1"
+          "Scenario 1|Category set 1",
+          "Scenario 2|Category set 1"
         ],
         "Input Values": [
-          "Scenario 1|Input group 1|Input Value 1"
+          "Scenario 1|Input group 1|Input Value 1-1",
+          "Scenario 2|Input group 1|Input Value 2-1"
         ],
         "Expected Values": [
-          "Scenario 1|Output group 1|Output Value 1"
+          "Scenario 1|Output group 1|Output Value 1-1",
+          "Scenario 2|Output group 1|Output Value 2-1"
         ],
         "Actual Values": [
-          "Scenario 1|Output group 1|Output Value 1"
+          "Scenario 1|Output group 1|Output Value 1-1",
+          "Scenario 2|Output group 1|Output Value 2-1"
         ]
       },
       "out": {
         "Summaries": [
-          "Report|||Unit Test Report: UUT|Category Set|Test scenarios: 0 failed of 1: SUCCESS|1|0|SUCCESS"
+          "Report|||Unit Test Report: UUT|Category Set|Test scenarios: 0 failed of 2: SUCCESS|2|0|SUCCESS",
+          "Scenario|Scenario 1||SCENARIO 1: Scenario 1 [Category Set: Category set 1]|INPUTS-OUTPUTS|0 failed of 1: SUCCESS|1|0|SUCCESS",
+          "Input group|Scenario 1|Input group 1|GROUP 1: Input group 1|||||",
+          "Output group|Scenario 1|Output group 1|GROUP 1: Output group 1||0 failed of 1: SUCCESS|1|0|SUCCESS",
+          "Scenario|Scenario 2||SCENARIO 2: Scenario 2 [Category Set: Category set 1]|INPUTS-OUTPUTS|0 failed of 1: SUCCESS|1|0|SUCCESS",
+          "Input group|Scenario 2|Input group 1|GROUP 1: Input group 1|||||",
+          "Output group|Scenario 2|Output group 1|GROUP 1: Output group 1||0 failed of 1: SUCCESS|1|0|SUCCESS"
         ],
         "Input Fields": [
-          "Scenario 1|Input group 1|#|1"
+          "Scenario 1|Input group 1|#|1",
+          "Scenario 1|Input group 1|Input field 1|15",
+          "Scenario 2|Input group 1|#|1",
+          "Scenario 2|Input group 1|Input field 1|15"
         ],
         "Output Fields": [
-          "Scenario 1|Output group 1|#|1"
+          "Scenario 1|Output group 1|#|1",
+          "Scenario 1|Output group 1|Output field 1|16",
+          "Scenario 2|Output group 1|#|1",
+          "Scenario 2|Output group 1|Output field 1|16"
         ],
         "Input Values": [
-          "Scenario 1|Input group 1|1~Input Value 1"
+          "Scenario 1|Input group 1|1~Input Value 1-1",
+          "Scenario 2|Input group 1|1~Input Value 2-1"
         ],
         "Output Values": [
-          "Scenario 1|Output group 1|1~Output Value 1"
+          "Scenario 1|Output group 1|1~Output Value 1-1",
+          "Scenario 2|Output group 1|1~Output Value 2-1"
         ]
       }
     },
@@ -1494,33 +2070,51 @@
           "Output group 1|Output field 1"
         ],
         "Scenarios": [
-          "Scenario 1|Category set 1"
+          "Scenario 1|Category set 1",
+          "Scenario 2|Category set 1"
         ],
         "Input Values": [
-          "Scenario 1|Input group 1|Input Value 1"
+          "Scenario 1|Input group 1|Input Value 1-1",
+          "Scenario 2|Input group 1|Input Value 2-1"
         ],
         "Expected Values": [
-          "Scenario 1|Output group 1|Output Value 1"
+          "Scenario 1|Output group 1|Output Value 1-1",
+          "Scenario 2|Output group 1|Output Value 2-1"
         ],
         "Actual Values": [
-          "Scenario 1|Output group 1|Output Value 1"
+          "Scenario 1|Output group 1|Output Value 1-1",
+          "Scenario 2|Output group 1|Output Value 2-1"
         ]
       },
       "out": {
         "Summaries": [
-          "Report|||Unit Test Report: UUT|Category Set|Test scenarios: 0 failed of 1: SUCCESS|1|0|SUCCESS"
+          "Report|||Unit Test Report: UUT|Category Set|Test scenarios: 0 failed of 2: SUCCESS|2|0|SUCCESS",
+          "Scenario|Scenario 1||SCENARIO 1: Scenario 1 [Category Set: Category set 1]|INPUTS-OUTPUTS|0 failed of 1: SUCCESS|1|0|SUCCESS",
+          "Input group|Scenario 1|Input group 1|GROUP 1: Input group 1|||||",
+          "Output group|Scenario 1|Output group 1|GROUP 1: Output group 1||0 failed of 1: SUCCESS|1|0|SUCCESS",
+          "Scenario|Scenario 2||SCENARIO 2: Scenario 2 [Category Set: Category set 1]|INPUTS-OUTPUTS|0 failed of 1: SUCCESS|1|0|SUCCESS",
+          "Input group|Scenario 2|Input group 1|GROUP 1: Input group 1|||||",
+          "Output group|Scenario 2|Output group 1|GROUP 1: Output group 1||0 failed of 1: SUCCESS|1|0|SUCCESS"
         ],
         "Input Fields": [
-          "Scenario 1|Input group 1|#|1"
+          "Scenario 1|Input group 1|#|1",
+          "Scenario 1|Input group 1|Input field 1|15",
+          "Scenario 2|Input group 1|#|1",
+          "Scenario 2|Input group 1|Input field 1|15"
         ],
         "Output Fields": [
-          "Scenario 1|Output group 1|#|1"
+          "Scenario 1|Output group 1|#|1",
+          "Scenario 1|Output group 1|Output field 1|16",
+          "Scenario 2|Output group 1|#|1",
+          "Scenario 2|Output group 1|Output field 1|16"
         ],
         "Input Values": [
-          "Scenario 1|Input group 1|1~Input Value 1"
+          "Scenario 1|Input group 1|1~Input Value 1-1",
+          "Scenario 2|Input group 1|1~Input Value 2-1"
         ],
         "Output Values": [
-          "Scenario 1|Output group 1|1~Output Value 1"
+          "Scenario 1|Output group 1|1~Output Value 1-1",
+          "Scenario 2|Output group 1|1~Output Value 2-1"
         ]
       }
     },
@@ -1538,33 +2132,51 @@
           "Output group 1|Output field 1"
         ],
         "Scenarios": [
-          "Scenario 1|Category set 1"
+          "Scenario 1|Category set 1",
+          "Scenario 2|Category set 1"
         ],
         "Input Values": [
-          "Scenario 1|Input group 1|Input Value 1"
+          "Scenario 1|Input group 1|Input Value 1-1",
+          "Scenario 2|Input group 1|Input Value 2-1"
         ],
         "Expected Values": [
-          "Scenario 1|Output group 1|Output Value 1"
+          "Scenario 1|Output group 1|Output Value 1-1",
+          "Scenario 2|Output group 1|Output Value 2-1"
         ],
         "Actual Values": [
-          "Scenario 1|Output group 1|Output Value 1"
+          "Scenario 1|Output group 1|Output Value 1-1",
+          "Scenario 2|Output group 1|Output Value 2-1"
         ]
       },
       "out": {
         "Summaries": [
-          "Report|||Unit Test Report: UUT|Category Set|Test scenarios: 0 failed of 1: SUCCESS|1|0|SUCCESS"
+          "Report|||Unit Test Report: UUT|Category Set|Test scenarios: 0 failed of 2: SUCCESS|2|0|SUCCESS",
+          "Scenario|Scenario 1||SCENARIO 1: Scenario 1 [Category Set: Category set 1]|INPUTS-OUTPUTS|0 failed of 1: SUCCESS|1|0|SUCCESS",
+          "Input group|Scenario 1|Input group 1|GROUP 1: Input group 1|||||",
+          "Output group|Scenario 1|Output group 1|GROUP 1: Output group 1||0 failed of 1: SUCCESS|1|0|SUCCESS",
+          "Scenario|Scenario 2||SCENARIO 2: Scenario 2 [Category Set: Category set 1]|INPUTS-OUTPUTS|0 failed of 1: SUCCESS|1|0|SUCCESS",
+          "Input group|Scenario 2|Input group 1|GROUP 1: Input group 1|||||",
+          "Output group|Scenario 2|Output group 1|GROUP 1: Output group 1||0 failed of 1: SUCCESS|1|0|SUCCESS"
         ],
         "Input Fields": [
-          "Scenario 1|Input group 1|#|1"
+          "Scenario 1|Input group 1|#|1",
+          "Scenario 1|Input group 1|Input field 1|15",
+          "Scenario 2|Input group 1|#|1",
+          "Scenario 2|Input group 1|Input field 1|15"
         ],
         "Output Fields": [
-          "Scenario 1|Output group 1|#|1"
+          "Scenario 1|Output group 1|#|1",
+          "Scenario 1|Output group 1|Output field 1|16",
+          "Scenario 2|Output group 1|#|1",
+          "Scenario 2|Output group 1|Output field 1|16"
         ],
         "Input Values": [
-          "Scenario 1|Input group 1|1~Input Value 1"
+          "Scenario 1|Input group 1|1~Input Value 1-1",
+          "Scenario 2|Input group 1|1~Input Value 2-1"
         ],
         "Output Values": [
-          "Scenario 1|Output group 1|1~Output Value 1"
+          "Scenario 1|Output group 1|1~Output Value 1-1",
+          "Scenario 2|Output group 1|1~Output Value 2-1"
         ]
       }
     },
@@ -1582,33 +2194,51 @@
           "Output group 1|Output field 1"
         ],
         "Scenarios": [
-          "Scenario 1|Category set 1"
+          "Scenario 1|Category set 1",
+          "Scenario 2|Category set 1"
         ],
         "Input Values": [
-          "Scenario 1|Input group 1|Input Value 1"
+          "Scenario 1|Input group 1|Input Value 1-1",
+          "Scenario 2|Input group 1|Input Value 2-1"
         ],
         "Expected Values": [
-          "Scenario 1|Output group 1|Output Value 1"
+          "Scenario 1|Output group 1|Output Value 1-1",
+          "Scenario 2|Output group 1|Output Value 2-1"
         ],
         "Actual Values": [
-          "Scenario 1|Output group 1|Output Value 1"
+          "Scenario 1|Output group 1|Output Value 1-1",
+          "Scenario 2|Output group 1|Output Value 2-1"
         ]
       },
       "out": {
         "Summaries": [
-          "Report|||Unit Test Report: UUT|Category Set|Test scenarios: 0 failed of 1: SUCCESS|1|0|SUCCESS"
+          "Report|||Unit Test Report: UUT|Category Set|Test scenarios: 0 failed of 2: SUCCESS|2|0|SUCCESS",
+          "Scenario|Scenario 1||SCENARIO 1: Scenario 1 [Category Set: Category set 1]|INPUTS-OUTPUTS|0 failed of 1: SUCCESS|1|0|SUCCESS",
+          "Input group|Scenario 1|Input group 1|GROUP 1: Input group 1|||||",
+          "Output group|Scenario 1|Output group 1|GROUP 1: Output group 1||0 failed of 1: SUCCESS|1|0|SUCCESS",
+          "Scenario|Scenario 2||SCENARIO 2: Scenario 2 [Category Set: Category set 1]|INPUTS-OUTPUTS|0 failed of 1: SUCCESS|1|0|SUCCESS",
+          "Input group|Scenario 2|Input group 1|GROUP 1: Input group 1|||||",
+          "Output group|Scenario 2|Output group 1|GROUP 1: Output group 1||0 failed of 1: SUCCESS|1|0|SUCCESS"
         ],
         "Input Fields": [
-          "Scenario 1|Input group 1|#|1"
+          "Scenario 1|Input group 1|#|1",
+          "Scenario 1|Input group 1|Input field 1|15",
+          "Scenario 2|Input group 1|#|1",
+          "Scenario 2|Input group 1|Input field 1|15"
         ],
         "Output Fields": [
-          "Scenario 1|Output group 1|#|1"
+          "Scenario 1|Output group 1|#|1",
+          "Scenario 1|Output group 1|Output field 1|16",
+          "Scenario 2|Output group 1|#|1",
+          "Scenario 2|Output group 1|Output field 1|16"
         ],
         "Input Values": [
-          "Scenario 1|Input group 1|1~Input Value 1"
+          "Scenario 1|Input group 1|1~Input Value 1-1",
+          "Scenario 2|Input group 1|1~Input Value 2-1"
         ],
         "Output Values": [
-          "Scenario 1|Output group 1|1~Output Value 1"
+          "Scenario 1|Output group 1|1~Output Value 1-1",
+          "Scenario 2|Output group 1|1~Output Value 2-1"
         ]
       }
     },
@@ -1626,33 +2256,51 @@
           "Output group 1|Output field 1"
         ],
         "Scenarios": [
-          "Scenario 1|Category set 1"
+          "Scenario 1|Category set 1",
+          "Scenario 2|Category set 1"
         ],
         "Input Values": [
-          "Scenario 1|Input group 1|Input Value 1"
+          "Scenario 1|Input group 1|Input Value 1-1",
+          "Scenario 2|Input group 1|Input Value 2-1"
         ],
         "Expected Values": [
-          "Scenario 1|Output group 1|Output Value 1"
+          "Scenario 1|Output group 1|Output Value 1-1",
+          "Scenario 2|Output group 1|Output Value 2-1"
         ],
         "Actual Values": [
-          "Scenario 1|Output group 1|Output Value 1"
+          "Scenario 1|Output group 1|Output Value 1-1",
+          "Scenario 2|Output group 1|Output Value 2-1"
         ]
       },
       "out": {
         "Summaries": [
-          "Report|||Unit Test Report: UUT|Category Set|Test scenarios: 0 failed of 1: SUCCESS|1|0|SUCCESS"
+          "Report|||Unit Test Report: UUT|Category Set|Test scenarios: 0 failed of 2: SUCCESS|2|0|SUCCESS",
+          "Scenario|Scenario 1||SCENARIO 1: Scenario 1 [Category Set: Category set 1]|INPUTS-OUTPUTS|0 failed of 1: SUCCESS|1|0|SUCCESS",
+          "Input group|Scenario 1|Input group 1|GROUP 1: Input group 1|||||",
+          "Output group|Scenario 1|Output group 1|GROUP 1: Output group 1||0 failed of 1: SUCCESS|1|0|SUCCESS",
+          "Scenario|Scenario 2||SCENARIO 2: Scenario 2 [Category Set: Category set 1]|INPUTS-OUTPUTS|0 failed of 1: SUCCESS|1|0|SUCCESS",
+          "Input group|Scenario 2|Input group 1|GROUP 1: Input group 1|||||",
+          "Output group|Scenario 2|Output group 1|GROUP 1: Output group 1||0 failed of 1: SUCCESS|1|0|SUCCESS"
         ],
         "Input Fields": [
-          "Scenario 1|Input group 1|#|1"
+          "Scenario 1|Input group 1|#|1",
+          "Scenario 1|Input group 1|Input field 1|15",
+          "Scenario 2|Input group 1|#|1",
+          "Scenario 2|Input group 1|Input field 1|15"
         ],
         "Output Fields": [
-          "Scenario 1|Output group 1|#|1"
+          "Scenario 1|Output group 1|#|1",
+          "Scenario 1|Output group 1|Output field 1|16",
+          "Scenario 2|Output group 1|#|1",
+          "Scenario 2|Output group 1|Output field 1|16"
         ],
         "Input Values": [
-          "Scenario 1|Input group 1|1~Input Value 1"
+          "Scenario 1|Input group 1|1~Input Value 1-1",
+          "Scenario 2|Input group 1|1~Input Value 2-1"
         ],
         "Output Values": [
-          "Scenario 1|Output group 1|1~Output Value 1"
+          "Scenario 1|Output group 1|1~Output Value 1-1",
+          "Scenario 2|Output group 1|1~Output Value 2-1"
         ]
       }
     },
@@ -1670,33 +2318,51 @@
           "Output group 1|Output field 1"
         ],
         "Scenarios": [
-          "Scenario 1|Category set 1"
+          "Scenario 1|Category set 1",
+          "Scenario 2|Category set 1"
         ],
         "Input Values": [
-          "Scenario 1|Input group 1|Input Value 1"
+          "Scenario 1|Input group 1|Input Value 1-1",
+          "Scenario 2|Input group 1|Input Value 2-1"
         ],
         "Expected Values": [
-          "Scenario 1|Output group 1|Output Value 1"
+          "Scenario 1|Output group 1|Output Value 1-1",
+          "Scenario 2|Output group 1|Output Value 2-1"
         ],
         "Actual Values": [
-          "Scenario 1|Output group 1|Output Value 1"
+          "Scenario 1|Output group 1|Output Value 1-1",
+          "Scenario 2|Output group 1|Output Value 2-1"
         ]
       },
       "out": {
         "Summaries": [
-          "Report|||Unit Test Report: UUT|Category Set|Test scenarios: 0 failed of 1: SUCCESS|1|0|SUCCESS"
+          "Report|||Unit Test Report: UUT|Category Set|Test scenarios: 0 failed of 2: SUCCESS|2|0|SUCCESS",
+          "Scenario|Scenario 1||SCENARIO 1: Scenario 1 [Category Set: Category set 1]|INPUTS-OUTPUTS|0 failed of 1: SUCCESS|1|0|SUCCESS",
+          "Input group|Scenario 1|Input group 1|GROUP 1: Input group 1|||||",
+          "Output group|Scenario 1|Output group 1|GROUP 1: Output group 1||0 failed of 1: SUCCESS|1|0|SUCCESS",
+          "Scenario|Scenario 2||SCENARIO 2: Scenario 2 [Category Set: Category set 1]|INPUTS-OUTPUTS|0 failed of 1: SUCCESS|1|0|SUCCESS",
+          "Input group|Scenario 2|Input group 1|GROUP 1: Input group 1|||||",
+          "Output group|Scenario 2|Output group 1|GROUP 1: Output group 1||0 failed of 1: SUCCESS|1|0|SUCCESS"
         ],
         "Input Fields": [
-          "Scenario 1|Input group 1|#|1"
+          "Scenario 1|Input group 1|#|1",
+          "Scenario 1|Input group 1|Input field 1|15",
+          "Scenario 2|Input group 1|#|1",
+          "Scenario 2|Input group 1|Input field 1|15"
         ],
         "Output Fields": [
-          "Scenario 1|Output group 1|#|1"
+          "Scenario 1|Output group 1|#|1",
+          "Scenario 1|Output group 1|Output field 1|16",
+          "Scenario 2|Output group 1|#|1",
+          "Scenario 2|Output group 1|Output field 1|16"
         ],
         "Input Values": [
-          "Scenario 1|Input group 1|1~Input Value 1"
+          "Scenario 1|Input group 1|1~Input Value 1-1",
+          "Scenario 2|Input group 1|1~Input Value 2-1"
         ],
         "Output Values": [
-          "Scenario 1|Output group 1|1~Output Value 1"
+          "Scenario 1|Output group 1|1~Output Value 1-1",
+          "Scenario 2|Output group 1|1~Output Value 2-1"
         ]
       }
     }

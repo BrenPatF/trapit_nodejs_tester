@@ -23,7 +23,7 @@ Unit Test Report: ColGroup - JavaScript
 
 Test scenarios: 2 failed of 17: FAILURE
 =======================================
-Formatted: 2023-04-12 06:07:43
+Formatted: 2025-06-25 09:24:56
 
 SCENARIO 1: No lines [Category Set: Lines Multiplicity] {
 =========================================================
@@ -69,7 +69,7 @@ SCENARIO 1: No lines [Category Set: Lines Multiplicity] {
 
             #  #Lines  Date Offset       Text                                                                                                                                                                                                         
             -  ------  ----------------  -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-            1  2       IN [0,2000]: 288  LIKE /.*: File .*ut_group.csv, delimiter ',', column 1/: Wed Apr 12 2023 07:07:42: File C:\Users\Brend\OneDrive\Documents\GitHub\trapit_nodejs_tester\examples\colgroup/ut_group.csv, delimiter ',', column 1
+            1  2       IN [0,2000]: 648  LIKE /.*: File .*ut_group.csv, delimiter ',', column 1/: Wed Jun 25 2025 11:24:54: File C:\Users\Brend\OneDrive\Documents\GitHub\trapit_nodejs_tester\examples\colgroup/ut_group.csv, delimiter ',', column 1
 
       } 0 failed of 1: SUCCESS
       ========================
@@ -141,7 +141,7 @@ SCENARIO 2: One line [Category Set: Lines Multiplicity] {
 
             #  #Lines  Date Offset       Text                                                                                                                                                                                                         
             -  ------  ----------------  -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-            1  2       IN [0,2000]: 395  LIKE /.*: File .*ut_group.csv, delimiter ',', column 1/: Wed Apr 12 2023 07:07:42: File C:\Users\Brend\OneDrive\Documents\GitHub\trapit_nodejs_tester\examples\colgroup/ut_group.csv, delimiter ',', column 1
+            1  2       IN [0,2000]: 749  LIKE /.*: File .*ut_group.csv, delimiter ',', column 1/: Wed Jun 25 2025 11:24:54: File C:\Users\Brend\OneDrive\Documents\GitHub\trapit_nodejs_tester\examples\colgroup/ut_group.csv, delimiter ',', column 1
 
       } 0 failed of 1: SUCCESS
       ========================
@@ -228,7 +228,7 @@ SCENARIO 3: Multiple lines [Category Set: Lines Multiplicity] {
 
             #  #Lines  Date Offset       Text                                                                                                                                                                                                         
             -  ------  ----------------  -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-            1  2       IN [0,2000]: 501  LIKE /.*: File .*ut_group.csv, delimiter ',', column 1/: Wed Apr 12 2023 07:07:42: File C:\Users\Brend\OneDrive\Documents\GitHub\trapit_nodejs_tester\examples\colgroup/ut_group.csv, delimiter ',', column 1
+            1  2       IN [0,2000]: 850  LIKE /.*: File .*ut_group.csv, delimiter ',', column 1/: Wed Jun 25 2025 11:24:54: File C:\Users\Brend\OneDrive\Documents\GitHub\trapit_nodejs_tester\examples\colgroup/ut_group.csv, delimiter ',', column 1
 
       } 0 failed of 1: SUCCESS
       ========================
@@ -314,7 +314,7 @@ SCENARIO 4: One column in file [Category Set: File Column Multiplicity] {
 
             #  #Lines  Date Offset       Text                                                                                                                                                                                                         
             -  ------  ----------------  -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-            1  2       IN [0,2000]: 608  LIKE /.*: File .*ut_group.csv, delimiter ',', column 0/: Wed Apr 12 2023 07:07:42: File C:\Users\Brend\OneDrive\Documents\GitHub\trapit_nodejs_tester\examples\colgroup/ut_group.csv, delimiter ',', column 0
+            1  2       IN [0,2000]: 951  LIKE /.*: File .*ut_group.csv, delimiter ',', column 0/: Wed Jun 25 2025 11:24:54: File C:\Users\Brend\OneDrive\Documents\GitHub\trapit_nodejs_tester\examples\colgroup/ut_group.csv, delimiter ',', column 0
 
       } 0 failed of 1: SUCCESS
       ========================
@@ -398,9 +398,9 @@ SCENARIO 5: Multiple columns in file [Category Set: File Column Multiplicity] {
       GROUP 1: Log {
       ==============
 
-            #  #Lines  Date Offset       Text                                                                                                                                                                                                         
-            -  ------  ----------------  -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-            1  2       IN [0,2000]: 714  LIKE /.*: File .*ut_group.csv, delimiter ',', column 1/: Wed Apr 12 2023 07:07:42: File C:\Users\Brend\OneDrive\Documents\GitHub\trapit_nodejs_tester\examples\colgroup/ut_group.csv, delimiter ',', column 1
+            #  #Lines  Date Offset      Text                                                                                                                                                                                                         
+            -  ------  ---------------  -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+            1  2       IN [0,2000]: 52  LIKE /.*: File .*ut_group.csv, delimiter ',', column 1/: Wed Jun 25 2025 11:24:55: File C:\Users\Brend\OneDrive\Documents\GitHub\trapit_nodejs_tester\examples\colgroup/ut_group.csv, delimiter ',', column 1
 
       } 0 failed of 1: SUCCESS
       ========================
@@ -486,7 +486,7 @@ SCENARIO 6: One key instance [Category Set: Key Instance Multiplicity] {
 
             #  #Lines  Date Offset       Text                                                                                                                                                                                                         
             -  ------  ----------------  -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-            1  2       IN [0,2000]: 820  LIKE /.*: File .*ut_group.csv, delimiter ',', column 1/: Wed Apr 12 2023 07:07:42: File C:\Users\Brend\OneDrive\Documents\GitHub\trapit_nodejs_tester\examples\colgroup/ut_group.csv, delimiter ',', column 1
+            1  2       IN [0,2000]: 153  LIKE /.*: File .*ut_group.csv, delimiter ',', column 1/: Wed Jun 25 2025 11:24:55: File C:\Users\Brend\OneDrive\Documents\GitHub\trapit_nodejs_tester\examples\colgroup/ut_group.csv, delimiter ',', column 1
 
       } 0 failed of 1: SUCCESS
       ========================
@@ -574,7 +574,7 @@ SCENARIO 7: Multiple key instances [Category Set: Key Instance Multiplicity] {
 
             #  #Lines  Date Offset       Text                                                                                                                                                                                                         
             -  ------  ----------------  -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-            1  2       IN [0,2000]: 927  LIKE /.*: File .*ut_group.csv, delimiter ',', column 1/: Wed Apr 12 2023 07:07:42: File C:\Users\Brend\OneDrive\Documents\GitHub\trapit_nodejs_tester\examples\colgroup/ut_group.csv, delimiter ',', column 1
+            1  2       IN [0,2000]: 254  LIKE /.*: File .*ut_group.csv, delimiter ',', column 1/: Wed Jun 25 2025 11:24:55: File C:\Users\Brend\OneDrive\Documents\GitHub\trapit_nodejs_tester\examples\colgroup/ut_group.csv, delimiter ',', column 1
 
       } 0 failed of 1: SUCCESS
       ========================
@@ -660,9 +660,9 @@ SCENARIO 8: One delimiter character [Category Set: Delimiter Multiplicity] {
       GROUP 1: Log {
       ==============
 
-            #  #Lines  Date Offset      Text                                                                                                                                                                                                         
-            -  ------  ---------------  -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-            1  2       IN [0,2000]: 34  LIKE /.*: File .*ut_group.csv, delimiter ',', column 1/: Wed Apr 12 2023 07:07:43: File C:\Users\Brend\OneDrive\Documents\GitHub\trapit_nodejs_tester\examples\colgroup/ut_group.csv, delimiter ',', column 1
+            #  #Lines  Date Offset       Text                                                                                                                                                                                                         
+            -  ------  ----------------  -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+            1  2       IN [0,2000]: 355  LIKE /.*: File .*ut_group.csv, delimiter ',', column 1/: Wed Jun 25 2025 11:24:55: File C:\Users\Brend\OneDrive\Documents\GitHub\trapit_nodejs_tester\examples\colgroup/ut_group.csv, delimiter ',', column 1
 
       } 0 failed of 1: SUCCESS
       ========================
@@ -748,7 +748,7 @@ SCENARIO 9: Multiple delimiter characters [Category Set: Delimiter Multiplicity]
 
             #  #Lines  Date Offset       Text                                                                                                                                                                                                           
             -  ------  ----------------  ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-            1  2       IN [0,2000]: 139  LIKE /.*: File .*ut_group.csv, delimiter ';;', column 1/: Wed Apr 12 2023 07:07:43: File C:\Users\Brend\OneDrive\Documents\GitHub\trapit_nodejs_tester\examples\colgroup/ut_group.csv, delimiter ';;', column 1
+            1  2       IN [0,2000]: 456  LIKE /.*: File .*ut_group.csv, delimiter ';;', column 1/: Wed Jun 25 2025 11:24:55: File C:\Users\Brend\OneDrive\Documents\GitHub\trapit_nodejs_tester\examples\colgroup/ut_group.csv, delimiter ';;', column 1
 
       } 0 failed of 1: SUCCESS
       ========================
@@ -827,7 +827,7 @@ SCENARIO 10: Short key [Category Set: Key Size] {
 
             #  #Lines  Date Offset       Text                                                                                                                                                                                                         
             -  ------  ----------------  -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-            1  1       IN [0,2000]: 244  LIKE /.*: File .*ut_group.csv, delimiter ',', column 1/: Wed Apr 12 2023 07:07:43: File C:\Users\Brend\OneDrive\Documents\GitHub\trapit_nodejs_tester\examples\colgroup/ut_group.csv, delimiter ',', column 1
+            1  1       IN [0,2000]: 557  LIKE /.*: File .*ut_group.csv, delimiter ',', column 1/: Wed Jun 25 2025 11:24:55: File C:\Users\Brend\OneDrive\Documents\GitHub\trapit_nodejs_tester\examples\colgroup/ut_group.csv, delimiter ',', column 1
 
       } 0 failed of 1: SUCCESS
       ========================
@@ -906,7 +906,7 @@ SCENARIO 11: Long key [Category Set: Key Size] {
 
             #  #Lines  Date Offset       Text                                                                                                                                                                                                         
             -  ------  ----------------  -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-            1  1       IN [0,2000]: 349  LIKE /.*: File .*ut_group.csv, delimiter ',', column 1/: Wed Apr 12 2023 07:07:43: File C:\Users\Brend\OneDrive\Documents\GitHub\trapit_nodejs_tester\examples\colgroup/ut_group.csv, delimiter ',', column 1
+            1  1       IN [0,2000]: 658  LIKE /.*: File .*ut_group.csv, delimiter ',', column 1/: Wed Jun 25 2025 11:24:55: File C:\Users\Brend\OneDrive\Documents\GitHub\trapit_nodejs_tester\examples\colgroup/ut_group.csv, delimiter ',', column 1
 
       } 0 failed of 1: SUCCESS
       ========================
@@ -985,7 +985,7 @@ SCENARIO 12: Log file does not exist at time of call [Category Set: Log file exi
 
             #  #Lines  Date Offset       Text                                                                                                                                                                                                         
             -  ------  ----------------  -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-            1  1       IN [0,2000]: 452  LIKE /.*: File .*ut_group.csv, delimiter ',', column 1/: Wed Apr 12 2023 07:07:43: File C:\Users\Brend\OneDrive\Documents\GitHub\trapit_nodejs_tester\examples\colgroup/ut_group.csv, delimiter ',', column 1
+            1  1       IN [0,2000]: 760  LIKE /.*: File .*ut_group.csv, delimiter ',', column 1/: Wed Jun 25 2025 11:24:55: File C:\Users\Brend\OneDrive\Documents\GitHub\trapit_nodejs_tester\examples\colgroup/ut_group.csv, delimiter ',', column 1
 
       } 0 failed of 1: SUCCESS
       ========================
@@ -1071,7 +1071,7 @@ SCENARIO 13: Log file exists at time of call [Category Set: Log file existence] 
 
             #  #Lines  Date Offset       Text                                                                                                                                                                                                         
             -  ------  ----------------  -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-            1  2       IN [0,2000]: 557  LIKE /.*: File .*ut_group.csv, delimiter ',', column 1/: Wed Apr 12 2023 07:07:43: File C:\Users\Brend\OneDrive\Documents\GitHub\trapit_nodejs_tester\examples\colgroup/ut_group.csv, delimiter ',', column 1
+            1  2       IN [0,2000]: 861  LIKE /.*: File .*ut_group.csv, delimiter ',', column 1/: Wed Jun 25 2025 11:24:55: File C:\Users\Brend\OneDrive\Documents\GitHub\trapit_nodejs_tester\examples\colgroup/ut_group.csv, delimiter ',', column 1
 
       } 0 failed of 1: SUCCESS
       ========================
@@ -1159,7 +1159,7 @@ SCENARIO 14: Order by key differs from order by value [Category Set: Key/Value O
 
             #  #Lines  Date Offset       Text                                                                                                                                                                                                         
             -  ------  ----------------  -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-            1  2       IN [0,2000]: 661  LIKE /.*: File .*ut_group.csv, delimiter ',', column 1/: Wed Apr 12 2023 07:07:43: File C:\Users\Brend\OneDrive\Documents\GitHub\trapit_nodejs_tester\examples\colgroup/ut_group.csv, delimiter ',', column 1
+            1  2       IN [0,2000]: 962  LIKE /.*: File .*ut_group.csv, delimiter ',', column 1/: Wed Jun 25 2025 11:24:55: File C:\Users\Brend\OneDrive\Documents\GitHub\trapit_nodejs_tester\examples\colgroup/ut_group.csv, delimiter ',', column 1
 
       } 0 failed of 1: SUCCESS
       ========================
@@ -1247,9 +1247,9 @@ SCENARIO 15: Order by key same as order by value [Category Set: Key/Value Orderi
       GROUP 1: Log {
       ==============
 
-            #  #Lines  Date Offset       Text                                                                                                                                                                                                         
-            -  ------  ----------------  -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-            1  2       IN [0,2000]: 768  LIKE /.*: File .*ut_group.csv, delimiter ',', column 1/: Wed Apr 12 2023 07:07:43: File C:\Users\Brend\OneDrive\Documents\GitHub\trapit_nodejs_tester\examples\colgroup/ut_group.csv, delimiter ',', column 1
+            #  #Lines  Date Offset      Text                                                                                                                                                                                                         
+            -  ------  ---------------  -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+            1  2       IN [0,2000]: 63  LIKE /.*: File .*ut_group.csv, delimiter ',', column 1/: Wed Jun 25 2025 11:24:56: File C:\Users\Brend\OneDrive\Documents\GitHub\trapit_nodejs_tester\examples\colgroup/ut_group.csv, delimiter ',', column 1
 
       } 0 failed of 1: SUCCESS
       ========================
@@ -1339,7 +1339,7 @@ SCENARIO 16: Actual/expected mismatch [Category Set: Errors] {
 
             #  #Lines  Date Offset       Text                                                                                                                                                                                                         
             -  ------  ----------------  -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-            1  2       IN [0,2000]: 872  LIKE /.*: File .*ut_group.csv, delimiter ',', column 1/: Wed Apr 12 2023 07:07:43: File C:\Users\Brend\OneDrive\Documents\GitHub\trapit_nodejs_tester\examples\colgroup/ut_group.csv, delimiter ',', column 1
+            1  2       IN [0,2000]: 165  LIKE /.*: File .*ut_group.csv, delimiter ',', column 1/: Wed Jun 25 2025 11:24:56: File C:\Users\Brend\OneDrive\Documents\GitHub\trapit_nodejs_tester\examples\colgroup/ut_group.csv, delimiter ',', column 1
 
       } 0 failed of 1: SUCCESS
       ========================
@@ -1476,20 +1476,20 @@ SCENARIO 17: Unhandled exception [Category Set: Errors] {
       GROUP 5: Unhandled Exception {
       ==============================
 
-            #   Message       Stack                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
-            --  ------------  -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-            1   *NO RECORD*                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
+            #   Message       Stack                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
+            --  ------------  -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+            1   *NO RECORD*                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
             1*  Error thrown  Error: Error thrown
     at purelyWrapUnit (C:\Users\Brend\OneDrive\Documents\GitHub\trapit_nodejs_tester\examples\colgroup\test-colgroup.js:72:11)
     at callPWU (C:\Users\Brend\OneDrive\Documents\node_modules\trapit\lib\trapit-utils.js:81:14)
     at Object.testUnit (C:\Users\Brend\OneDrive\Documents\node_modules\trapit\lib\trapit-utils.js:201:62)
     at Object.fmtTestUnit (C:\Users\Brend\OneDrive\Documents\node_modules\trapit\lib\trapit-utils.js:212:20)
     at Object.<anonymous> (C:\Users\Brend\OneDrive\Documents\GitHub\trapit_nodejs_tester\examples\colgroup\test-colgroup.js:93:8)
-    at Module._compile (internal/modules/cjs/loader.js:1158:30)
-    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1178:10)
-    at Module.load (internal/modules/cjs/loader.js:1002:32)
-    at Function.Module._load (internal/modules/cjs/loader.js:901:14)
-    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)
+    at Module._compile (node:internal/modules/cjs/loader:1369:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1427:10)
+    at Module.load (node:internal/modules/cjs/loader:1206:32)
+    at Module._load (node:internal/modules/cjs/loader:1022:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:135:12)
 
       } 1 failed of 1: FAILURE
       ========================

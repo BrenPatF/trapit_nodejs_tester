@@ -2,9 +2,9 @@
 Unit Test Results Summary for Folder C:\Users\Brend\OneDrive\Documents\GitHub\trapit_nodejs_tester\unit_test
 ============================================================================================================
 File:          getutresults.json
-Title:         getUTResults
+Title:         Get UT Results
 Inp Groups:    7
 Out Groups:    6
 Tests:         37
 Fails:         0
-Folder:        getutresults
+Folder:        get-ut-results

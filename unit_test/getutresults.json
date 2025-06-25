@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "getUTResults",
+    "title": "Get UT Results",
     "delimiter": "|",
     "inp": {
       "Report": [

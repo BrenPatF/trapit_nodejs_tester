@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "title",
+    "title": "ColGroup - JavaScript",
     "delimiter": "|",
     "inp": {
       "Log": [
@@ -39,14 +39,15 @@
       "active_yn": "Y",
       "category_set": "Lines Multiplicity",
       "inp": {
-        "Log": [
-          ""
-        ],
+        "Log": [],
         "Scalars": [
           ",|1|"
         ],
         "Lines": [
-          "col_0,col_1,col_2"
+          "col_0,col_1,col_2",
+          "val_01,val_11,val_21",
+          "val_02,val_12,val_22",
+          "val_03,val_11,val_23"
         ]
       },
       "out": {
@@ -54,13 +55,15 @@
           "1|IN [0,2000]|LIKE /.*: File .*ut_group.*.csv, delimiter ',', column 1/"
         ],
         "listAsIs": [
-          "1"
+          "2"
         ],
         "sortByKey": [
-          "val_1|1"
+          "val_11|2",
+          "val_12|1"
         ],
         "sortByValue": [
-          "val_1|1"
+          "val_12|1",
+          "val_11|2"
         ]
       }
     },
@@ -68,14 +71,15 @@
       "active_yn": "Y",
       "category_set": "Lines Multiplicity",
       "inp": {
-        "Log": [
-          ""
-        ],
+        "Log": [],
         "Scalars": [
           ",|1|"
         ],
         "Lines": [
-          "col_0,col_1,col_2"
+          "col_0,col_1,col_2",
+          "val_01,val_11,val_21",
+          "val_02,val_12,val_22",
+          "val_03,val_11,val_23"
         ]
       },
       "out": {
@@ -83,13 +87,15 @@
           "1|IN [0,2000]|LIKE /.*: File .*ut_group.*.csv, delimiter ',', column 1/"
         ],
         "listAsIs": [
-          "1"
+          "2"
         ],
         "sortByKey": [
-          "val_1|1"
+          "val_11|2",
+          "val_12|1"
         ],
         "sortByValue": [
-          "val_1|1"
+          "val_12|1",
+          "val_11|2"
         ]
       }
     },
@@ -97,14 +103,15 @@
       "active_yn": "Y",
       "category_set": "Lines Multiplicity",
       "inp": {
-        "Log": [
-          ""
-        ],
+        "Log": [],
         "Scalars": [
           ",|1|"
         ],
         "Lines": [
-          "col_0,col_1,col_2"
+          "col_0,col_1,col_2",
+          "val_01,val_11,val_21",
+          "val_02,val_12,val_22",
+          "val_03,val_11,val_23"
         ]
       },
       "out": {
@@ -112,13 +119,15 @@
           "1|IN [0,2000]|LIKE /.*: File .*ut_group.*.csv, delimiter ',', column 1/"
         ],
         "listAsIs": [
-          "1"
+          "2"
         ],
         "sortByKey": [
-          "val_1|1"
+          "val_11|2",
+          "val_12|1"
         ],
         "sortByValue": [
-          "val_1|1"
+          "val_12|1",
+          "val_11|2"
         ]
       }
     },
@@ -126,14 +135,15 @@
       "active_yn": "Y",
       "category_set": "File Column Multiplicity",
       "inp": {
-        "Log": [
-          ""
-        ],
+        "Log": [],
         "Scalars": [
           ",|1|"
         ],
         "Lines": [
-          "col_0,col_1,col_2"
+          "col_0,col_1,col_2",
+          "val_01,val_11,val_21",
+          "val_02,val_12,val_22",
+          "val_03,val_11,val_23"
         ]
       },
       "out": {
@@ -141,13 +151,15 @@
           "1|IN [0,2000]|LIKE /.*: File .*ut_group.*.csv, delimiter ',', column 1/"
         ],
         "listAsIs": [
-          "1"
+          "2"
         ],
         "sortByKey": [
-          "val_1|1"
+          "val_11|2",
+          "val_12|1"
         ],
         "sortByValue": [
-          "val_1|1"
+          "val_12|1",
+          "val_11|2"
         ]
       }
     },
@@ -155,14 +167,15 @@
       "active_yn": "Y",
       "category_set": "File Column Multiplicity",
       "inp": {
-        "Log": [
-          ""
-        ],
+        "Log": [],
         "Scalars": [
           ",|1|"
         ],
         "Lines": [
-          "col_0,col_1,col_2"
+          "col_0,col_1,col_2",
+          "val_01,val_11,val_21",
+          "val_02,val_12,val_22",
+          "val_03,val_11,val_23"
         ]
       },
       "out": {
@@ -170,13 +183,15 @@
           "1|IN [0,2000]|LIKE /.*: File .*ut_group.*.csv, delimiter ',', column 1/"
         ],
         "listAsIs": [
-          "1"
+          "2"
         ],
         "sortByKey": [
-          "val_1|1"
+          "val_11|2",
+          "val_12|1"
         ],
         "sortByValue": [
-          "val_1|1"
+          "val_12|1",
+          "val_11|2"
         ]
       }
     },
@@ -184,14 +199,15 @@
       "active_yn": "Y",
       "category_set": "Key Instance Multiplicity",
       "inp": {
-        "Log": [
-          ""
-        ],
+        "Log": [],
         "Scalars": [
           ",|1|"
         ],
         "Lines": [
-          "col_0,col_1,col_2"
+          "col_0,col_1,col_2",
+          "val_01,val_11,val_21",
+          "val_02,val_12,val_22",
+          "val_03,val_11,val_23"
         ]
       },
       "out": {
@@ -199,13 +215,15 @@
           "1|IN [0,2000]|LIKE /.*: File .*ut_group.*.csv, delimiter ',', column 1/"
         ],
         "listAsIs": [
-          "1"
+          "2"
         ],
         "sortByKey": [
-          "val_1|1"
+          "val_11|2",
+          "val_12|1"
         ],
         "sortByValue": [
-          "val_1|1"
+          "val_12|1",
+          "val_11|2"
         ]
       }
     },
@@ -213,14 +231,15 @@
       "active_yn": "Y",
       "category_set": "Key Instance Multiplicity",
       "inp": {
-        "Log": [
-          ""
-        ],
+        "Log": [],
         "Scalars": [
           ",|1|"
         ],
         "Lines": [
-          "col_0,col_1,col_2"
+          "col_0,col_1,col_2",
+          "val_01,val_11,val_21",
+          "val_02,val_12,val_22",
+          "val_03,val_11,val_23"
         ]
       },
       "out": {
@@ -228,13 +247,15 @@
           "1|IN [0,2000]|LIKE /.*: File .*ut_group.*.csv, delimiter ',', column 1/"
         ],
         "listAsIs": [
-          "1"
+          "2"
         ],
         "sortByKey": [
-          "val_1|1"
+          "val_11|2",
+          "val_12|1"
         ],
         "sortByValue": [
-          "val_1|1"
+          "val_12|1",
+          "val_11|2"
         ]
       }
     },
@@ -242,14 +263,15 @@
       "active_yn": "Y",
       "category_set": "Delimiter Multiplicity",
       "inp": {
-        "Log": [
-          ""
-        ],
+        "Log": [],
         "Scalars": [
           ",|1|"
         ],
         "Lines": [
-          "col_0,col_1,col_2"
+          "col_0,col_1,col_2",
+          "val_01,val_11,val_21",
+          "val_02,val_12,val_22",
+          "val_03,val_11,val_23"
         ]
       },
       "out": {
@@ -257,13 +279,15 @@
           "1|IN [0,2000]|LIKE /.*: File .*ut_group.*.csv, delimiter ',', column 1/"
         ],
         "listAsIs": [
-          "1"
+          "2"
         ],
         "sortByKey": [
-          "val_1|1"
+          "val_11|2",
+          "val_12|1"
         ],
         "sortByValue": [
-          "val_1|1"
+          "val_12|1",
+          "val_11|2"
         ]
       }
     },
@@ -271,14 +295,15 @@
       "active_yn": "Y",
       "category_set": "Delimiter Multiplicity",
       "inp": {
-        "Log": [
-          ""
-        ],
+        "Log": [],
         "Scalars": [
           ",|1|"
         ],
         "Lines": [
-          "col_0,col_1,col_2"
+          "col_0,col_1,col_2",
+          "val_01,val_11,val_21",
+          "val_02,val_12,val_22",
+          "val_03,val_11,val_23"
         ]
       },
       "out": {
@@ -286,13 +311,15 @@
           "1|IN [0,2000]|LIKE /.*: File .*ut_group.*.csv, delimiter ',', column 1/"
         ],
         "listAsIs": [
-          "1"
+          "2"
         ],
         "sortByKey": [
-          "val_1|1"
+          "val_11|2",
+          "val_12|1"
         ],
         "sortByValue": [
-          "val_1|1"
+          "val_12|1",
+          "val_11|2"
         ]
       }
     },
@@ -300,14 +327,15 @@
       "active_yn": "Y",
       "category_set": "Key Size",
       "inp": {
-        "Log": [
-          ""
-        ],
+        "Log": [],
         "Scalars": [
           ",|1|"
         ],
         "Lines": [
-          "col_0,col_1,col_2"
+          "col_0,col_1,col_2",
+          "val_01,val_11,val_21",
+          "val_02,val_12,val_22",
+          "val_03,val_11,val_23"
         ]
       },
       "out": {
@@ -315,13 +343,15 @@
           "1|IN [0,2000]|LIKE /.*: File .*ut_group.*.csv, delimiter ',', column 1/"
         ],
         "listAsIs": [
-          "1"
+          "2"
         ],
         "sortByKey": [
-          "val_1|1"
+          "val_11|2",
+          "val_12|1"
         ],
         "sortByValue": [
-          "val_1|1"
+          "val_12|1",
+          "val_11|2"
         ]
       }
     },
@@ -329,14 +359,15 @@
       "active_yn": "Y",
       "category_set": "Key Size",
       "inp": {
-        "Log": [
-          ""
-        ],
+        "Log": [],
         "Scalars": [
           ",|1|"
         ],
         "Lines": [
-          "col_0,col_1,col_2"
+          "col_0,col_1,col_2",
+          "val_01,val_11,val_21",
+          "val_02,val_12,val_22",
+          "val_03,val_11,val_23"
         ]
       },
       "out": {
@@ -344,13 +375,15 @@
           "1|IN [0,2000]|LIKE /.*: File .*ut_group.*.csv, delimiter ',', column 1/"
         ],
         "listAsIs": [
-          "1"
+          "2"
         ],
         "sortByKey": [
-          "val_1|1"
+          "val_11|2",
+          "val_12|1"
         ],
         "sortByValue": [
-          "val_1|1"
+          "val_12|1",
+          "val_11|2"
         ]
       }
     },
@@ -358,14 +391,15 @@
       "active_yn": "Y",
       "category_set": "Log file existence",
       "inp": {
-        "Log": [
-          ""
-        ],
+        "Log": [],
         "Scalars": [
           ",|1|"
         ],
         "Lines": [
-          "col_0,col_1,col_2"
+          "col_0,col_1,col_2",
+          "val_01,val_11,val_21",
+          "val_02,val_12,val_22",
+          "val_03,val_11,val_23"
         ]
       },
       "out": {
@@ -373,13 +407,15 @@
           "1|IN [0,2000]|LIKE /.*: File .*ut_group.*.csv, delimiter ',', column 1/"
         ],
         "listAsIs": [
-          "1"
+          "2"
         ],
         "sortByKey": [
-          "val_1|1"
+          "val_11|2",
+          "val_12|1"
         ],
         "sortByValue": [
-          "val_1|1"
+          "val_12|1",
+          "val_11|2"
         ]
       }
     },
@@ -387,14 +423,15 @@
       "active_yn": "Y",
       "category_set": "Log file existence",
       "inp": {
-        "Log": [
-          ""
-        ],
+        "Log": [],
         "Scalars": [
           ",|1|"
         ],
         "Lines": [
-          "col_0,col_1,col_2"
+          "col_0,col_1,col_2",
+          "val_01,val_11,val_21",
+          "val_02,val_12,val_22",
+          "val_03,val_11,val_23"
         ]
       },
       "out": {
@@ -402,13 +439,15 @@
           "1|IN [0,2000]|LIKE /.*: File .*ut_group.*.csv, delimiter ',', column 1/"
         ],
         "listAsIs": [
-          "1"
+          "2"
         ],
         "sortByKey": [
-          "val_1|1"
+          "val_11|2",
+          "val_12|1"
         ],
         "sortByValue": [
-          "val_1|1"
+          "val_12|1",
+          "val_11|2"
         ]
       }
     },
@@ -416,14 +455,15 @@
       "active_yn": "Y",
       "category_set": "Key/Value Ordering",
       "inp": {
-        "Log": [
-          ""
-        ],
+        "Log": [],
         "Scalars": [
           ",|1|"
         ],
         "Lines": [
-          "col_0,col_1,col_2"
+          "col_0,col_1,col_2",
+          "val_01,val_11,val_21",
+          "val_02,val_12,val_22",
+          "val_03,val_11,val_23"
         ]
       },
       "out": {
@@ -431,13 +471,15 @@
           "1|IN [0,2000]|LIKE /.*: File .*ut_group.*.csv, delimiter ',', column 1/"
         ],
         "listAsIs": [
-          "1"
+          "2"
         ],
         "sortByKey": [
-          "val_1|1"
+          "val_11|2",
+          "val_12|1"
         ],
         "sortByValue": [
-          "val_1|1"
+          "val_12|1",
+          "val_11|2"
         ]
       }
     },
@@ -445,14 +487,15 @@
       "active_yn": "Y",
       "category_set": "Key/Value Ordering",
       "inp": {
-        "Log": [
-          ""
-        ],
+        "Log": [],
         "Scalars": [
           ",|1|"
         ],
         "Lines": [
-          "col_0,col_1,col_2"
+          "col_0,col_1,col_2",
+          "val_01,val_11,val_21",
+          "val_02,val_12,val_22",
+          "val_03,val_11,val_23"
         ]
       },
       "out": {
@@ -460,13 +503,15 @@
           "1|IN [0,2000]|LIKE /.*: File .*ut_group.*.csv, delimiter ',', column 1/"
         ],
         "listAsIs": [
-          "1"
+          "2"
         ],
         "sortByKey": [
-          "val_1|1"
+          "val_11|2",
+          "val_12|1"
         ],
         "sortByValue": [
-          "val_1|1"
+          "val_12|1",
+          "val_11|2"
         ]
       }
     },
@@ -474,14 +519,15 @@
       "active_yn": "Y",
       "category_set": "Errors",
       "inp": {
-        "Log": [
-          ""
-        ],
+        "Log": [],
         "Scalars": [
           ",|1|"
         ],
         "Lines": [
-          "col_0,col_1,col_2"
+          "col_0,col_1,col_2",
+          "val_01,val_11,val_21",
+          "val_02,val_12,val_22",
+          "val_03,val_11,val_23"
         ]
       },
       "out": {
@@ -489,13 +535,15 @@
           "1|IN [0,2000]|LIKE /.*: File .*ut_group.*.csv, delimiter ',', column 1/"
         ],
         "listAsIs": [
-          "1"
+          "2"
         ],
         "sortByKey": [
-          "val_1|1"
+          "val_11|2",
+          "val_12|1"
         ],
         "sortByValue": [
-          "val_1|1"
+          "val_12|1",
+          "val_11|2"
         ]
       }
     },
@@ -503,14 +551,15 @@
       "active_yn": "Y",
       "category_set": "Errors",
       "inp": {
-        "Log": [
-          ""
-        ],
+        "Log": [],
         "Scalars": [
           ",|1|"
         ],
         "Lines": [
-          "col_0,col_1,col_2"
+          "col_0,col_1,col_2",
+          "val_01,val_11,val_21",
+          "val_02,val_12,val_22",
+          "val_03,val_11,val_23"
         ]
       },
       "out": {
@@ -518,13 +567,15 @@
           "1|IN [0,2000]|LIKE /.*: File .*ut_group.*.csv, delimiter ',', column 1/"
         ],
         "listAsIs": [
-          "1"
+          "2"
         ],
         "sortByKey": [
-          "val_1|1"
+          "val_11|2",
+          "val_12|1"
         ],
         "sortByValue": [
-          "val_1|1"
+          "val_12|1",
+          "val_11|2"
         ]
       }
     }

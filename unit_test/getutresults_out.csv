@@ -1,24 +1,24 @@
-Group,Field,Value
-Summaries,Type,Report
-Summaries,Scenario,
-Summaries,Group,
-Summaries,Header 1,Unit Test Report: UUT
-Summaries,Header 2,Category Set
-Summaries,Footer,Test scenarios: 0 failed of 1: SUCCESS
-Summaries,# Records,1
-Summaries,# Fails,0
-Summaries,Status,SUCCESS
-Input Fields,Scenario,Scenario 1
-Input Fields,Group,Input group 1
-Input Fields,Name,#
-Input Fields,Length,1
-Output Fields,Scenario,Scenario 1
-Output Fields,Group,Output group 1
-Output Fields,Name,#
-Output Fields,Length,1
-Input Values,Scenario,Scenario 1
-Input Values,Group,Input group 1
-Input Values,Row CSV,1~Input Value 1
-Output Values,Scenario,Scenario 1
-Output Values,Group,Output group 1
-Output Values,Row CSV,1~Output Value 1
+Group,Field,Value1,Value2,Value3,Value4,Value5,Value6,Value7
+Summaries,Type,Report,Scenario,Input group,Output group,Scenario,Input group,Output group
+Summaries,Scenario,,Scenario 1,Scenario 1,Scenario 1,Scenario 2,Scenario 2,Scenario 2
+Summaries,Group,,,Input group 1,Output group 1,,Input group 1,Output group 1
+Summaries,Header 1,Unit Test Report: UUT,SCENARIO 1: Scenario 1 [Category Set: Category set 1],GROUP 1: Input group 1,GROUP 1: Output group 1,SCENARIO 2: Scenario 2 [Category Set: Category set 1],GROUP 1: Input group 1,GROUP 1: Output group 1
+Summaries,Header 2,Category Set,INPUTS-OUTPUTS,,,INPUTS-OUTPUTS,,
+Summaries,Footer,Test scenarios: 0 failed of 2: SUCCESS,0 failed of 1: SUCCESS,,0 failed of 1: SUCCESS,0 failed of 1: SUCCESS,,0 failed of 1: SUCCESS
+Summaries,# Records,2,1,,1,1,,1
+Summaries,# Fails,0,0,,0,0,,0
+Summaries,Status,SUCCESS,SUCCESS,,SUCCESS,SUCCESS,,SUCCESS
+Input Fields,Scenario,Scenario 1,Scenario 1,Scenario 2,Scenario 2,,,
+Input Fields,Group,Input group 1,Input group 1,Input group 1,Input group 1,,,
+Input Fields,Name,#,Input field 1,#,Input field 1,,,
+Input Fields,Length,1,15,1,15,,,
+Output Fields,Scenario,Scenario 1,Scenario 1,Scenario 2,Scenario 2,,,
+Output Fields,Group,Output group 1,Output group 1,Output group 1,Output group 1,,,
+Output Fields,Name,#,Output field 1,#,Output field 1,,,
+Output Fields,Length,1,16,1,16,,,
+Input Values,Scenario,Scenario 1,Scenario 2,,,,,
+Input Values,Group,Input group 1,Input group 1,,,,,
+Input Values,Row CSV,1~Input Value 1-1,1~Input Value 2-1,,,,,
+Output Values,Scenario,Scenario 1,Scenario 2,,,,,
+Output Values,Group,Output group 1,Output group 1,,,,,
+Output Values,Row CSV,1~Output Value 1-1,1~Output Value 2-1,,,,,

@@ -48,7 +48,7 @@ h4 {margin-top: 0em; margin-bottom: 0em;
 </style>
 </head>
 <body>
-<h2>SCENARIO 32: Groups number mismatch [Category Set: Exception]</h2>
+<h2>SCENARIO 33: Fields number mismatch [Category Set: Exception]</h2>
 <h3>INPUTS</h3>
 <h4>GROUP 1: Report</h4>
 <table>
@@ -66,6 +66,7 @@ h4 {margin-top: 0em; margin-bottom: 0em;
 <table>
 <tr><th>#</th><th>Group</th><th>Field</th></tr>
 <tr><td>1</td><td>Output group 1</td><td>Output field 1</td></tr>
+<tr><td>2</td><td>Output group 1</td><td>Output field 2</td></tr>
 </table>
 <h4></h4>
 <h4>GROUP 4: Scenarios</h4>
@@ -90,7 +91,6 @@ h4 {margin-top: 0em; margin-bottom: 0em;
 <table>
 <tr><th>#</th><th>Scenario</th><th>Group</th><th>Row CSV</th></tr>
 <tr><td>1</td><td>Scenario 1</td><td>Output group 1</td><td>Output Value 1</td></tr>
-<tr><td>2</td><td>Scenario 1</td><td>Output group 2</td><td>Output Value 1</td></tr>
 </table>
 <h4></h4>
 <h3>OUTPUTS</h3>
@@ -101,15 +101,15 @@ h4 {margin-top: 0em; margin-bottom: 0em;
 <h4>GROUP 5: Output Values</h4>
 <table>
 <tr><th>#</th><th>Scenario</th><th>Group</th><th>Row CSV</th></tr>
-<tr><td>1</td><td>Scenario 1</td><td>Exception Message</td><td>Error, s: Out: Scenario 1: expected #groups = 1, actual #groups = 2</td></tr>
-<tr><td>2</td><td>Scenario 1</td><td>Exception Stack</td><td>UNTESTED: Error: Error, s: Out: Scenario 1: expected #groups = 1, actual #groups = 2
-    at chkGrpLen (C:\Users\Brend\OneDrive\Documents\GitHub\trapit_nodejs_tester\lib\trapit.js:267:11)
-    at chkInputs (C:\Users\Brend\OneDrive\Documents\GitHub\trapit_nodejs_tester\lib\trapit.js:301:5)
-    at Object.getUTResults (C:\Users\Brend\OneDrive\Documents\GitHub\trapit_nodejs_tester\lib\trapit.js:383:5)
+<tr><td>1</td><td>Scenario 1</td><td>Exception Message</td><td>Error, exp #fields 1, expected 2 [s: Scenario 1, g: Output group 1, r: Output Value 1]</td></tr>
+<tr><td>2</td><td>Scenario 1</td><td>Exception Stack</td><td>UNTESTED: Error: Error, exp #fields 1, expected 2 [s: Scenario 1, g: Output group 1, r: Output Value 1]
+    at chkRec (C:\Users\Brend\OneDrive\Documents\GitHub\trapit_nodejs_tester\lib\trapit.js:272:11)
+    at chkInputs (C:\Users\Brend\OneDrive\Documents\GitHub\trapit_nodejs_tester\lib\trapit.js:333:9)
+    at Object.getUTResults (C:\Users\Brend\OneDrive\Documents\GitHub\trapit_nodejs_tester\lib\trapit.js:400:5)
     at purelyWrapUnit (C:\Users\Brend\OneDrive\Documents\GitHub\trapit_nodejs_tester\unit_test\test-getutresults.js:229:23)
-    at callPWU (C:\Users\Brend\OneDrive\Documents\GitHub\trapit_nodejs_tester\lib\trapit-utils.js:81:14)
-    at Object.testUnit (C:\Users\Brend\OneDrive\Documents\GitHub\trapit_nodejs_tester\lib\trapit-utils.js:211:62)
-    at Object.fmtTestUnit (C:\Users\Brend\OneDrive\Documents\GitHub\trapit_nodejs_tester\lib\trapit-utils.js:221:20)
+    at callPWU (C:\Users\Brend\OneDrive\Documents\GitHub\trapit_nodejs_tester\lib\trapit-utils.js:98:14)
+    at Object.testUnit (C:\Users\Brend\OneDrive\Documents\GitHub\trapit_nodejs_tester\lib\trapit-utils.js:228:62)
+    at Object.fmtTestUnit (C:\Users\Brend\OneDrive\Documents\GitHub\trapit_nodejs_tester\lib\trapit-utils.js:238:20)
     at Object.<anonymous> (C:\Users\Brend\OneDrive\Documents\GitHub\trapit_nodejs_tester\unit_test\test-getutresults.js:235:8)
     at Module._compile (node:internal/modules/cjs/loader:1369:14)
     at Module._extensions..js (node:internal/modules/cjs/loader:1427:10)</td></tr>

@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "title",
+    "title": "Hello World - JavaScript",
     "delimiter": "|",
     "inp": {},
     "out": {
@@ -15,9 +15,7 @@
       "category_set": "Global",
       "inp": {},
       "out": {
-        "Group": [
-          ""
-        ]
+        "Group": []
       }
     }
   }

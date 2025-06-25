@@ -1,1 +1,1 @@
-pwsh ./Test-Examples.ps1 > .\test-examples.out 2> .\test-examples.err
+pwsh ./Test-Examples.ps1 > .\Test-Examples.out 2> .\Test-Examples.err

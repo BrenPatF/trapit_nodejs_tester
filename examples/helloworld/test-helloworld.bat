@@ -1,0 +1,1 @@
+node .\test-helloworld  > .\test-helloworld.out 2> .\test-helloworld.err
